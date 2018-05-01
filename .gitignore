@@ -80,3 +80,5 @@ public/js/bundle.min.js.map
 env
 
 tmp
+# nuxt
+.nuxt
