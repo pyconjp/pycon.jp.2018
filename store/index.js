@@ -3,6 +3,10 @@ export const state = () => ({
     locale: 'ja'
 })
 
+export const getters = {
+  locale(state) { return state.locale}
+}
+
 export const mutations = {
     SET_LANG(state, locale) {
         if (state.locales.indexOf(locale) !== -1) {

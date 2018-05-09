@@ -1,5 +1,14 @@
 {
+  "header": {
+    "navi": {
+      "top":"TOP",
+      "sponsor":"Sponsor"
+    }
+  },
   "top": {
-    "title": "トップ"
+    "title": "Top"
+  },
+  "sponsor": {
+    "title": "Sponsor"
   }
 }
