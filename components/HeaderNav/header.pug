@@ -2,6 +2,10 @@ div(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; b
     .uk-navbar-right
         ul.uk-navbar-nav(class="uk-visible@s")
             li.uk-active
-                a(href="" uk-scroll="") Top
+                nuxt-link(:to="$i18n.path('')" exact)
+                    | {{ $t('header.navi.top') }}
             li
-                a(href="" uk-scroll="") スポンサー
+                nuxt-link(:to="$i18n.path('sponsor')" exact)
+                    | {{ $t('header.navi.sponsor') }}
+            //li
+            //    | {{}}

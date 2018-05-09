@@ -2,10 +2,10 @@
 
 <script>
   export default {
-    name: 'index',
+    name: 'sponsor',
     head () {
       return {
-        title: "TOP"
+        title: this.$t('sponsor.title')
       }
     }
   }

@@ -8,14 +8,15 @@ export default ({ app, store }) => {
   // This way we can use it in middleware and pages asyncData/fetch
   app.i18n = new VueI18n({
     locale: store.state.locale,
-    fallbackLocale: 'en',
+    fallbackLocale: 'ja',
     messages: {
-      'en': require('~/locales/en.json'),
-      'ja': require('~/locales/ja.json')
+      'ja': require('~/locales/ja.json'),
+      'en': require('~/locales/en.json')
     }
   })
 
   app.i18n.path = (link) => {
+    // console.log(link);
     if (app.i18n.locale === app.i18n.fallbackLocale) {
       return `/${link}`
     }

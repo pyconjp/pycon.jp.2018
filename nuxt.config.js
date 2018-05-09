@@ -8,10 +8,13 @@ module.exports = {
   css: [
     'uikit/dist/css/uikit.min.css',
   ],
-  // router: {
-  //   middleware: 'i18n'
-  // },
-  // plugins: ['~/plugins/i18n.js'],
+  router: {
+    middleware: 'i18n'
+  },
+  plugins: ['~/plugins/i18n.js'],
+  generate: {
+    routes: ['/','/en']
+  },
   meta: [
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },

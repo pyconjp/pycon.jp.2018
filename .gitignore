@@ -82,3 +82,6 @@ env
 tmp
 # nuxt
 .nuxt
+
+dist
+!.keep
