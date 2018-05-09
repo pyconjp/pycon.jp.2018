@@ -39,7 +39,7 @@ https://ja.nuxtjs.org/guide/directory-structure#%E3%83%87%E3%82%A3%E3%83%AC%E3%8
 2. `_lang`ディレクトリに `page_name` ディレクトリを作成（トップだけ特別になっているので注意
 3. `page_name` ディレクトリに `index.vue` を作成、テンプレートファイル(pug)やスタイル(sass)ファイルになるべく分割してください
 4. `import PageName from './_lang/page_name/index'`
-   `export PageName Top` と`page_name.vue`の`script`に記載する
+   `export default PageName` と`page_name.vue`の`script`に記載する
 
 # 多言語化
 `locales`ディレクトリ に `ja.json` と `en.json`に記載して,vueファイルなどで`this.$t('top.title')`(テンプレートの場合はthisいらない）として使います。
