@@ -5,6 +5,3 @@
     name: 'header'
   }
 </script>
-
-<style scoped>
-</style>

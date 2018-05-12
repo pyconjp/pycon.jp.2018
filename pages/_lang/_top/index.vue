@@ -2,15 +2,28 @@
 
 <script>
   import { mapGetters } from 'vuex'
+  import TopHero from '~/components/TopHero'
+  import TopKeyNote from '~/components/TopKeyNote'
+  import TopNews from '~/components/TopNews'
+  import TopPlace from '~/components/TopPlace'
+  import TopOther from '~/components/TopOther'
+  import TopSponsor from '~/components/TopSponsor'
+  import TopStaff from '~/components/TopStaff'
 
   export default {
     name: 'top',
+    components: {
+      TopHero,
+      TopKeyNote,
+      TopNews,
+      TopPlace,
+      TopOther,
+      TopSponsor,
+      TopStaff
+    },
     computed: mapGetters({
       locale: 'locale'
     }),
-    // mounted(){
-    //   console.log(this.$store);
-    // },
     head () {
       return {
         title: this.$t('top.title')
