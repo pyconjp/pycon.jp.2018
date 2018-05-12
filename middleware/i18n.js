@@ -8,16 +8,10 @@ export default function ({ isHMR, app, store, route, params, error, redirect }) 
     return error({ message: 'This page could not be found.', statusCode: 404 })
   }
   // Set locale
-  // console.log(params)
-  // console.log(locale)
   store.commit('SET_LANG', locale)
   app.i18n.locale = store.state.locale
   // If route is /<defaultLocale>/... -> redirect to /...
-  // console.log(defaultLocale)
-  // console.log(route)
   if (locale === defaultLocale && route.fullPath.indexOf('/' + defaultLocale) === 0) {
-    // console.log('hoge')
-
     const toReplace = '^/' + defaultLocale
     const re = new RegExp(toReplace)
     return redirect(
