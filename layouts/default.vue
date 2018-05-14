@@ -2,7 +2,7 @@
     div
         header-nav
         nuxt
-        common-footer
+        //common-footer
 </template>
 <script>
   import HeaderNav from '../components/HeaderNav'
@@ -12,7 +12,7 @@
     name: 'default',
     components: {
       HeaderNav,
-      CommonFooter
+      // CommonFooter
     }
   }
 </script>
