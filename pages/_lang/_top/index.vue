@@ -9,7 +9,7 @@
   import TopOther from '~/components/TopOther'
   import TopSponsor from '~/components/TopSponsor'
   import TopStaff from '~/components/TopStaff'
-
+  import CommonFooter from '~/components/CommonFooter'
   export default {
     name: 'top',
     components: {
@@ -19,7 +19,8 @@
       TopPlace,
       TopOther,
       TopSponsor,
-      TopStaff
+      TopStaff,
+      CommonFooter
     },
     computed: mapGetters({
       locale: 'locale'
