@@ -6,7 +6,7 @@
 </template>
 <script>
   import HeaderNav from '../components/HeaderNav'
-  import CommonFooter from '../components/CommonFooter'
+  // import CommonFooter from '../components/CommonFooter'
 
   export default {
     name: 'default',
