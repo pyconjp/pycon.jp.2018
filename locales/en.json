@@ -1,8 +1,17 @@
 {
   "header": {
     "navi": {
-      "top":"TOP",
-      "sponsor":"Sponsor"
+      "top":{
+        "top": "TOP",
+        "keynote":"Key note",
+        "news":"News",
+        "place":"Place",
+        "other":"Other",
+        "sponsor":"Sponsor",
+        "staff":"Staff"
+      },
+      "sponsor":"Sponsor",
+      "lang": "日本語版"
     }
   },
   "top": {

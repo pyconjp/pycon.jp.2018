@@ -1,11 +1,83 @@
-div(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar")
-    .uk-navbar-right
+div(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar" uk-navbar)
+    .uk-navbar-right(class="uk-hidden@s")
+        a.uk-button.uk-button-default(href="#MobileMenu" uk-toggle) MobileMenu
+        #MobileMenu(uk-offcanvas)
+            .uk-offcanvas-bar
+                ul.uk-nav.uk-nav-default
+                    li(v-bind:class="{'uk-active':isActive('index')}")
+                        a(href="#") {{ $t('header.navi.top.top') }}
+                        ul.uk-nav-sub(v-if='$nuxt.$route.name !== "index"')
+                            li
+                                nuxt-link(:to="$i18n.path('')" exact) {{ $t('header.navi.top.top') }}
+                            li
+                                nuxt-link(:to="$i18n.path('#TopKeyNote')"  exact) {{ $t('header.navi.top.keynote') }}
+                            li
+                                nuxt-link(:to="$i18n.path('#TopNews')"  exact) {{ $t('header.navi.top.news') }}
+                            li
+                                nuxt-link(:to="$i18n.path('#TopPlace')"  exact) {{ $t('header.navi.top.place') }}
+                            li
+                                nuxt-link(:to="$i18n.path('#TopOther')"  exact) {{ $t('header.navi.top.other') }}
+                            li
+                                nuxt-link(:to="$i18n.path('#TopSponsor')"  exact) {{ $t('header.navi.top.sponsor') }}
+                            li
+                                nuxt-link(:to="$i18n.path('#TopStaff')"  exact) {{ $t('header.navi.top.staff') }}
+                        ul.uk-nav-sub(v-else)
+                            li
+                                a(href="#TopHero") {{ $t('header.navi.top.top') }}
+                            li
+                                a(href="#TopKeyNote") {{ $t('header.navi.top.keynote') }}
+                            li
+                                a(href="#TopNews") {{ $t('header.navi.top.news') }}
+                            li
+                                a(href="#TopPlace") {{ $t('header.navi.top.place') }}
+                            li
+                                a(href="#TopOther") {{ $t('header.navi.top.other') }}
+                            li
+                                a(href="#TopSponsor") {{ $t('header.navi.top.sponsor') }}
+                            li
+                                a(href="#TopStaff") {{ $t('header.navi.top.staff') }}
+                    li(v-bind:class="{'uk-active':isActive('sponsor')}")
+                        nuxt-link(:to="$i18n.path('sponsor')" exact)
+                            | {{ $t('header.navi.sponsor') }}
+                    li
+                        nuxt-link(:to="getLangPath()" exact) {{ $t('header.navi.lang') }}
+    .uk-navbar-right(class="uk-visible@s")
         ul.uk-navbar-nav(class="uk-visible@s")
-            li.uk-active
-                nuxt-link(:to="$i18n.path('')" exact)
-                    | {{ $t('header.navi.top') }}
-            li
+            li(v-bind:class="{'uk-active':isActive('index')}")
+                a(href="#") {{ $t('header.navi.top.top') }}
+                .uk-navbar-dropdown
+                    ul.uk-nav.uk-navbar-dropdown-nav(v-if='$nuxt.$route.name !== "index"')
+                        li
+                            nuxt-link(:to="$i18n.path('')" exact) {{ $t('header.navi.top.top') }}
+                        li
+                            nuxt-link(:to="$i18n.path('#TopKeyNote')"  exact) {{ $t('header.navi.top.keynote') }}
+                        li
+                            nuxt-link(:to="$i18n.path('#TopNews')"  exact) {{ $t('header.navi.top.news') }}
+                        li
+                            nuxt-link(:to="$i18n.path('#TopPlace')"  exact) {{ $t('header.navi.top.place') }}
+                        li
+                            nuxt-link(:to="$i18n.path('#TopOther')"  exact) {{ $t('header.navi.top.other') }}
+                        li
+                            nuxt-link(:to="$i18n.path('#TopSponsor')"  exact) {{ $t('header.navi.top.sponsor') }}
+                        li
+                            nuxt-link(:to="$i18n.path('#TopStaff')"  exact) {{ $t('header.navi.top.staff') }}
+                    ul.uk-nav.uk-navbar-dropdown-nav(v-else)
+                        li
+                            a(href="#TopHero") {{ $t('header.navi.top.top') }}
+                        li
+                            a(href="#TopKeyNote") {{ $t('header.navi.top.keynote') }}
+                        li
+                            a(href="#TopNews") {{ $t('header.navi.top.news') }}
+                        li
+                            a(href="#TopPlace") {{ $t('header.navi.top.place') }}
+                        li
+                            a(href="#TopOther") {{ $t('header.navi.top.other') }}
+                        li
+                            a(href="#TopSponsor") {{ $t('header.navi.top.sponsor') }}
+                        li
+                            a(href="#TopStaff") {{ $t('header.navi.top.staff') }}
+            li(v-bind:class="{'uk-active':isActive('sponsor')}")
                 nuxt-link(:to="$i18n.path('sponsor')" exact)
                     | {{ $t('header.navi.sponsor') }}
-            //li
-            //    | {{}}
+            li
+                nuxt-link(:to="getLangPath()" exact) {{ $t('header.navi.lang') }}
