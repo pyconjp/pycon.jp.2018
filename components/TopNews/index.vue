@@ -1,8 +1,7 @@
 <template lang="pug" src="./news.pug"/>
 
 <script>
-  import { mapGetters, mapActions } from 'vuex'
-  import { FETCH_PYCON_JP_BLOG_ATOM } from '../../store/mutation-types'
+  import moment from "moment"
 
   export default {
     name: 'top-news',
@@ -11,14 +10,11 @@
         type: Object,
         default: {}
       }
+    },
+    methods: {
+      getDate(pubDate){
+        return moment(pubDate, "dddd, DD MMM YYYY").format("YYYY/MM/DD(ddd)")
+      }
     }
-    // mounted () {
-    //   this.FETCH_PYCON_JP_BLOG_ATOM()
-    // },
-    // methods: {
-    //   ...mapActions([
-    //     FETCH_PYCON_JP_BLOG_ATOM
-    //   ])
-    // }
   }
 </script>
