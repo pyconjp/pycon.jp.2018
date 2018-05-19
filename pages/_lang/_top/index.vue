@@ -9,7 +9,6 @@
   import TopOther from '~/components/TopOther'
   import TopSponsor from '~/components/TopSponsor'
   import TopStaff from '~/components/TopStaff'
-  // import HeaderNav from '~/components/HeaderNav'
   import CommonFooter from '~/components/CommonFooter'
   export default {
     name: 'top',
@@ -21,15 +20,14 @@
       TopOther,
       TopSponsor,
       TopStaff,
-      // HeaderNav,
       CommonFooter
     },
-    // computed: mapGetters({
-    //   locale: 'locale'
-    // }),
     head () {
       return {
         title: this.$t('top.title'),
+        // script: [ //Todo:Key
+        //   {src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDlpo1FgIi-XNoyDgzoGYZBo8yC_Xut5Ok'}
+        // ]
       }
     }
   }
