@@ -1,7 +1,15 @@
 {
   "header": {
     "navi": {
-      "top":"トップ",
+      "top":{
+        "top": "トップ",
+        "keynote":"キーノート",
+        "news":"ニュース",
+        "place":"場所",
+        "other":"その他",
+        "sponsor":"スポンサー",
+        "staff":"スタッフ"
+      },
       "sponsor":"スポンサー"
     }
   },

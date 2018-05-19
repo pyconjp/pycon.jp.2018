@@ -9,6 +9,7 @@
   import TopOther from '~/components/TopOther'
   import TopSponsor from '~/components/TopSponsor'
   import TopStaff from '~/components/TopStaff'
+  // import HeaderNav from '~/components/HeaderNav'
   import CommonFooter from '~/components/CommonFooter'
   export default {
     name: 'top',
@@ -20,6 +21,7 @@
       TopOther,
       TopSponsor,
       TopStaff,
+      // HeaderNav,
       CommonFooter
     },
     computed: mapGetters({

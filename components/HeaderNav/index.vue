@@ -2,6 +2,11 @@
 
 <script>
   export default {
-    name: 'header'
+    name: 'header',
+    methods: {
+        isActive(route_name){
+          return this.$nuxt.$route.name === route_name
+        }
+    }
   }
 </script>

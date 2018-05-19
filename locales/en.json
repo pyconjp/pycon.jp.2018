@@ -1,7 +1,15 @@
 {
   "header": {
     "navi": {
-      "top":"TOP",
+      "top":{
+        "top": "TOP",
+        "keynote":"Key note",
+        "news":"News",
+        "place":"Place",
+        "other":"Other",
+        "sponsor":"Sponsor",
+        "staff":"Staff"
+      },
       "sponsor":"Sponsor"
     }
   },
