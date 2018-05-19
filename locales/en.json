@@ -15,8 +15,26 @@
     }
   },
   "top": {
-    "title": "Top"
-  },
+    "title": "Top",
+    "map": {
+      "place": "Venue",
+      "conference": {
+        "text": {
+          "head": "Conference"
+        },
+        "venue": "大田区産業プラザ",
+        "address": "〒144-0035 東京都大田区南蒲田一丁目20番20号",
+        "access": "京浜急行電鉄本線・空港線京急蒲田駅から徒歩3分"
+      },
+      "sprint": {
+        "text": {
+          "head": "Sprint"
+        },
+        "venue": "HDE",
+        "address": "じゅうしょー",
+        "access": "あくせすー"
+      }
+    }},
   "sponsor": {
     "title": "Sponsor"
   }
