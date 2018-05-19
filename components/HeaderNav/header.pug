@@ -39,6 +39,8 @@ div(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; b
                     li(v-bind:class="{'uk-active':isActive('sponsor')}")
                         nuxt-link(:to="$i18n.path('sponsor')" exact)
                             | {{ $t('header.navi.sponsor') }}
+                    li
+                        nuxt-link(:to="getLangPath()" exact) {{ $t('header.navi.lang') }}
     .uk-navbar-right(class="uk-visible@s")
         ul.uk-navbar-nav(class="uk-visible@s")
             li(v-bind:class="{'uk-active':isActive('index')}")
@@ -77,3 +79,5 @@ div(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; b
             li(v-bind:class="{'uk-active':isActive('sponsor')}")
                 nuxt-link(:to="$i18n.path('sponsor')" exact)
                     | {{ $t('header.navi.sponsor') }}
+            li
+                nuxt-link(:to="getLangPath()" exact) {{ $t('header.navi.lang') }}

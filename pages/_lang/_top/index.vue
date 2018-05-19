@@ -24,12 +24,12 @@
       // HeaderNav,
       CommonFooter
     },
-    computed: mapGetters({
-      locale: 'locale'
-    }),
+    // computed: mapGetters({
+    //   locale: 'locale'
+    // }),
     head () {
       return {
-        title: this.$t('top.title')
+        title: this.$t('top.title'),
       }
     }
   }
