@@ -2,10 +2,7 @@
 
 <script>
   export default {
-    name: 'top-place',
-    mounted () {
-      // const map_data = [{'map_elem': document.getElementById('ConferenceMap'), 'lat_lang': {'lat': 35.558877, 'lang': '139.724089'}}]
-    }
+    name: 'top-place'
   }
 </script>
 

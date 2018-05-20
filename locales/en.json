@@ -34,7 +34,12 @@
         "address": "じゅうしょー",
         "access": "あくせすー"
       }
-    }},
+    },
+    "news": {
+      "head": "news",
+      "more": "more"
+    }
+  },
   "sponsor": {
     "title": "Sponsor"
   }

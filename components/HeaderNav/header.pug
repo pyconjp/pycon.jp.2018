@@ -15,12 +15,12 @@ div(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; b
                                 nuxt-link(:to="$i18n.path('#TopNews')"  exact) {{ $t('header.navi.top.news') }}
                             li
                                 nuxt-link(:to="$i18n.path('#TopPlace')"  exact) {{ $t('header.navi.top.place') }}
-                            li
-                                nuxt-link(:to="$i18n.path('#TopOther')"  exact) {{ $t('header.navi.top.other') }}
-                            li
-                                nuxt-link(:to="$i18n.path('#TopSponsor')"  exact) {{ $t('header.navi.top.sponsor') }}
-                            li
-                                nuxt-link(:to="$i18n.path('#TopStaff')"  exact) {{ $t('header.navi.top.staff') }}
+                            //li
+                            //    nuxt-link(:to="$i18n.path('#TopOther')"  exact) {{ $t('header.navi.top.other') }}
+                            //li
+                            //    nuxt-link(:to="$i18n.path('#TopSponsor')"  exact) {{ $t('header.navi.top.sponsor') }}
+                            //li
+                            //    nuxt-link(:to="$i18n.path('#TopStaff')"  exact) {{ $t('header.navi.top.staff') }}
                         ul.uk-nav-sub(v-else)
                             li
                                 a(href="#TopHero") {{ $t('header.navi.top.top') }}
@@ -30,12 +30,12 @@ div(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; b
                                 a(href="#TopNews") {{ $t('header.navi.top.news') }}
                             li
                                 a(href="#TopPlace") {{ $t('header.navi.top.place') }}
-                            li
-                                a(href="#TopOther") {{ $t('header.navi.top.other') }}
-                            li
-                                a(href="#TopSponsor") {{ $t('header.navi.top.sponsor') }}
-                            li
-                                a(href="#TopStaff") {{ $t('header.navi.top.staff') }}
+                            //li
+                            //    a(href="#TopOther") {{ $t('header.navi.top.other') }}
+                            //li
+                            //    a(href="#TopSponsor") {{ $t('header.navi.top.sponsor') }}
+                            //li
+                            //    a(href="#TopStaff") {{ $t('header.navi.top.staff') }}
                     li(v-bind:class="{'uk-active':isActive('sponsor')}")
                         nuxt-link(:to="$i18n.path('sponsor')" exact)
                             | {{ $t('header.navi.sponsor') }}
@@ -55,12 +55,12 @@ div(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; b
                             nuxt-link(:to="$i18n.path('#TopNews')"  exact) {{ $t('header.navi.top.news') }}
                         li
                             nuxt-link(:to="$i18n.path('#TopPlace')"  exact) {{ $t('header.navi.top.place') }}
-                        li
-                            nuxt-link(:to="$i18n.path('#TopOther')"  exact) {{ $t('header.navi.top.other') }}
-                        li
-                            nuxt-link(:to="$i18n.path('#TopSponsor')"  exact) {{ $t('header.navi.top.sponsor') }}
-                        li
-                            nuxt-link(:to="$i18n.path('#TopStaff')"  exact) {{ $t('header.navi.top.staff') }}
+                        //li
+                        //    nuxt-link(:to="$i18n.path('#TopOther')"  exact) {{ $t('header.navi.top.other') }}
+                        //li
+                        //    nuxt-link(:to="$i18n.path('#TopSponsor')"  exact) {{ $t('header.navi.top.sponsor') }}
+                        //li
+                        //    nuxt-link(:to="$i18n.path('#TopStaff')"  exact) {{ $t('header.navi.top.staff') }}
                     ul.uk-nav.uk-navbar-dropdown-nav(v-else)
                         li
                             a(href="#TopHero") {{ $t('header.navi.top.top') }}
@@ -70,12 +70,12 @@ div(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; b
                             a(href="#TopNews") {{ $t('header.navi.top.news') }}
                         li
                             a(href="#TopPlace") {{ $t('header.navi.top.place') }}
-                        li
-                            a(href="#TopOther") {{ $t('header.navi.top.other') }}
-                        li
-                            a(href="#TopSponsor") {{ $t('header.navi.top.sponsor') }}
-                        li
-                            a(href="#TopStaff") {{ $t('header.navi.top.staff') }}
+                        //li
+                        //    a(href="#TopOther") {{ $t('header.navi.top.other') }}
+                        //li
+                        //    a(href="#TopSponsor") {{ $t('header.navi.top.sponsor') }}
+                        //li
+                        //    a(href="#TopStaff") {{ $t('header.navi.top.staff') }}
             li(v-bind:class="{'uk-active':isActive('sponsor')}")
                 nuxt-link(:to="$i18n.path('sponsor')" exact)
                     | {{ $t('header.navi.sponsor') }}

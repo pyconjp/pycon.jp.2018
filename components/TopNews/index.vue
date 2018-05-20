@@ -1,7 +1,20 @@
-<template lang="pug" src="./news.pug" />
+<template lang="pug" src="./news.pug"/>
 
 <script>
+  import moment from "moment"
+
   export default {
-    name: 'top-news'
+    name: 'top-news',
+    props: {
+      blog_data: {
+        type: Object,
+        default: {}
+      }
+    },
+    methods: {
+      getDate(pubDate){
+        return moment(pubDate, "dddd, DD MMM YYYY").format("YYYY/MM/DD(ddd)")
+      }
+    }
   }
 </script>
