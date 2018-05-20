@@ -1,25 +1,27 @@
 #footer.uk-section.uk-section-default
     .uk-container.uk-text-center
         p#sns
-            a(href='https://twitter.com/pyconj')
+            a(href='https://twitter.com/pyconj' target='_blank')
                 img(src='~/static/footer/icon-twitter.png', alt='twitter')
             a(href='https://www.facebook.com/PyConJP')
                 img(src='~/static/footer/icon-facebook.png', alt='facebook')
-            a(href='http://pyconjp-fellow.herokuapp.com/', title='Join PyCon JP Fellow on Slack!')
+            a(href='http://pyconjp-fellow.herokuapp.com/', title='Join PyCon JP Fellow on Slack!' target='_blank')
                 img(src='~/static/footer/icon-slack.png')
         p#footer-venue
-            a.uk-thumbnail.uk-thumbnail-mini(href='http://www.pycon.jp/')
-              img(src='~/static/footer/pyconjp-logo.png',alt='PyCon JP Committee')
-            br
-            |主催: 一般社団法人PyCon JP
+            ul.uk-list
+                li.uk-active
+                    a.uk-thumbnail.uk-thumbnail-mini(href='http://www.pycon.jp/')
+                    img(src='~/static/footer/pyconjp-logo.png',alt='PyCon JP Committee' target='_blank')
+                li
+                    span 主催: 一般社団法人PyCon JP
             p PyCon JP 2018 in Tokyo is a production of the
                 a(href='http://www.pycon.jp/', target='blank') PyCon JP Committee
                 |. Contact :
                 a(href='mailto:pycon@pycon.jp') pycon@pycon.jp
             p.footer-creativeCommons
-                a(href='https://creativecommons.org/licenses/by/4.0/')
+                a(href='https://creativecommons.org/licenses/by/4.0/' target='_blank')
                     img(src='~/static/footer/88x31.png', alt='クリエイティブ・コモンズ・ライセンス')
-                br
+            p
                 |この Webサイト は
-                a(href='https://creativecommons.org/licenses/by/4.0/') クリエイティブ・コモンズ 表示 4.0 国際 ライセンス
+                a(href='https://creativecommons.org/licenses/by/4.0/' target='_blank') クリエイティブ・コモンズ 表示 4.0 国際 ライセンス
                 |の下に提供されています。

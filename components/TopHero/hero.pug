@@ -10,25 +10,25 @@
             ul.uk-list
                 li.uk-active
                     |{{ $t('top.hero.sprint.eventname') }} 
-                    br
+                li
                     |{{ $t('top.hero.sprint.date') }} @{{ $t('top.map.sprint.venue') }}
                 li
                     |{{ $t('top.hero.tutorial.eventname') }} 
-                    br
+                li
                     |{{ $t('top.hero.tutorial.date') }} @ {{ $t('top.map.conference.venue') }}
                 li 
                     |{{ $t('top.hero.conference.eventname') }} 
-                    br
+                li
                     |{{ $t('top.hero.conference.date-day1') }}/ {{ $t('top.hero.conference.date-day2') }}@ {{ $t('top.map.conference.venue') }}
         #application
             p.uk-margin
-                a.uk-button.uk-button-primary.uk-button-larg(href='#')                
+                a.uk-button.uk-button-primary.uk-button-larg(href='#' target='_blank')                
                     |{{ $t('top.hero.application.talk') }}                
-                a.uk-button.uk-button-default.uk-button-larg(href='https://docs.google.com/forms/d/e/1FAIpQLSdtYlETMPrz_LK-kSDsnJjMPcIkl1OKpRqfnse6d2mPr3MPaw/viewform')                
+                a.uk-button.uk-button-default.uk-button-larg(href='https://docs.google.com/forms/d/e/1FAIpQLSdtYlETMPrz_LK-kSDsnJjMPcIkl1OKpRqfnse6d2mPr3MPaw/viewform' target='_blank')                
                     |{{ $t('top.hero.application.staff') }}
-                button.uk-button.uk-button-default.uk-button-larg.uk-inline(disabled)
+                button.uk-button.uk-button-default.uk-button-larg.uk-inline(disabled target='_blank')
                     |{{ $t('top.hero.application.ticket') }}                     
         #links
             span(uk-icon='twitter')
-            a(href='https://twitter.com/search?f=tweets&q=%23pyconjp')
+            a(href='https://twitter.com/search?f=tweets&q=%23pyconjp' target='_blank')
                 |#pyconjp
