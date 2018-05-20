@@ -17,18 +17,24 @@
   "top": {
     "title": "Top",
     "hero": {
+      "theme": {
+        "text": {
+          "head": "テーマ"
+        },
+        "2018": "広がるPython"
+      },
       "sprint": {
         "text": {
           "head": "Sprint"
         },
-        "evenetname": "Sprint",
+        "eventname": "Sprint",
         "date": "2018/9/15(Sat) "
       },
       "tutorial": {
         "text": {
           "head": "Tutorial"
         },
-        "evenetname": "Tutorial",
+        "eventname": "Tutorial",
         "date": "2018/9/16(Sun) "
       },
 
@@ -36,7 +42,7 @@
         "text": {
           "head": "Conference"
         },
-        "evenetname": "Conference Day1 Day2",
+        "eventname": "Conference Day1 Day2",
         "date-day1": "2018/9/17(Mon)",
         "date-day2": "2018/9/18(Tue)"
       },
@@ -56,7 +62,7 @@
           "head": "Conference"
         },
         "venue": "Ota City Industrial Plaza",
-        "address": "1 Chome-20-２０ Minamikamata, Ōta, Tokyo 144-0035",
+        "address": "1 Chome-20-２０ Minamikamata, Ōta, TOKYO,144-0035 JAPAN",
         "access": "京浜急行電鉄本線・空港線京急蒲田駅から徒歩3分"
       },
       "sprint": {

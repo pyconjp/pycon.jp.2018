@@ -17,18 +17,24 @@
   "top": {
     "title": "トップ",
     "hero": {
+      "theme": {
+        "text": {
+          "head": "テーマ"
+        },
+        "2018": "広がるPython"
+      },
       "sprint": {
         "text": {
           "head": "スプリント"
         },
-        "evenetname": "スプリント",
+        "eventname": "スプリント",
         "date": "2018/9/15(土) "
       },
       "tutorial": {
         "text": {
           "head": "チュートリアル/ウェルカムパーティー"
         },
-        "evenetname": "チュートリアル",
+        "eventname": "チュートリアル",
         "date": "2018/9/16(日) "
       },
 
@@ -36,7 +42,7 @@
         "text": {
           "head": "カンファレンス"
         },
-        "evenetname": "カンファレンス Day1 Day2",
+        "eventname": "カンファレンス Day1 Day2",
         "date-day1": "2018/9/17(月・祝)",
         "date-day2": "2018/9/18(火)"
       },

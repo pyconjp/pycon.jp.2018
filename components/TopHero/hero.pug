@@ -3,41 +3,32 @@
        #banner
        h1.uk-heading-line.uk-text-center
         span
-            |広がるPython
-        //- img(src='~/static/hero/sample.png', alt='Theme：広がるPython')
-        
+            |{{ $t('top.hero.theme.2018') }} 
+        //- img(src='~/static/hero/sample.png', alt='Theme：広がるPython')        
        #schedule
         p
             ul.uk-list
                 li.uk-active
-                    |{{ $t('top.hero.sprint.evenetname') }} 
+                    |{{ $t('top.hero.sprint.eventname') }} 
                     br
                     |{{ $t('top.hero.sprint.date') }} @{{ $t('top.map.sprint.venue') }}
                 li
-                    |{{ $t('top.hero.tutorial.evenetname') }} 
+                    |{{ $t('top.hero.tutorial.eventname') }} 
                     br
                     |{{ $t('top.hero.tutorial.date') }} @ {{ $t('top.map.conference.venue') }}
                 li 
-                    |{{ $t('top.hero.conference.evenetname') }} 
+                    |{{ $t('top.hero.conference.eventname') }} 
                     br
                     |{{ $t('top.hero.conference.date-day1') }}/ {{ $t('top.hero.conference.date-day2') }}@ {{ $t('top.map.conference.venue') }}
-
-  
         #application
             p.uk-margin
-                a.uk-button.uk-button-primary.uk-button-larg.uk-margin-medium-right(href='#')                
+                a.uk-button.uk-button-primary.uk-button-larg(href='#')                
                     |{{ $t('top.hero.application.talk') }}                
-                a.uk-button.uk-button-default.uk-button-larg.uk-margin-medium-right(href='https://docs.google.com/forms/d/e/1FAIpQLSdtYlETMPrz_LK-kSDsnJjMPcIkl1OKpRqfnse6d2mPr3MPaw/viewform')                
+                a.uk-button.uk-button-default.uk-button-larg(href='https://docs.google.com/forms/d/e/1FAIpQLSdtYlETMPrz_LK-kSDsnJjMPcIkl1OKpRqfnse6d2mPr3MPaw/viewform')                
                     |{{ $t('top.hero.application.staff') }}
                 button.uk-button.uk-button-default.uk-button-larg.uk-inline(disabled)
-                    |{{ $t('top.hero.application.ticket') }} 
-                    
+                    |{{ $t('top.hero.application.ticket') }}                     
         #links
-            ul.uk-list
-                li.uk-active
-                    span(uk-icon='twitter')
-                    a(href='https://twitter.com/search?f=tweets&q=%23pyconjp')
-                        |#pyconjp
-
-                    
-            
+            span(uk-icon='twitter')
+            a(href='https://twitter.com/search?f=tweets&q=%23pyconjp')
+                |#pyconjp
