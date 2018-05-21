@@ -37,7 +37,6 @@
         "eventname": "チュートリアル",
         "date": "2018/9/16(日) "
       },
-
       "conference": {
         "text": {
           "head": "カンファレンス"
@@ -53,6 +52,27 @@
         "talk": "トークに応募する",
         "staff": "スタッフに募集する",
         "ticket": "チケットを購入する"
+      }
+    },
+    "keynote": {
+        "text": {
+          "head": "キーノート"
+      },
+      "japanese": {
+        "text": {
+          "head": "国内のキーノート"
+        },
+        "name": "発表者の方の名前",
+        "about": "発表者の方の概要---- ",
+        "title":"発表タイトル"
+      },
+      "english": {
+        "text": {
+          "head": "国外のキーノート"
+        },
+        "name": "発表者の方の名前-en",
+        "about": "発表者の方の概要----en ",
+        "title":"発表タイトル-en"
       }
     },
     "map": {
@@ -77,5 +97,13 @@
   },
   "sponsor": {
     "title": "スポンサー"
+  },
+  "footer": {
+        "host": "主催: 一般社団法人PyCon JP",
+        "creativeCommons":{
+          "text":"この Webサイト は",
+          "license":"クリエイティブ・コモンズ 表示 4.0 国際 ライセンス",
+          "text-end":"の下に提供されています。"
+        }
   }
 }

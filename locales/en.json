@@ -55,6 +55,27 @@
         "ticket": "Get Your tickets"
       }
     },
+    "keynote": {
+      "text": {
+        "head": "Keynote"
+    },
+    "japanese": {
+      "text": {
+        "head": "国内のキーノート"
+      },
+      "name": "name-ja",
+      "about": "about-ja ",
+      "title":"title-ja"
+    },
+    "english": {
+      "text": {
+        "head": "国外のキーノート"
+      },
+      "name": "name-en",
+      "about": "about----en ",
+      "title":"title-en"
+    }
+  },
      "map": {
       "place": "Venue",
       "conference": {
@@ -76,5 +97,13 @@
     }},
   "sponsor": {
     "title": "Sponsor"
+  },
+  "footer": {
+        "host": "Host:PyCon JP Committee",
+        "creativeCommons":{
+          "text":"This web site is licensed under a",
+          "license":"Creative Commons Attribution 4.0 International License",
+          "text-end":""
+        }
   }
 }
