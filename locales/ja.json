@@ -16,6 +16,45 @@
   },
   "top": {
     "title": "トップ",
+    "hero": {
+      "theme": {
+        "text": {
+          "head": "テーマ"
+        },
+        "2018": "広がるPython"
+      },
+      "sprint": {
+        "text": {
+          "head": "スプリント"
+        },
+        "eventname": "スプリント",
+        "date": "2018/9/15(土) "
+      },
+      "tutorial": {
+        "text": {
+          "head": "チュートリアル/ウェルカムパーティー"
+        },
+        "eventname": "チュートリアル",
+        "date": "2018/9/16(日) "
+      },
+
+      "conference": {
+        "text": {
+          "head": "カンファレンス"
+        },
+        "eventname": "カンファレンス Day1 Day2",
+        "date-day1": "2018/9/17(月・祝)",
+        "date-day2": "2018/9/18(火)"
+      },
+      "application": {
+        "text": {
+          "head": "応募"
+        },
+        "talk": "トークに応募する",
+        "staff": "スタッフに募集する",
+        "ticket": "チケットを購入する"
+      }
+    },
     "map": {
       "place": "会場",
       "conference": {
@@ -31,8 +70,8 @@
           "head": "スプリント"
         },
         "venue": "HDE",
-        "address": "じゅうしょー",
-        "access": "あくせすー"
+        "address": "〒150-0036　東京都渋谷区南平台町16番28号 グラスシティ渋谷",
+        "access": "東急東横線・田園都市線・地下鉄銀座線・地下鉄半蔵門線・副都心線・JR渋谷駅より徒歩10分"
       }
     },
     "news": {
