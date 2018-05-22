@@ -13,7 +13,7 @@
                     a.uk-thumbnail.uk-thumbnail-mini(href='http://www.pycon.jp/')
                     img(src='~/static/footer/pyconjp-logo.png',alt='PyCon JP Committee' target='_blank')
                 li
-                    span 主催: 一般社団法人PyCon JP
+                    span {{ $t('footer.host') }}  
             p PyCon JP 2018 in Tokyo is a production of the
                 a(href='http://www.pycon.jp/', target='blank') PyCon JP Committee
                 |. Contact :
@@ -22,6 +22,6 @@
                 a(href='https://creativecommons.org/licenses/by/4.0/' target='_blank')
                     img(src='~/static/footer/88x31.png', alt='クリエイティブ・コモンズ・ライセンス')
             p
-                |この Webサイト は
-                a(href='https://creativecommons.org/licenses/by/4.0/' target='_blank') クリエイティブ・コモンズ 表示 4.0 国際 ライセンス
-                |の下に提供されています。
+                |{{ $t('footer.creativeCommons.text') }} 
+                a(href='https://creativecommons.org/licenses/by/4.0/' target='_blank') {{ $t('footer.creativeCommons.license') }}  
+                |{{ $t('footer.creativeCommons.text-end') }} 
