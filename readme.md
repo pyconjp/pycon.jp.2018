@@ -74,3 +74,16 @@ https://ja.nuxtjs.org/guide/directory-structure#%E3%83%87%E3%82%A3%E3%83%AC%E3%8
 `en` -> `/en/sponsor`
 
 リンクパスは `nuxt-link(:to="$i18n.path('sponsor')" exact)` のように対応`(HeaderNavi参照
+
+# その他
+## 開発環境のPort変更
+
+package.json
+
+```json
+"config": {
+  "nuxt": {
+    "host": "0.0.0.0",
+    "port": "4000" // ここを変更
+  }
+},
