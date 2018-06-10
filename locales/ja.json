@@ -97,10 +97,10 @@
     "news": {
       "head": "ニュース",
       "more": "もっと読む"
+    },
+      "sponsor": {
+      "head": "スポンサー"
     }
-  },
-  "sponsor": {
-    "title": "スポンサー"
   },
   "footer": {
         "host": "主催: 一般社団法人PyCon JP",

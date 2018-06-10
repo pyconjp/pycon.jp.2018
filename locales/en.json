@@ -98,10 +98,9 @@
     "news": {
       "head": "news",
       "more": "more"
+    },  "sponsor": {
+      "title": "Sponsor"
     }
-  },
-  "sponsor": {
-    "title": "Sponsor"
   },
   "footer": {
         "host": "Host:PyCon JP Committee",
