@@ -1,2 +1,8 @@
 #TopSponsor.uk-section.uk-section-default
-    .uk-container TopSponsor
+    .uk-container.uk-text-center
+        h2.uk-text-center {{ $t('top.sponsor.head') }}
+        ul.uk-thumbnav(uk-margin)
+            // Todo:本番データが来たら要修正
+            li(v-for="sponsor in sponsor_array")
+                a(:href="sponsor.link" target='_blank')
+                    img(:src="sponsor.image" :alt="sponsor.alt" uk-img)
