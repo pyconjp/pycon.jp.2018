@@ -2,21 +2,7 @@
     .uk-container.uk-text-center
         h2.uk-text-center {{ $t('top.sponsor.head') }}
         ul.uk-thumbnav(uk-margin)
-            -
-                var list = [
-                {
-                    link: '#',                
-                    image: 'https://placehold.jp/190x100.png',
-                    alt: 'スポンサー1',
-
-                },
-                {
-                    link: '#',                
-                    image: 'https://placehold.jp/190x100.png',
-                    alt: 'スポンサー2',
-                },
-                ]
-            each sponser in list
-                li 
-                    a(href=sponser.link target='_blank')
-                        img(src=sponser.image alt=sponser.alt uk-img)
+            // Todo:本番データが来たら要修正
+            li(v-for="sponsor in sponsor_array")
+                a(:href="sponsor.link" target='_blank')
+                    img(:src="sponsor.image" :alt="sponsor.alt" uk-img)
