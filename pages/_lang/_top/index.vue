@@ -3,13 +3,13 @@
 <script>
   // import { mapGetters } from 'vuex'
   import TopHero from '~/components/TopHero'
-  import TopKeyNote from '~/components/TopKeyNote'
+  import TopKeynote from '~/components/TopKeynote'
   import TopNews from '~/components/TopNews'
   import TopPlace from '~/components/TopPlace'
   import TopOther from '~/components/TopOther'
   import TopSponsor from '~/components/TopSponsor'
   import TopStaff from '~/components/TopStaff'
-  import CommonFooter from '~/components/CommonFooter'
+  import GlobalFooter from '~/components/GlobalFooter'
   import fetch from 'node-fetch'
   import convert from 'xml-js'
 
@@ -17,13 +17,13 @@
     name: 'top',
     components: {
       TopHero,
-      TopKeyNote,
+      TopKeynote,
       TopNews,
       TopPlace,
       TopOther,
       TopSponsor,
       TopStaff,
-      CommonFooter
+      GlobalFooter
     },
     head () {
       return {

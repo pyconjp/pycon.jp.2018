@@ -2,7 +2,6 @@
 
 <script>
     export default {
-        name: 'common-footer'
+        name: 'global-footer'
     }
 </script>
-

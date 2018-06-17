@@ -1,7 +1,7 @@
-<template lang="pug" src="./key_note.pug" />
+<template lang="pug" src="./keynote.pug" />
 
 <script>
   export default {
-    name: 'top-key-note'
+    name: 'top-keynote'
   }
 </script>
