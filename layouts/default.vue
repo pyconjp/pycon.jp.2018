@@ -18,3 +18,6 @@
     }
   }
 </script>
+
+<style src="./default.sass" lang="sass" />
+
