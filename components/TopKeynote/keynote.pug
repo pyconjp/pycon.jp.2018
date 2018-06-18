@@ -1,23 +1,18 @@
-#TopKeynote.uk-section.uk-section-default
-    .uk-container.uk-text-center
-        h2.uk-text-center {{ $t('top.keynote.text.head') }}
-        div(class='uk-child-width-1-2@m' uk-grid)
-            .uk-card.uk-card-default
-                .uk-card-media-top
-                    img.uk-border-circle(src='~/static/keynote/keynote_256x256.png' alt='')
-                .uk-card-body
-                    h3.uk-card-title {{ $t('top.keynote.japanese.name') }}
-                    p
-                    |{{ $t('top.keynote.japanese.about') }}
-                    p
-                    |{{ $t('top.keynote.japanese.title') }}
+section#TopKeynote.uk-section.uk-section-default
+    h2 {{ $t('top.keynote.text.head') }}
+    div(class='uk-child-width-1-2@m' uk-grid)
+        .uk-card.uk-card-default
+            img(src='~/static/keynote/keynote_256x256.png' alt='')
+            h3.uk-card-title {{ $t('top.keynote.japanese.name') }}
+            p
+              |{{ $t('top.keynote.japanese.about') }}
+            p
+              |{{ $t('top.keynote.japanese.title') }}
 
-            .uk-card.uk-card-default
-                .uk-card-media-top
-                    img.uk-border-circle(src='~/static/keynote/keynote_256x256.png' alt='')
-                .uk-card-body
-                    h3.uk-card-title {{ $t('top.keynote.english.name') }}
-                    p
-                    |{{ $t('top.keynote.english.about') }}
-                    p
-                    |{{ $t('top.keynote.english.title') }}
+        .uk-card.uk-card-default
+            img(src='~/static/keynote/keynote_256x256.png' alt='')
+            h3.uk-card-title {{ $t('top.keynote.english.name') }}
+            p
+              |{{ $t('top.keynote.english.about') }}
+            p
+              |{{ $t('top.keynote.english.title') }}

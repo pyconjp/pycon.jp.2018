@@ -1,27 +1,28 @@
-#footer.uk-section.uk-section-default
-    .uk-container.uk-text-center
-        p#sns
-            a(href='https://twitter.com/pyconj' target='_blank')
+footer#global-footer.uk-section.uk-section-default.uk-container.uk-text-center
+    address
+        ul#sns-link.uk-flex.uk-flex-center
+            li
+              a(href='https://twitter.com/pyconj' target='_blank')
                 img(src='~/static/footer/icon-twitter.png', alt='twitter')
-            a(href='https://www.facebook.com/PyConJP')
-                img(src='~/static/footer/icon-facebook.png', alt='facebook')
-            a(href='http://pyconjp-fellow.herokuapp.com/', title='Join PyCon JP Fellow on Slack!' target='_blank')
-                img(src='~/static/footer/icon-slack.png')
-        p#footer-venue
-            ul.uk-list
-                li.uk-active
-                    a.uk-thumbnail.uk-thumbnail-mini(href='http://www.pycon.jp/')
-                    img(src='~/static/footer/pyconjp-logo.png',alt='PyCon JP Committee' target='_blank')
-                li
-                    span {{ $t('footer.host') }}  
-            p PyCon JP 2018 in Tokyo is a production of the
-                a(href='http://www.pycon.jp/', target='blank') PyCon JP Committee
-                |. Contact :
-                a(href='mailto:pycon@pycon.jp') pycon@pycon.jp
-            p.footer-creativeCommons
-                a(href='https://creativecommons.org/licenses/by/4.0/' target='_blank')
-                    img(src='~/static/footer/88x31.png', alt='クリエイティブ・コモンズ・ライセンス')
-            p
-                |{{ $t('footer.creativeCommons.text') }} 
-                a(href='https://creativecommons.org/licenses/by/4.0/' target='_blank') {{ $t('footer.creativeCommons.license') }}  
-                |{{ $t('footer.creativeCommons.text-end') }} 
+            li.uk-margin-left
+                a(href='https://www.facebook.com/PyConJP')
+                    img(src='~/static/footer/icon-facebook.png', alt='facebook')
+            li.uk-margin-left
+                a(href='http://pyconjp-fellow.herokuapp.com/', title='Join PyCon JP Fellow on Slack!' target='_blank')
+                  img(src='~/static/footer/icon-slack.png')
+        div#blog-link
+            a.uk-thumbnail.uk-thumbnail-mini(href='http://www.pycon.jp/')
+                img(src='~/static/footer/pyconjp-logo.png',alt='PyCon JP Committee' target='_blank')
+                p {{ $t('footer.host') }}
+        p#contact-mail-address PyCon JP 2018 in Tokyo is a production of the
+            a(href='http://www.pycon.jp/', target='blank') PyCon JP Committee
+            |. Contact :
+            a(href='mailto:pycon@pycon.jp') pycon@pycon.jp
+
+    p.footer-creative-commons
+        a(href='https://creativecommons.org/licenses/by/4.0/' target='_blank')
+          img(src='~/static/footer/88x31.png', alt='クリエイティブ・コモンズ・ライセンス')
+    p
+        |{{ $t('footer.creativeCommons.text') }}
+        a(href='https://creativecommons.org/licenses/by/4.0/' target='_blank') {{ $t('footer.creativeCommons.license') }}
+        |{{ $t('footer.creativeCommons.text-end') }}
