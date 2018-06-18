@@ -2,7 +2,7 @@
 
 <script>
   export default {
-    name: 'header',
+    name: 'global-header',
     methods: {
       isActive (route_name) {
         // console.log(this.$nuxt.$route.name);

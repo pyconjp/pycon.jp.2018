@@ -1,18 +1,18 @@
 <template lang="pug">
     div
-        header-nav
+        global-header
         nuxt
-        //common-footer
+        //global-footer
 </template>
 <script>
-  import HeaderNav from '../components/HeaderNav'
-  // import CommonFooter from '../components/CommonFooter'
+  import GlobalHeader from '../components/GlobalHeader'
+  // import GlobalFooter from '../components/GlobalFooter'
 
   export default {
     name: 'default',
     components: {
-      HeaderNav,
-      // CommonFooter
+      GlobalHeader,
+      // GlobalFooter
     }
   }
 </script>
