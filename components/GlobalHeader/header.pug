@@ -1,5 +1,8 @@
-div(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar" uk-navbar)
-    .uk-navbar-right(class="uk-hidden@s")
+header#global-header(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar" uk-navbar)
+    h1
+      nuxt-link(:to="$i18n.path('')" exact)
+        img(src='~/static/common/global-header-logo.png', alt='PyConJP 2018' width='188' height='26')
+    nav#global_nav.uk-navbar-right(class="uk-hidden@s")
         a.uk-button.uk-button-default(href="#MobileMenu" uk-toggle) MobileMenu
         #MobileMenu(uk-offcanvas)
             .uk-offcanvas-bar
@@ -41,7 +44,7 @@ div(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; b
                             | {{ $t('header.navi.sponsor') }}
                     li
                         nuxt-link(:to="getLangPath()" exact) {{ $t('header.navi.lang') }}
-    .uk-navbar-right(class="uk-visible@s")
+    nav#global_nav_mobile.uk-navbar-right(class="uk-visible@s")
         ul.uk-navbar-nav(class="uk-visible@s")
             li(v-bind:class="{'uk-active':isActive('index')}")
                 a(href="#") {{ $t('header.navi.top.top') }}

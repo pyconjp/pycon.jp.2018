@@ -1,18 +1,20 @@
 <template lang="pug">
-    div
+    div.outer-container
         global-header
         nuxt
-        //global-footer
+        div
+          global-footer
+
 </template>
 <script>
   import GlobalHeader from '../components/GlobalHeader'
-  // import GlobalFooter from '../components/GlobalFooter'
+  import GlobalFooter from '../components/GlobalFooter'
 
   export default {
     name: 'default',
     components: {
       GlobalHeader,
-      // GlobalFooter
+      GlobalFooter
     }
   }
 </script>
