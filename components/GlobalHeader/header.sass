@@ -1,0 +1,26 @@
+$breakpoint-xsmall-max: 639px
+$breakpoint-large: 1300px
+$global-link-hover-color: #00dfd8
+
+header#global-header
+    background-color: #ffffff
+    //border-bottom: 1px solid #f6f6f6
+    div#pc-nav
+        width: $breakpoint-large
+        padding-top: 2rem
+
+        h1
+          bottom: 0
+        nav
+            ul
+                li
+                    font-size: 16px
+                    color: #9b9b9b
+                    a
+                      &:hover
+                          color: $global-link-hover-color
+    div#mobile-nav
+        padding-top: 1.8rem
+        padding-bottom: 1rem
+        a > img
+            width: 224px
