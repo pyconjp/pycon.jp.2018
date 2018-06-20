@@ -15,6 +15,11 @@
       getLangPath () {
         return (this.$i18n.locale === 'en')?　this.$route.fullPath.replace(/^\/[^\/]+/, '') : `/en` + this.$route.fullPath;
       },
+      getPath(path=""){
+        // Todo::Topへのリンクが重いための暫定処理
+        const _path = '/' + path
+        return (this.$i18n.locale === 'en')? "/" + this.$i18n.locale + _path: _path
+      }
     }
   }
 </script>
