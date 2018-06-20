@@ -18,3 +18,5 @@
     }
   }
 </script>
+
+<style src="./news.sass" lang="sass" />

@@ -18,8 +18,40 @@
             image: 'https://placehold.jp/190x100.png',
             alt: 'スポンサー2',
           },
+          {
+            link: '#',
+            image: 'https://placehold.jp/190x100.png',
+            alt: 'スポンサー2',
+          },
+          {
+            link: '#',
+            image: 'https://placehold.jp/190x100.png',
+            alt: 'スポンサー2',
+          },
+          {
+            link: '#',
+            image: 'https://placehold.jp/190x100.png',
+            alt: 'スポンサー2',
+          },
+          {
+            link: '#',
+            image: 'https://placehold.jp/190x100.png',
+            alt: 'スポンサー2',
+          },
+          {
+            link: '#',
+            image: 'https://placehold.jp/190x100.png',
+            alt: 'スポンサー2',
+          },
+          {
+            link: '#',
+            image: 'https://placehold.jp/190x100.png',
+            alt: 'スポンサー2',
+          },
+          
         ]
       }
     }
   }
 </script>
+<style src="./sponsor.sass" lang="sass" />

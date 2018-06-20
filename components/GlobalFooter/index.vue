@@ -5,3 +5,5 @@
         name: 'global-footer'
     }
 </script>
+
+<style src="./footer.sass" lang="sass" />

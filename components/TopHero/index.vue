@@ -5,3 +5,5 @@
     name: 'top-hero'
   }
 </script>
+
+<style src="./hero.sass" lang="sass" />

@@ -12,7 +12,7 @@
       },
       "sponsor":"Sponsor",
       "code_of_conduct":"Code of Conduct",
-      "lang": "日本語版"
+      "lang": "日本語"
     }
   },
   "top": {
@@ -20,32 +20,44 @@
     "hero": {
       "theme": {
         "text": {
-          "head": "テーマ"
+          "head": "Theme"
         },
-        "2018": "広がるPython"
+        "2018": "Spread Python"
       },
       "sprint": {
         "text": {
           "head": "Sprint"
         },
-        "eventname": "Sprint",
-        "date": "2018/9/15(Sat) "
+        "eventname": "SPRINT",
+        "date": {
+          "ymd": "9.15",
+          "week": "Sat"
+          }
       },
       "tutorial": {
         "text": {
-          "head": "Tutorial"
+          "head": "Tutorial/Welcome party"
         },
-        "eventname": "Tutorial",
-        "date": "2018/9/16(Sun) "
+        "eventname": "TUTORIAL",
+        "date": {
+          "ymd": "9.16",
+          "week": "Sun"
+          }
       },
 
       "conference": {
         "text": {
           "head": "Conference"
         },
-        "eventname": "Conference Day1 Day2",
-        "date-day1": "2018/9/17(Mon)",
-        "date-day2": "2018/9/18(Tue)"
+        "eventname": "CONFERENCE",
+        "date-day1": {
+          "ymd": "9.17",
+          "week": "Mon"
+        },
+        "date-day2": {
+          "ymd": "9.18",
+          "week": "Tue"
+        }
       },
       "application": {
         "text": {
@@ -79,28 +91,41 @@
   },
      "map": {
       "place": "Venue",
+      "subcaption": " ",
       "conference": {
         "text": {
-          "head": "Conference"
+          "head": "TUTORIAL / CONFERENCE"
         },
-        "venue": "Ota City Industrial Plaza",
-        "address": "1 Chome-20-２０ Minamikamata, Ōta, TOKYO,144-0035 JAPAN",
-        "access": "京浜急行電鉄本線・空港線京急蒲田駅から徒歩3分"
-      },
+        "venue": "Ota City Industrial Plaza PiO",
+      "address":{
+         "post-code": " ",
+         "primary": "1 Chome-20-２０ Minamikamata, Ōta, TOKYO,144-0035 JAPAN"
+       },
+      "access": "京浜急行電鉄本線・空港線京急蒲田駅から徒歩3分"
+    },
       "sprint": {
         "text": {
-          "head": "Sprint"
+          "head": "SPRINT"
         },
         "venue": "HDE, Inc.",
-        "address": "16-28, Nanpeidaicho, Shibuya, TOKYO, 150-0036 JAPAN",
-        "access": "あくせすー"
+        "address":{
+           "post-code": " ",
+           "primary": "16-28, Nanpeidaicho, Shibuya, TOKYO, 150-0036 JAPAN",
+           "sub" : " glass city shibuya"
+         },
+
+        "access": "東急東横線・田園都市線・地下鉄銀座線・地下鉄半蔵門線・副都心線・JR渋谷駅より徒歩10分"
       }
     },
     "news": {
-      "head": "news",
-      "more": "more"
-    },  "sponsor": {
-      "title": "Sponsor"
+      "head": "News",
+      "subcaption": " ",
+      "more": "more",
+      "detail": "more detail"
+    },
+      "sponsor": {
+        "head": "Sponsor",
+        "subcaption": " "
     }
   },
   "footer": {

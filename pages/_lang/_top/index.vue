@@ -46,6 +46,4 @@
   }
 </script>
 
-<style scoped>
-
-</style>
+<style src="./index.sass" lang="sass" />

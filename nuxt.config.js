@@ -22,7 +22,7 @@ module.exports = {
     vendor: ['uikit']
   },
   css: [
-    'uikit/dist/css/uikit.min.css',
+    { src: '~assets/css/main.sass', lang: 'sass' },
   ],
   router: {
     middleware: 'i18n'

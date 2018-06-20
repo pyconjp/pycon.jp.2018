@@ -2,7 +2,7 @@
     div.outer-container
         global-header
         nuxt
-        div
+        div#global-footer-wrapper.uk-container-expand
           global-footer
 
 </template>
@@ -20,4 +20,3 @@
 </script>
 
 <style src="./default.sass" lang="sass" />
-
