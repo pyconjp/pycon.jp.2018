@@ -64,7 +64,8 @@
         },
         "talk": "トークを応募する",
         "staff": "スタッフに応募する",
-        "ticket": "チケットを購入する"
+        "ticket": "チケットを購入する",
+        "ticket-comming-soon": "近日発売予定！"
       }
     },
     "keynote": {
@@ -123,7 +124,8 @@
     },
       "sponsor": {
         "head": "Sponsor",
-        "subcaption": "スポンサー"
+        "subcaption": "スポンサー",
+        "coming-soon": "coming soon later ..."
     }
   },
   "footer": {

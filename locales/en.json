@@ -65,7 +65,8 @@
         },
         "talk": "Apply for talk",
         "staff": "Apply for the staff",
-        "ticket": "Get Your tickets"
+        "ticket": "Get Your tickets",
+        "ticket-comming-soon": "coming soon!"
       }
     },
     "keynote": {
@@ -125,7 +126,8 @@
     },
       "sponsor": {
         "head": "Sponsor",
-        "subcaption": " "
+        "subcaption": " ",
+        "coming-soon": "coming soon later ..."
     }
   },
   "footer": {

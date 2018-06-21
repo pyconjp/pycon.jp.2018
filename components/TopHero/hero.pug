@@ -28,10 +28,12 @@ section#TopHero.uk-section.uk-section-default
                 | , {{ $t('top.hero.conference.date-day2.ymd') }}
                 span.week {{ $t('top.hero.conference.date-day2.week') }}
 
-    button.uk-button.uk-button-default.uk-button-larg.uk-inline(disabled href='#' target='_blank')
+    button.disable.uk-button.uk-button-default.uk-button-larg.uk-inline(disabled href='#' target='_blank')
         | {{ $t('top.hero.application.ticket') }}
         div.button-bg
         div.button-shadow
+
+    p#ticket-notice.coming-soon {{ $t('top.hero.application.ticket-comming-soon') }}
 
     ul.other-application-link.uk-flex.uk-flex-left
         li.uk-flex.uk-flex-middle
