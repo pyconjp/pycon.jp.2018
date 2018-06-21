@@ -31,16 +31,16 @@
       }
     },
     async asyncData(){
-      try{
-        //Todo::ハードコード
-        const response = await fetch('http://pyconjp.blogspot.com/feeds/posts/default/-/pyconjp2018?alt=rss&max-results=5')
-        const text = await response.text()
-        const json_text = convert.xml2json(text, {compact: true, spaces: 4})
-        const blog_data = JSON.parse(json_text)
-        return {blog_data}
-      } catch (e) {
-        console.log(e)
-      }
+      // try{
+      //   //Todo::ハードコード
+      //   const response = await fetch('http://pyconjp.blogspot.com/feeds/posts/default/-/pyconjp2018?alt=rss&max-results=5')
+      //   const text = await response.text()
+      //   const json_text = convert.xml2json(text, {compact: true, spaces: 4})
+      //   const blog_data = JSON.parse(json_text)
+      //   return {blog_data}
+      // } catch (e) {
+      //   console.log(e)
+      // }
 
     }
   }
