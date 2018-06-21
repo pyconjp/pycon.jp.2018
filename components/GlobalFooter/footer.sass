@@ -1,0 +1,59 @@
+$breakpoint-xsmall-max: 639px
+
+footer#global-footer
+  background-color: #f6f6f6
+  font-size: 14px
+  padding-top: 5rem
+  padding-bottom: 6rem
+  @media (max-width: $breakpoint-xsmall-max)
+    flex-wrap: wrap
+    padding: 10% 30px
+    font-size: 12px
+
+  #pyconjp-blog-link
+    display: block
+    width: 200px
+    min-width: 200px
+    margin-left: 1rem
+    margin-right: 6.5%
+    @media (max-width: $breakpoint-xsmall-max)
+      margin-bottom: 1rem
+
+  address
+    width: 65%
+    margin-top: 0
+    margin-left: 0
+    margin-right: .5rem
+    line-height: 1rem
+    color: #9b9b9b
+    @media (max-width: $breakpoint-xsmall-max)
+      width: 100%
+    p
+      margin-top: 0
+      margin-bottom: .8rem
+
+    #footer-creative-commons
+      margin-top: 2rem
+      @media (max-width: $breakpoint-xsmall-max)
+        flex-wrap: wrap
+      p
+        margin-right: 1rem
+        width: calc(100% - 88px)
+        @media (max-width: $breakpoint-xsmall-max)
+          width: 100%
+        &:first-child
+          width: 88px
+
+  ul#sns-link
+    margin: 0
+    margin-top: 2rem
+    padding: 0
+    width: 126px
+    list-style-type: none
+    @media (max-width: $breakpoint-xsmall-max)
+      width: 100%
+    li
+      margin-right: 10px
+      width: 32px
+      &:last-child
+        margin: 0

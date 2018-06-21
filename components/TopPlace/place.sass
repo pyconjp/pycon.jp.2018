@@ -1,0 +1,59 @@
+$breakpoint-xsmall-max: 639px
+
+#TopPlace
+    margin-bottom: 140px
+    h2
+        margin-bottom: 4rem
+
+    h2 + .place-info
+          margin-bottom: 4rem
+
+    .place-info
+        @media (max-width: $breakpoint-xsmall-max)
+            flex-wrap: wrap
+
+        .place-map
+            width: 60%
+            max-width: 820px
+            min-height: 410px
+            @media (max-width: $breakpoint-xsmall-max)
+              width: 100%
+              min-height: 180px
+              margin-bottom: 2rem
+
+        .place-address
+            width: 40%
+            @media (max-width: $breakpoint-xsmall-max)
+              width: 100%
+            div
+                width: 80%
+                @media (max-width: $breakpoint-xsmall-max)
+                    width: calc(100% - 60px)
+                h3
+                  font-size: 18px
+                  margin-bottom: 0
+                  @media (max-width: $breakpoint-xsmall-max)
+                      font-size: 14px
+                h3.conference
+                  color: #11bec2
+                h3.sprint
+                  color: #c8ba09
+
+                dl
+                    margin: 0
+                    dt
+                        margin-bottom: 2rem
+                        color: #000000
+                        font-size: 36px
+                        font-weight: normal
+                        @media (max-width: $breakpoint-xsmall-max)
+                            font-size: 24px
+                            margin-bottom: 1rem
+                    dd
+                        color: #9b9b9b
+                        line-height: 1.6rem
+                        span
+                          display: block
+                          margin-top: 2.5rem
+                          @media (max-width: $breakpoint-xsmall-max)
+                              margin-top: 1.5rem

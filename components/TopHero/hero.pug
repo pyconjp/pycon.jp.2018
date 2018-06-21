@@ -1,0 +1,48 @@
+section#TopHero.uk-section.uk-section-default
+    .image-layer_1
+    .image-layer_2
+    .image-layer_3
+    .image-layer_4
+
+    h2
+      img(src='~/static/top/firstview-logo.png', alt='PyConJP 2018 ひろがるPython' width='506' height='100')
+    dl#event-summary.uk-list.uk-flex.uk-flex-wrap
+        span.sprint
+            dt
+                |{{ $t('top.hero.sprint.eventname') }}
+            dd
+                |{{ $t('top.hero.sprint.date.ymd') }}
+                span.week.sat {{ $t('top.hero.sprint.date.week') }}
+        span.tutorial
+            dt
+                |{{ $t('top.hero.tutorial.eventname') }}
+            dd
+                |{{ $t('top.hero.tutorial.date.ymd') }}
+                span.week.sun {{ $t('top.hero.tutorial.date.week') }}
+        span.conference
+            dt
+                |{{ $t('top.hero.conference.eventname') }}
+            dd
+                |{{ $t('top.hero.conference.date-day1.ymd') }}
+                span.week.mon {{ $t('top.hero.conference.date-day1.week') }}
+                | , {{ $t('top.hero.conference.date-day2.ymd') }}
+                span.week {{ $t('top.hero.conference.date-day2.week') }}
+
+    button.disable.uk-button.uk-button-default.uk-button-larg.uk-inline(disabled href='#' target='_blank')
+        | {{ $t('top.hero.application.ticket') }}
+        div.button-bg
+        div.button-shadow
+
+    p#ticket-notice.coming-soon {{ $t('top.hero.application.ticket-comming-soon') }}
+
+    ul.other-application-link.uk-flex.uk-flex-left
+        li.uk-flex.uk-flex-middle
+            a(href='http://pyconjp.blogspot.com/2018/05/fortalker.html' target='_blank')
+              | {{ $t('top.hero.application.talk') }}
+        li
+            a(href='https://docs.google.com/forms/d/e/1FAIpQLSdtYlETMPrz_LK-kSDsnJjMPcIkl1OKpRqfnse6d2mPr3MPaw/viewform' target='_blank')
+              | {{ $t('top.hero.application.staff') }}
+
+    span(uk-icon='twitter')
+    a(href='https://twitter.com/search?f=tweets&q=%23pyconjp' target='_blank')
+        |#pyconjp

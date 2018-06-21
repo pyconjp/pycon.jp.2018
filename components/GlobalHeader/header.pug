@@ -1,0 +1,42 @@
+header#global-header(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar" uk-navbar)
+    div#pc-nav.uk-container.uk-flex.uk-flex-middle(class="uk-visible@s")
+      h1
+        a(:href="getPath()")
+            img(src='~/static/common/global-header-logo.png', alt='PyConJP 2018' width='188' height='26')
+      nav#global_nav.uk-navbar-right
+          ul.uk-navbar-nav
+              //li(v-bind:class="{'uk-active':isActive('sponsor')}")
+                  nuxt-link(:to="$i18n.path('sponsor')" exact)
+                      | {{ $t('header.navi.sponsor') }}
+              li(v-bind:class="{'uk-active':isActive('code-of-conduct')}")
+                  nuxt-link(:to="$i18n.path('code-of-conduct')" exact)
+                      | {{ $t('header.navi.code_of_conduct') }}
+              li
+                  a(v-if="isActive('index')" :href="getLangPath()") {{ $t('header.navi.lang') }}
+                  nuxt-link(v-else :to="getLangPath()" exact) {{ $t('header.navi.lang') }}
+
+    div#mobile-nav.uk-container(class="uk-hidden@s").uk-flex
+        .uk-offcanvas-content
+          button.uk-button(type="button" href="#mobile-menu" uk-toggle)
+            span.top
+            span.middle
+            span.bottom
+          #mobile-menu(uk-offcanvas)
+            .uk-offcanvas-bar
+              button.uk-offcanvas-close(tyle="button" uk-close)
+              nav#global-nav-sp
+                  ul
+                    li(v-bind:class="{'uk-active':isActive('sponsor')}")
+                        a(:href="getPath()")  {{ $t('header.navi.top.top') }}
+                    //li(v-bind:class="{'uk-active':isActive('sponsor')}")
+                        nuxt-link(:to="$i18n.path('sponsor')" exact)
+                            | {{ $t('header.navi.sponsor') }}
+                    li(v-bind:class="{'uk-active':isActive('code-of-conduct')}")
+                        nuxt-link(:to="$i18n.path('code-of-conduct')" exact)
+                            | {{ $t('header.navi.code_of_conduct') }}
+                    li
+                        a(v-if="isActive('index')" :href="getLangPath()") {{ $t('header.navi.lang') }}
+                        nuxt-link(v-else :to="getLangPath()" exact) {{ $t('header.navi.lang') }}
+
+        a(:href="getPath()")
+            img(src='~/static/top/firstview-logo.png', alt='PyConJP 2018')

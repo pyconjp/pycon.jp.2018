@@ -1,0 +1,46 @@
+$breakpoint-xsmall-max: 639px
+
+#TopNews
+    flex-wrap: wrap
+    h2
+        width: 30%
+    .news-list
+        width: 70%
+        @media (max-width: $breakpoint-xsmall-max)
+            width: 100%
+            padding: 0 30px
+
+        a.uk-button
+            color: #9b9b9b
+            @media (max-width: $breakpoint-xsmall-max)
+                width: 100%
+
+        ul
+            width: 100%
+            li
+                border-bottom: solid 1px #dddddd
+                margin: 0
+                &:first-child
+                    div
+                        @media (max-width: $breakpoint-xsmall-max)
+                            margin-top: 0
+                div
+                    margin: 2rem auto
+                    flex-wrap: wrap
+                    @media (max-width: $breakpoint-xsmall-max)
+                        margin-bottom: 0
+                    p
+                      margin: 0
+                      color: #9b9b9b
+                      width: 90%
+                      font-size: 18px
+                      @media (max-width: $breakpoint-xsmall-max)
+                          width: 100%
+                          font-size: 14px
+                          margin-bottom: .5rem
+                    p.news-link
+                        width: 10%
+                        @media (max-width: $breakpoint-xsmall-max)
+                            width: 100%
+                        a
+                            font-size: 14px

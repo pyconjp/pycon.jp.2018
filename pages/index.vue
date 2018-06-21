@@ -1,13 +1,4 @@
-<template>
-    <h1>Hello world!</h1>
-</template>
-
 <script>
-  export default {
-    name: 'index'
-  }
+    import Top from './_lang/_top/index'
+    export default Top
 </script>
-
-<style scoped>
-
-</style>

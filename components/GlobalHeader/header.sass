@@ -1,0 +1,62 @@
+$breakpoint-xsmall-max: 639px
+$breakpoint-large: 1300px
+$global-link-hover-color: #00dfd8
+
+header#global-header
+    background-color: #ffffff
+    div#pc-nav
+        width: $breakpoint-large
+        padding-top: 2rem
+        h1
+          margin-bottom: 0
+        nav
+            ul
+                li
+                    font-size: 16px
+                    color: #9b9b9b
+                    a
+
+                      &:hover
+                          color: $global-link-hover-color
+
+
+
+    div#mobile-nav
+        padding-top: 1.8rem
+        padding-bottom: 1rem
+        position: relative
+        width: 100%
+        .uk-offcanvas-content
+            vertical-align: middle
+            position: absolute
+            left: 30px
+            top: 30px
+            button
+                padding: 0
+                background: none
+                height: 32px
+                margin-right: 1rem
+                span
+                    display: block
+                    height: 2px
+                    width: 12px
+                    transform: rotate(0deg)
+                    background-color: #979797
+                span.middle
+                    margin-top: 2px
+                span.bottom
+                    margin-top: 2px
+        a
+            margin: 0 auto
+            img
+                width: 224px
+
+nav#global-nav-sp
+  ul
+    list-style: none
+    margin-top: 2rem
+    li
+      margin-bottom: .5rem
+      a
+        font-size: 16px
+        font-weight: 300
