@@ -14,7 +14,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "st_pyconjp": "BASE_URL=https://pycon.jp/2018 nuxt generate"
   },
   "author": "",
   "license": "MIT",
