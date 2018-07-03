@@ -5,68 +5,33 @@
   export default {
     name: 'top-sponsor',
     mounted(){
-      this.FETCH_SPONSOR()
-      console.log(this.sponsor_array)
+      this.FETCH_TOP_SPONSOR()
     },
     computed: {
       ...mapGetters([
-        "sponsor_array"
+        "top_sponsor_array"
       ])
     },
     methods: {
       ...mapActions({
-        FETCH_SPONSOR: "FETCH_SPONSOR"
-      })
+        FETCH_TOP_SPONSOR: "FETCH_TOP_SPONSOR"
+      }),
+      getImagePath(path){
+        let _path
+        if( path != undefined && path != "" ){
+            _path = require('~/assets/img/sponsor/' + path)
+        }else{
+            _path = require('~/assets/img/noImage.png')
+        }
+
+        return _path
+      },
+
     },
     data(){
-      return {
-        // Todo: 本番ではStoreからAPIのデータを取得
-        // sponsor_array : [
-        //   {
-        //     link: '#',
-        //     image: 'https://placehold.jp/190x100.png',
-        //     alt: 'スポンサー1',
-        //
-        //   },
-        //   {
-        //     link: '#',
-        //     image: 'https://placehold.jp/190x100.png',
-        //     alt: 'スポンサー2',
-        //   },
-        //   {
-        //     link: '#',
-        //     image: 'https://placehold.jp/190x100.png',
-        //     alt: 'スポンサー2',
-        //   },
-        //   {
-        //     link: '#',
-        //     image: 'https://placehold.jp/190x100.png',
-        //     alt: 'スポンサー2',
-        //   },
-        //   {
-        //     link: '#',
-        //     image: 'https://placehold.jp/190x100.png',
-        //     alt: 'スポンサー2',
-        //   },
-        //   {
-        //     link: '#',
-        //     image: 'https://placehold.jp/190x100.png',
-        //     alt: 'スポンサー2',
-        //   },
-        //   {
-        //     link: '#',
-        //     image: 'https://placehold.jp/190x100.png',
-        //     alt: 'スポンサー2',
-        //   },
-        //   {
-        //     link: '#',
-        //     image: 'https://placehold.jp/190x100.png',
-        //     alt: 'スポンサー2',
-        //   },
-        //
-        // ]
-      }
+      return {}
     }
   }
 </script>
+
 <style src="./sponsor.sass" lang="sass" />
