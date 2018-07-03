@@ -9,7 +9,8 @@
     },
     computed: {
       ...mapGetters([
-        "top_sponsor_array"
+        "top_sponsor_array",
+        "top_sponsor_loading"
       ])
     },
     methods: {

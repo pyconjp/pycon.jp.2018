@@ -1,6 +1,10 @@
 section#TopSponsor.uk-section.uk-section-default.uk-container
     h2 {{ $t('top.sponsor.head') }}
         span {{ $t('top.sponsor.subcaption') }}
+    div.loading(:class="top_sponsor_loading").uk-flex.uk-flex-center.uk-flex-column
+      div(uk-spinner="ratio:1.5")
+      p now loading
+
     ul(uk-margin)(class="uk-flex uk-flex-wrap uk-flex-center uk-flex-left@s")
         li(v-for="sponsor in top_sponsor_array").uk-flex.uk-flex-center.uk-flex-middle
             a(:href="sponsor.siteUrl_ja" target='_blank')

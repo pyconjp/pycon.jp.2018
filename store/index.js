@@ -2,12 +2,14 @@ export const state = () => ({
   locales: ['ja', 'en'],
   locale: 'ja',
   news_list: [],
-  top_sponsor_array:[]
+  top_sponsor_array:[],
+  top_sponsor_loading: 'enable'
 })
 
 export const getters = {
   locale (state) { return state.locale},
-  top_sponsor_array (state) { return state.top_sponsor_array }
+  top_sponsor_array (state) { return state.top_sponsor_array },
+  top_sponsor_loading (state) { return state.top_sponsor_loading}
 }
 
 export const actions = {
@@ -21,6 +23,9 @@ export const actions = {
     // or 正確性がとれるなら、全パッケージ出力の上、重複は削除
 
     commit('FETCH_TOP_SPONSOR', data)
+
+    // ローディング表示解除
+    commit('SET_TOP_SPONSOR_LOADING', 'disable')
   }
 }
 
@@ -32,5 +37,8 @@ export const mutations = {
   },
   FETCH_TOP_SPONSOR(state, data) {
     state.top_sponsor_array = data
+  },
+  SET_TOP_SPONSOR_LOADING(state, doLoading) {
+    state.top_sponsor_loading = doLoading
   }
 }
