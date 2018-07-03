@@ -6,6 +6,9 @@ section#TopSponsor.uk-section.uk-section-default.uk-container
       p now loading
 
     ul(uk-margin)(class="uk-flex uk-flex-wrap uk-flex-center uk-flex-left@s")
-        li(v-for="sponsor in top_sponsor_array").uk-flex.uk-flex-center.uk-flex-middle
-            a(:href="sponsor.siteUrl_ja" target='_blank')
-              img.sponser-logo(:src="getImagePath(sponsor.imgPath)" :alt="sponsor.alt" uk-img)
+        li(v-for="sponsor in top_sponsor_array").uk-flex.uk-flex-center.uk-flex-middle.uk-flex-column
+            a(v-if="sponsor.siteUrl_ja")(:href="sponsor.siteUrl_ja" target='_blank')
+                img.sponser-logo(:src="getImagePath(sponsor.imgPath)" :alt="sponsor.alt" uk-img)
+                p(v-if='!showSponsorName(sponsor.imgPath)') {{ sponsor.name_ja }}
+            img(v-else).sponser-logo(:src="getImagePath(sponsor.imgPath)" :alt="sponsor.alt" uk-img)
+            p(v-if='!showSponsorName(sponsor.imgPath)') {{ sponsor.name_ja }}

@@ -19,10 +19,16 @@ export const actions = {
     const json = await response.json()
     const data = json.data;
 
-    // Diamond/Platinum/Gold/Sprint/Silverのみ
-    // or 正確性がとれるなら、全パッケージ出力の上、重複は削除
+    // 重複の削除
+    let _data = [], names = []
+    data.forEach( function ( item ) {
+        if ( names.indexOf( item.name_ja ) === -1 ) {
+           _data.push(item)
+         }
+        names.push( item.name_ja )
+    } )
 
-    commit('FETCH_TOP_SPONSOR', data)
+    commit('FETCH_TOP_SPONSOR', _data)
 
     // ローディング表示解除
     commit('SET_TOP_SPONSOR_LOADING', 'disable')

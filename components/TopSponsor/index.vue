@@ -19,15 +19,20 @@
       }),
       getImagePath(path){
         let _path
-        if( path != undefined && path != "" ){
-            _path = require('~/assets/img/sponsor/' + path)
-        }else{
-            _path = require('~/assets/img/noImage.png')
-        }
-
+          if( path != undefined && path != "" ){
+              _path = require('~/assets/img/sponsor/' + path)
+          }else{
+              _path = require('~/assets/img/noImage.png')
+          }
         return _path
       },
-
+      showSponsorName(path){
+        let _show = false
+          if( path != undefined && path != "" ){
+              _show = true
+          }
+        return _show
+      }
     },
     data(){
       return {}
