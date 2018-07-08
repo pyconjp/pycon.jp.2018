@@ -1,5 +1,5 @@
 export default {
-  props: ['sponsor', 'index'],
+  props: {'sponsor': {}, 'index': 0},
   computed: {
     imgSrc: function(){
       if (!this.sponsor.imgPath || this.sponsor.imgPath === ""){

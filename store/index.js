@@ -10,8 +10,8 @@ export const getters = {
   sponsor_array (state) { return state.sponsor_array }
 }
 
-const stage = 'dummy'
-  , noCache = true
+const stage = 'dummy' // Please change to "prod" if deploying production
+  , noCache = true  // Please change to "false" if deploying production
   , sponsorApi = process.env.sponsorApiEndpoint + `?stage=${stage}&noCache=${noCache}`
   ;
 

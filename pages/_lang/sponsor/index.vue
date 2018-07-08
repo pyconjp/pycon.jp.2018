@@ -16,8 +16,6 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import axios from 'axios';
-import _ from 'lodash';
 import Diamond from '~/components/Sponsor/Diamond';
 import Platinum from '~/components/Sponsor/Platinum';
 import Gold from '~/components/Sponsor/Gold';
@@ -43,65 +41,28 @@ export default {
     Patron,
     Media
   },
-  data() {
-    return {
-      sponsors: null,
-      diamondSponsor: [],
-      platinumSponsors: [],
-      goldSponsors: [],
-      sprintSponsors: [],
-      silverSponsors: [],
-      lunchSponsors: [],
-      lanyardSponsors: [],
-      waterSponsors: [],
-      patron: [],
-      mediaSponsors: [] 
-    }
-  },
   mounted() {
     this.FETCH_SPONSOR()
   },
   computed: {
-    ...mapGetters([
-      "sponsor_array"
-    ])
+    ...mapGetters({
+      "sponsors": "sponsor_array"
+    }),
+    diamondSponsor() { return this.sponsors.filter(s => s.package == "Diamond")[0] || {} },
+    platinumSponsors() { return this.sponsors.filter(s => s.package == "Platinum") },
+    goldSponsors() { return this.sponsors.filter(s => s.package == "Gold") },
+    sprintSponsors() { return this.sponsors.filter(s => s.package == "Sprint") },
+    silverSponsors() { return this.sponsors.filter(s => s.package == "Silver") },
+    lunchSponsors() { return this.sponsors.filter(s => s.package == "Lunch") },
+    lanyardSponsors() { return this.sponsors.filter(s => s.package == "Lanyard") },
+    waterSponsors() { return this.sponsors.filter(s => s.package == "Water") },
+    patron() { return this.sponsors.filter(s => s.package == "Patron") },
+    mediaSponsors() { return this.sponsors.filter(s => s.package == "Media") }
   },
   methods: {
     ...mapActions({
       FETCH_SPONSOR: "FETCH_SPONSOR"
-    }),
-    clear: function() {
-      this.sponsors = null,
-      this.diamondSponsor = [],
-      this.platinumSponsors = [],
-      this.goldSponsors = [],
-      this.sprintSponsors = [],
-      this.silverSponsors = [],
-      this.lunchSponsors = [],
-      this.lanyardSponsors = [],
-      this.waterSponsors = [],
-      this.patron = [],
-      this.mediaSponsors = [] 
-    }
-  },
-  watch: {
-    sponsor_array: function(sponsor_array){
-      this.clear()
-      sponsor_array.forEach(sponsor => {
-        switch (sponsor['package']) {
-          case 'Diamond': this.diamondSponsor = sponsor; break
-          case 'Platinum': this.platinumSponsors.push(sponsor); break
-          case 'Gold': this.goldSponsors.push(sponsor); break
-          case 'Sprint': this.sprintSponsors.push(sponsor); break
-          case 'Silver': this.silverSponsors.push(sponsor); break
-          case 'Lunch': this.lunchSponsors.push(sponsor); break
-          case 'Lanyard': this.lanyardSponsors.push(sponsor); break
-          case 'Water': this.waterSponsors.push(sponsor); break
-          case 'Patron': this.patron.push(sponsor); break
-          case 'Media': this.mediaSponsors.push(sponsor); break
-        }
-      });
-    }
+    })
   },
   head () {
     return {

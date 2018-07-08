@@ -1,7 +1,7 @@
 <template lang="pug">
 section#DiamondSponsor.sponsor-section
   h2 Diamond Sponsor
-  .uk-flex.uk-flex-wrap.sponsor-block
+  .uk-flex.uk-flex-wrap.sponsor-block(v-if="this.sponsor")
     .logo
         .decoration-box
         .logo-frame
@@ -15,7 +15,6 @@ section#DiamondSponsor.sponsor-section
 import cardMixin from '~/components/Sponsor/Card/mixins/cardMixin';
 export default {
   name: 'diamond',
-  props: ["sponsor"],
   mixins: [cardMixin]
 }
 </script>
