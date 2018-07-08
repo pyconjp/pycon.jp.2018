@@ -6,7 +6,7 @@
   "config": {
     "nuxt": {
       "host": "0.0.0.0",
-      "port": "3000"
+      "port": "4000"
     }
   },
   "scripts": {
@@ -14,20 +14,24 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "st_pyconjp": "BASE_URL=https://pycon.jp/2018 nuxt generate"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.18.0",
+    "lodash": "^4.17.10",
     "moment": "^2.22.1",
     "node-sass": "^4.9.0",
-    "nuxt": "^1.4.0",
+    "nuxt": "^1.4.1",
     "pug": "^2.0.3",
     "pug-loader": "^2.4.0",
     "sass-loader": "^7.0.1",
     "uikit": "^3.0.0-beta.42",
     "vue-i18n": "^7.6.0",
     "vuex": "^3.0.1",
-    "xml-js": "^1.6.4"
+    "xml-js": "^1.6.4",
+    "nuxt-sass-resources-loader": "^2.0.2"
   }
 }
