@@ -10,13 +10,13 @@ export const getters = {
   sponsor_array (state) { return state.sponsor_array }
 }
 
-const stage = 'dummy' // Please change to "prod" if deploying production
-  , noCache = true  // Please change to "false" if deploying production
-  , sponsorApi = process.env.sponsorApiEndpoint + `?stage=${stage}&noCache=${noCache}`
-  ;
-
 export const actions = {
   async FETCH_SPONSOR ({ commit }) {
+
+    const stage = 'dummy' // Please change to "prod" if deploying production
+    const noCache = true  // Please change to "false" if deploying production
+    const sponsorApi = process.env.sponsorApiEndpoint + `?stage=${stage}&noCache=${noCache}`
+
     const response = await fetch(sponsorApi)
     const json = await response.json()
     const data = json.data;
