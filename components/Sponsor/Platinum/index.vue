@@ -2,7 +2,7 @@
   section#PlatinumSponsor.sponsor-section
       h2 Platinum Sponsor
       .card-block.uk-flex.uk-flex-wrap.uk-flex-space-between
-        BigCard(v-for="sponsor in sponsors" :key="sponsor.id" :sponsor="sponsor")
+        big-card(v-for="sponsor in sponsors" :key="sponsor.id" :sponsor="sponsor")
 </template>
 
 <script>

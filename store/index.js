@@ -12,7 +12,7 @@ export const getters = {
 
 const stage = 'dummy'
   , noCache = true
-  , sponsorApi = `https://script.google.com/macros/s/AKfycbyKmE6Ew9aWmOnj3VSwn435T8cx8kF0SkJb9fN7_PdE_ME2QpqP/exec?stage=${stage}&noCache=${noCache}`
+  , sponsorApi = process.env.sponsorApiEndpoint + `?stage=${stage}&noCache=${noCache}`
   ;
 
 export const actions = {

@@ -1,6 +1,4 @@
-console.log(process.env.BASE_URL);
 const baseUrl = process.env.BASE_URL || '';
-console.log(baseUrl);
 module.exports = {
   head: {
     titleTemplate: '%s - PyCon JP 2018',
@@ -42,7 +40,8 @@ module.exports = {
   },
   env: {
     // baseUrl: baseUrl
-    baseUrl: ''
+    baseUrl: '',
+    sponsorApiEndpoint: 'https://script.google.com/macros/s/AKfycbyKmE6Ew9aWmOnj3VSwn435T8cx8kF0SkJb9fN7_PdE_ME2QpqP/exec'
   },
   modules: [
     ['nuxt-sass-resources-loader', [

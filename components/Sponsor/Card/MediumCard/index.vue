@@ -17,7 +17,6 @@
 import cardMixin from '~/components/Sponsor/Card/mixins/cardMixin';
 export default {
   name: 'medium-card',
-  props: ["sponsor", "index"],
   mixins: [cardMixin]
 }
 </script>
@@ -30,7 +29,7 @@ export default {
   margin: 0 10px 50px;
   @media (max-width: $breakpoint-small) {
     width: 100%;
-    margin: 0 20px 50px;
+    margin: 0 20px 30px;
   }
 }
 .card {
