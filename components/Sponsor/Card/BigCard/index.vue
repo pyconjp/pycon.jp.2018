@@ -9,7 +9,7 @@
       .text-block
         .desc {{this.desc}}
         h4
-          a(:href="this.recruitUrl" taget="_blank") 採用情報 
+          a(:href="this.recruitUrl" taget="_blank") {{$t('sponsor.recruitTitle')}}
         .recruitText {{this.recruitText}}
 </template>
 
