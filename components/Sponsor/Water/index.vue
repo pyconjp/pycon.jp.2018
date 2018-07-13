@@ -1,6 +1,6 @@
 <template lang="pug">
-  section#MediaSponsor.sponsor-section
-      h2 Media Sponsor
+  section#WaterSponsor.sponsor-section
+      h2 Water Sponsor
       .card-block.uk-flex.uk-flex-wrap.uk-flex-space-between
         small-card(v-for="(sponsor, index) in sponsors" :index="index" :key="sponsor.id" :sponsor="sponsor")
 </template>
@@ -8,7 +8,7 @@
 <script>
   import SmallCard from '~/components/Sponsor/Card/SmallCard';
   export default {
-    name: 'media-sponsor',
+    name: 'Water-sponsor',
     props: ["sponsors"],
     components: {
       SmallCard,
