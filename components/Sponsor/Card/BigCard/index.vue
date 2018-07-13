@@ -8,9 +8,10 @@
       a.name(:href="this.siteUrl" taget="_blank") {{this.name}}
       .text-block
         .desc {{this.desc}}
-        h4
-          a(:href="this.recruitUrl" taget="_blank") {{$t('sponsor.recruitTitle')}}
-        .recruitText {{this.recruitText}}
+        .recruit(v-if="this.recruitText")
+          h4
+            a(:href="this.recruitUrl" taget="_blank") {{$t('sponsor.recruitTitle')}}
+          .recruitText {{this.recruitText}}
 </template>
 
 <script>
