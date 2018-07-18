@@ -1,12 +1,12 @@
 <template lang="pug">
   section#PlatinumSponsor.sponsor-section
       h2 Platinum Sponsor
-      .card-block.uk-flex.uk-flex-wrap.uk-flex-space-between
+      .card-block.uk-flex.uk-flex-wrap
         big-card(v-for="sponsor in sponsors" :key="sponsor.id" :sponsor="sponsor")
 </template>
 
 <script>
-  import BigCard from '~/components/Sponsor/Card/BigCard';;
+  import BigCard from '~/components/Sponsor/Card/BigCard';
 
   export default {
     name: 'platinum-sponsor',
@@ -17,13 +17,5 @@
   }
 </script>
 
-<style lang="scss" scoped>
-.card-block {
-  justify-content: space-between;
-}
-.card-block::after{
-  content:"";
-  display: block;
-  width:30%;
-}
+<style lang="sass" scoped>
 </style>

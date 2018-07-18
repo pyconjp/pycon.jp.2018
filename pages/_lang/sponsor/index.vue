@@ -56,7 +56,7 @@ export default {
     lunchSponsors() { return this.sponsors.filter(s => s.package == "Lunch") },
     lanyardSponsors() { return this.sponsors.filter(s => s.package == "Lanyard") },
     waterSponsors() { return this.sponsors.filter(s => s.package == "Water") },
-    patron() { return this.sponsors.filter(s => s.package == "Patron") },
+    patron() { return this.sponsors.filter(s => s.package == "Media") },
     mediaSponsors() { return this.sponsors.filter(s => s.package == "Media") }
   },
   methods: {
@@ -72,54 +72,42 @@ export default {
 }
 </script>
 
-<style lang="scss">
-* {
-  box-sizing: border-box;
-}
-.sponsor-sections {
-  padding: 30px 0 0;
-}
-.sponsor-sections > * {
-  margin-bottom: 100px;
-}
-@media (max-width: $breakpoint-small) {
-  .sponsor-sections > * {
-    margin-bottom: 30px;
-  }
-  .sponsor-section > h2 {
-    margin: 10px 20px 20px;
-    font-size: 36px;
-  }
-}
-.decoration-box {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform: rotate(5deg);
-  border-radius: 4px;
-  transform: rotate(3deg);
-  background-image: linear-gradient(62deg,  rgba(255, 244, 63, 0.5), rgba(232, 214, 0, 0.5));
+<style lang="sass">
+*
+  box-sizing: border-box
 
-}
-.card-content {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  padding: 5px;
-  background-color: white;
-  border-radius: 4px;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
-}
-.img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-}
-.img-block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
+#pycon-sponsor
+  margin-top: 3rem
+  @media (max-width: $breakpoint-small)
+    margin-top: 0
+  section
+    &:last-child
+      margin-bottom: 10rem
+      @media (max-width: $breakpoint-small)
+        margin-bottom: 6rem
+
+.sponsor-sections
+  padding-top: 30px
+  &> *
+    margin-bottom: 10rem
+    @media (max-width: $breakpoint-small)
+      margin-bottom: 6rem
+  h2
+    @media (max-width: $breakpoint-small)
+      margin: 10px 20px 3rem
+      font-size: 36px
+  h3
+    margin: 0
+
+.img
+  width: auto
+  height: auto
+  max-width: 100%
+  max-height: 100%
+
+.img-block
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 20px
 </style>

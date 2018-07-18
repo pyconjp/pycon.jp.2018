@@ -45,7 +45,7 @@ module.exports = {
   },
   modules: [
     ['nuxt-sass-resources-loader', [
-        '~assets/css/variables.scss'
+        '~assets/css/variables.sass'
         // '~assets/css/mixin.scss'
     ]]
   ]

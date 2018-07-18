@@ -16,19 +16,5 @@
   }
 </script>
 
-<style lang="scss" scoped>
-.card-block {
-  justify-content: space-between;
-}
-.card-block::before{
-  content:"";
-  display: block;
-  width: $sponsor-1-4-width;
-  order:1;
-}
-.card-block::after{
-  content:"";
-  display: block;
-  width: $sponsor-1-4-width;
-}
+<style lang="sass" scoped>
 </style>

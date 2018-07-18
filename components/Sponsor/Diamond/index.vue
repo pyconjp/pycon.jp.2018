@@ -3,12 +3,11 @@ section#DiamondSponsor.sponsor-section
   h2 Diamond Sponsor
   .uk-flex.uk-flex-wrap.sponsor-block(v-if="this.sponsor")
     .logo
-        .decoration-box
-        .logo-frame
-            img.img(:src="this.imgSrc")  
+      img.img(:src="this.imgSrc")
     .text
-       a.name(:href="this.siteUrl") {{ sponsor ? this.name : '' }} 
-       .desc {{ sponsor ? this.desc : '' }}
+      h3
+        a.name(:href="this.siteUrl" target="_blank") {{ sponsor ? this.name : '' }}
+      p.desc {{ sponsor ? this.desc : '' }}
 </template>
 
 <script>
@@ -19,63 +18,87 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.sponsor-block {
-  height: 326px;
-}
-.logo {
-  position: relative;
-  width: 40%;
-}
-.text {
-  padding: 15px 0 0 67px;
-  width: 60%;
-}
-.name {
-  font-size: 50px;
-  font-weight: 300;
-  line-height: normal;
-  color: #4a4a4a;
-}
-@media (max-width: $breakpoint-small) {
-  .sponsor-block {
-    height: auto;
-  }
-  .logo {
-    height: 200px;
-  }
-  .logo, .text {
-    width: 100%;
-    margin: 10px 20px;
-    padding: 0;
-  }
-  .name {
-    font-size: 28px;
-  }
-}
-.desc {
-  padding: 20px 0 0 0;
-}
-.decoration-box, .logo-frame {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.decoration-box {
-  transform: rotate(5deg);
-  background-image: linear-gradient(62deg, rgba(40, 170, 226, 0.5), rgba(0, 223, 216, 0.5));
+<style lang="sass" scoped>
+section#DiamondSponsor
+  margin-bottom: 14rem
+  @media (max-width: $breakpoint-small)
+    margin-bottom: 8rem
 
-}
-.logo-frame {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 15px;
-  border-radius: 4px;
-  background-color: white;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
-}
-.img {
-  width: 100%;
-}
+.sponsor-block
+  @media (max-width: $breakpoint-small)
+    height: auto
+
+.logo
+  position: relative
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  width: 40%
+  min-width: 490px
+  height: 326px
+  padding: 1rem
+  &:before
+      content: ""
+      position: absolute
+      display: block
+      z-index: -1
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: #FFF
+      border-radius: 4px
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2)
+  &:after
+      content: ""
+      position: absolute
+      display: block
+      z-index: -2
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      border-radius: 4px
+      background-image: linear-gradient(62deg, rgba(40, 170, 226, 0.5), rgba(0, 223, 216, 0.5))
+      transform: rotate(5deg)
+  @media (max-width: $breakpoint-small)
+    width: 100%
+    height: 60vw
+    min-width: 0
+    min-height: 0
+    margin: 10px 1rem
+    padding: 1rem
+
+.img
+  width: 100%
+
+.text
+  padding: 15px 0 0 67px
+  width: calc(100% - 530px)
+  @media (max-width: 980px)
+    width: 100%
+    padding-left: 0
+  @media (max-width: $breakpoint-small)
+    margin: 10px 20px
+    padding: 0
+  h3
+    @media (max-width: 980px)
+      margin-top: 2.4rem
+
+.name
+  font-size: 50px
+  font-weight: 300
+  line-height: normal
+  color: #4a4a4a
+  @media (max-width: $breakpoint-small)
+    font-size: 24px
+
+p.desc
+  margin-top: 20px
+  line-height: 1.9rem
+  @media (max-width: $breakpoint-small)
+    padding-top: 0
+    margin-top: .8rem
+
 </style>

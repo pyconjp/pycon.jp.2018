@@ -1,7 +1,7 @@
 section#TopSponsor.uk-section.uk-section-default.uk-container.coming-soon
     h2 {{ $t('top.sponsor.head') }}
         span {{ $t('top.sponsor.subcaption') }}
-    ul.uk-thumbnav(uk-margin)(class="uk-flex uk-flex-wrap uk-flex-center uk-flex-left@s")
+    ul.uk-thumbnav(uk-margin class="uk-flex uk-flex-wrap uk-flex-center uk-flex-left@s")
         // Todo:本番データが来たら要修正
         li(v-for="sponsor in sponsor_array")
             a(:href="sponsor.link" target='_blank')

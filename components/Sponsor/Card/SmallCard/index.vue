@@ -1,11 +1,9 @@
 <template lang="pug">
-.card
-  .decoration-box(:style="this.decorationStyle")
-  .card-content
-    .img-block
-      img.img(:src="this.imgSrc")  
-    .text-block
-      a.name(:href="this.siteUrl") {{this.name}}
+.card.uk-flex.uk-flex-column
+  .img-block
+    img.img(:src="this.imgSrc")
+  p.text-block
+    a.name(:href="this.siteUrl" target="_blank") {{this.name}}
 </template>
 
 <script>
@@ -16,36 +14,56 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@mixin card($height, $width) {
-  width: $width;
-  height: $height;
-  position: relative;
-  margin: 0 10px 50px;
-  @media (max-width: $breakpoint-small) {
-    width: 100%;
-    margin: 0 20px 30px;
-  }
-}
-.card {
-  @include card(200px, $sponsor-1-4-width);
-}
-.img-block {
-  height: 120px;
-}
-.text-block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70px;
-  padding: 0;
-}
-.name {
-  display: inline-block;
-  padding: 10px 0;
-  line-height: 28px;
-  font-size: 20px;
-  font-weight: 300;
-  color: #666666;
-}
+<style lang="sass" scoped>
+.card
+  justify-content: space-between
+  @include card(180px, $sponsor-1-4-width)
+  margin-right: 3.7rem
+  margin-bottom: 5rem
+  &:nth-child(4n)
+    margin-right: 0
+  @media (max-width: 1300px)
+    &:nth-child(4n)
+      margin-right: 3.7rem
+    &:nth-child(3n)
+      margin-right: 0
+  @media (max-width: 985px)
+    &:nth-child(3n)
+      margin-right: 3.7rem
+    &:nth-child(2n)
+      margin-right: 0
+      margin-bottom: 5rem
+  @media (max-width: $breakpoint-small)
+    margin: 0 1rem 4rem
+    &:nth-child(2n),
+    &:nth-child(3n)
+      margin: 0 1rem 4rem
+
+
+.img-block
+  height: 150px
+  padding: 1rem 1rem 25px
+  @media (max-width: $breakpoint-small)
+    width: 100%
+    height: 56vw
+
+  img
+    width: auto
+    height: auto
+    max-width: 100%
+    max-height: 100%
+
+p.text-block
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 0 1rem 1rem
+  margin: 0
+
+.name
+  display: inline-block
+  font-size: 16px
+  font-weight: 300
+  color: #666666
+
 </style>
