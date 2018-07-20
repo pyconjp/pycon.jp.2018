@@ -1,5 +1,10 @@
 export default {
   props: {'sponsor': {}, 'index': 0},
+  data () {
+    return {
+      showRecruit: false,
+    }
+  },
   computed: {
     imgSrc: function(){
       if (!this.sponsor.imgPath || this.sponsor.imgPath === ""){

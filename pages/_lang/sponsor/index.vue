@@ -56,7 +56,7 @@ export default {
     lunchSponsors() { return this.sponsors.filter(s => s.package == "Lunch") },
     lanyardSponsors() { return this.sponsors.filter(s => s.package == "Lanyard") },
     waterSponsors() { return this.sponsors.filter(s => s.package == "Water") },
-    patron() { return this.sponsors.filter(s => s.package == "Media") },
+    patron() { return this.sponsors.filter(s => s.package == "Patron") },
     mediaSponsors() { return this.sponsors.filter(s => s.package == "Media") }
   },
   methods: {

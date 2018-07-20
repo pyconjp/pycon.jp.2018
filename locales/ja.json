@@ -151,6 +151,7 @@
   },
   "sponsor": {
     "title": "スポンサー",
-    "recruitTitle": "採用情報"
+    "recruitTitle": "採用について",
+    "companyInfoTitle": "企業概要"
   }
 }

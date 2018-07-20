@@ -1,9 +1,10 @@
 <template lang="pug">
 .card.uk-flex.uk-flex-row
-  .img-block
-    img.img(:src="this.imgSrc")
+  a.img-link(:href="this.siteUrl" target="_blank")
+    .img-block
+      img.img(:src="this.imgSrc")
   .text-block
-    a.name(:href="this.siteUrl") {{this.name}}
+    a.name(:href="this.siteUrl" target="_blank") {{this.name}}
 </template>
 
 <script>
@@ -39,6 +40,11 @@ export default {
     &:nth-child(2n),
     &:nth-child(3n)
       margin: 0 1rem 4rem
+
+a.img-block
+  display: block
+  height: 60px
+  width: 60px
 
 .img-block
   height: 60px

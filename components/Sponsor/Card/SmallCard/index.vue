@@ -1,7 +1,8 @@
 <template lang="pug">
 .card.uk-flex.uk-flex-column
-  .img-block
-    img.img(:src="this.imgSrc")
+  a.img-link(:href="this.siteUrl" target="_blank")
+    .img-block
+      img.img(:src="this.imgSrc")
   p.text-block
     a.name(:href="this.siteUrl" target="_blank") {{this.name}}
 </template>
@@ -39,6 +40,13 @@ export default {
     &:nth-child(3n)
       margin: 0 1rem 4rem
 
+
+a.img-link
+  display: block
+  height: 150px
+  @media (max-width: $breakpoint-small)
+    width: 100%
+    height: 56vw
 
 .img-block
   height: 150px

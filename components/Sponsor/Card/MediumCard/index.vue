@@ -1,18 +1,22 @@
 <template lang="pug">
 .card
-  .img-block
-    img.img(:src="this.imgSrc")
+  a.img-link(:href="this.siteUrl" target="_blank")
+    .img-block
+      img.img(:src="this.imgSrc")
   .body.uk-flex.uk-flex-column
     .text-block
       h3
         a.name(:href="this.siteUrl" target="_blank") {{this.name}}
-      p.desc {{this.desc}}
-        //.recruit(v-if="this.recruitText")
-          //h4
-            //a(:href="this.recruitUrl" taget="_blank") {{$t('sponsor.recruitTitle')}}
-          //.recruitText {{this.recruitText}}
-    nav.card-nav
-      a(href="#") 採用情報
+      p.desc.uk-animation-slide-right-medium(:class="'text-' + sponsor.idName") {{this.desc}}
+      .recruit(v-if="this.recruitText" :class="'text-' + sponsor.idName + ' uk-animation-slide-left-medium'" hidden)
+        h4
+          a(:href="this.recruitUrl" target="_blank") {{$t('sponsor.recruitTitle')}}
+        p.recruitText {{this.recruitText}}
+    nav.card-nav(v-if="this.recruitText")
+      a.company(@click="showRecruit=!showRecruit" :uk-toggle="'target: .text-' + sponsor.idName + ';'" v-if="showRecruit")
+        | {{$t('sponsor.companyInfoTitle')}}
+      a(@click="showRecruit=!showRecruit" :uk-toggle="'target: .text-' + sponsor.idName + ';'" v-else="!showRecruit")
+        | {{$t('sponsor.recruitTitle')}}
 </template>
 
 <script>
@@ -46,6 +50,13 @@ export default {
     &:nth-child(3n)
       margin: 0 1rem 4rem
 
+a.img-link
+  display: block
+  height: 150px
+  @media (max-width: $breakpoint-small)
+    width: 100%
+    height: 56vw
+
 .img-block
   height: 150px
   padding: 1rem 1rem 25px
@@ -75,7 +86,11 @@ export default {
   color: #666666
 
 .text-block
-  min-height: 300px
+  min-height: 180px
+  overflow: hidden
+  h4
+    margin: .5rem 0 -.5rem
+    font-size: 16px
 
 p.desc, p.recruitText
   font-size: 14px
@@ -83,13 +98,43 @@ p.desc, p.recruitText
   margin-top: .6rem
 
 nav.card-nav
+  position: relative
+  display: flex
+  flex-direction: row
+  justify-content: center
   margin-bottom: 1rem
-  padding: .2rem 0
-  background-color: rgba(0, 0, 0, 0.1)
-  border-radius: 1px
+  padding: .3rem 0 0
   width: 100%
   text-align: center
+  border-top: 1px solid #EEE
+  font-size: 14px
   a
-    color: #666
-
+    display: block
+    justify-content: stretch
+    color: #9b9b9b
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      transform: rotate(45deg)
+      width: .5rem
+      height: .5rem
+      top: .65rem
+      right: 1rem
+      background: #9b9b9b
+    &:after
+      content: ""
+      display: block
+      position: absolute
+      transform: rotate(45deg)
+      width: .5rem
+      height: .5rem
+      top: .65rem
+      right: 1.1rem
+      background: #FFF
+  a.company
+    &::before
+      left: 1rem
+    &:after
+      left: 1.1rem
 </style>

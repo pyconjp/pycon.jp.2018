@@ -2,12 +2,17 @@
 section#DiamondSponsor.sponsor-section
   h2 Diamond Sponsor
   .uk-flex.uk-flex-wrap.sponsor-block(v-if="this.sponsor")
-    .logo
-      img.img(:src="this.imgSrc")
+    a.logo-link(:href="this.siteUrl" target="_blank")
+      .logo
+        img.img(:src="this.imgSrc")
     .text
       h3
         a.name(:href="this.siteUrl" target="_blank") {{ sponsor ? this.name : '' }}
       p.desc {{ sponsor ? this.desc : '' }}
+      .recruit(v-if="this.recruitText" :class="'text-' + sponsor.idName")
+        h4
+          a(:href="this.recruitUrl" target="_blank") {{$t('sponsor.recruitTitle')}}
+        p.recruitText {{this.recruitText}}
 </template>
 
 <script>
@@ -27,6 +32,17 @@ section#DiamondSponsor
 .sponsor-block
   @media (max-width: $breakpoint-small)
     height: auto
+
+a.logo-link
+    width: 40%
+    min-width: 490px
+    height: 326px
+    @media (max-width: $breakpoint-small)
+      width: 100%
+      height: 60vw
+      min-width: 0
+      min-height: 0
+      margin: 10px 1rem
 
 .logo
   position: relative
@@ -67,7 +83,7 @@ section#DiamondSponsor
     height: 60vw
     min-width: 0
     min-height: 0
-    margin: 10px 1rem
+    margin: 0
     padding: 1rem
 
 .img
@@ -100,5 +116,12 @@ p.desc
   @media (max-width: $breakpoint-small)
     padding-top: 0
     margin-top: .8rem
+
+.recruit
+  h4
+    margin: 0
+  p.recruitText
+    margin-top: .5rem
+    line-height: 1.9rem
 
 </style>
