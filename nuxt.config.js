@@ -1,3 +1,4 @@
+console.log(process.env.BASE_URL);
 const baseUrl = process.env.BASE_URL || '';
 module.exports = {
   head: {
@@ -46,7 +47,6 @@ module.exports = {
   modules: [
     ['nuxt-sass-resources-loader', [
         '~assets/css/variables.sass'
-        // '~assets/css/mixin.scss'
     ]]
   ]
 }
