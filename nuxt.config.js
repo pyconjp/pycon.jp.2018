@@ -15,8 +15,8 @@ module.exports = {
       { property: 'og:locale', content: 'ja_JP' },
       { property: 'og:type', content: 'website' },
       { property: 'og:title', content: 'PyCon JP 2018 in Tokyo | Sep 17th &ndash; Sep 18th' },
-      { property: 'og:description', content: 'Meta description' },
-      { property: 'og:url', content: 'http://' },
+      { property: 'og:description', content: 'PyCon JP 2018 ひろがるpython' },
+      { property: 'og:url', content: 'https://pycon.jp/2018' },
       { property: 'og:image', content: baseUrl + '/common/ogp_image.png' }
     ],
     link: [
@@ -40,8 +40,8 @@ module.exports = {
     routes: ['/', 'code-of-conduct', 'en', 'en/code-of-conduct']
   },
   env: {
-    // baseUrl: baseUrl
-    baseUrl: '',
+    //baseUrl: '',
+    baseUrl: baseUrl,
     sponsorApiEndpoint: 'https://script.google.com/macros/s/AKfycbyKmE6Ew9aWmOnj3VSwn435T8cx8kF0SkJb9fN7_PdE_ME2QpqP/exec'
   },
   modules: [

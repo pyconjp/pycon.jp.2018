@@ -5,10 +5,10 @@ section#TopSponsor.uk-section.uk-section-default.uk-container
       div(uk-spinner="ratio:1.5")
       p now loading
 
-    ul(uk-margin)(class="uk-flex uk-flex-wrap uk-flex-center uk-flex-left@s")
+    ul(uk-margin class="uk-flex uk-flex-wrap uk-flex-center uk-flex-left@s")
         li(v-for="sponsor in top_sponsor_array").uk-flex.uk-flex-center.uk-flex-middle.uk-flex-column
-            a(v-if="sponsor.siteUrl_ja")(:href="sponsor.siteUrl_ja" target='_blank')
-                img.sponser-logo(:src="getImagePath(sponsor.imgPath)" :alt="sponsor.name_ja" uk-img)
+            a(v-if="sponsor.siteUrl_ja" :href="sponsor.siteUrl_ja" target='_blank')
+                img.sponsor-logo(:src="getImagePath(sponsor.imgPath)" :alt="sponsor.name_ja" uk-img)
                 p(v-if='!showSponsorName(sponsor.imgPath)') {{ sponsor.name_ja }}
-            img(v-else).sponser-logo(:src="getImagePath(sponsor.imgPath)" :alt="sponsor.name_ja" uk-img)
+            img(v-else class="sponsor-logo" :src="getImagePath(sponsor.imgPath)" :alt="sponsor.name_ja" uk-img)
             p(v-if='!sponsor.siteUrl_ja && !showSponsorName(sponsor.imgPath)') {{ sponsor.name_ja }}
