@@ -1,9 +1,14 @@
-section#TopSponsor.uk-section.uk-section-default.uk-container.coming-soon
+section#TopSponsor.uk-section.uk-section-default.uk-container
     h2 {{ $t('top.sponsor.head') }}
         span {{ $t('top.sponsor.subcaption') }}
-    ul.uk-thumbnav(uk-margin)(class="uk-flex uk-flex-wrap uk-flex-center uk-flex-left@s")
-        // Todo:本番データが来たら要修正
-        li(v-for="sponsor in sponsor_array")
-            a(:href="sponsor.link" target='_blank')
-                img(:src="sponsor.image" :alt="sponsor.alt" uk-img)
-    p.coming-soon {{ $t('top.sponsor.coming-soon') }}
+    div.loading(:class="top_sponsor_loading").uk-flex.uk-flex-center.uk-flex-column
+      div(uk-spinner="ratio:1.5")
+      p now loading
+
+    ul(uk-margin class="uk-flex uk-flex-wrap uk-flex-center uk-flex-left@s")
+        li(v-for="sponsor in top_sponsor_array").uk-flex.uk-flex-center.uk-flex-middle.uk-flex-column
+            a(v-if="sponsor.siteUrl_ja" :href="sponsor.siteUrl_ja" target='_blank')
+                img.sponsor-logo(:src="getImagePath(sponsor.imgPath)" :alt="sponsor.name_ja" uk-img)
+                p(v-if='!showSponsorName(sponsor.imgPath)') {{ sponsor.name_ja }}
+            img(v-else class="sponsor-logo" :src="getImagePath(sponsor.imgPath)" :alt="sponsor.name_ja" uk-img)
+            p(v-if='!sponsor.siteUrl_ja && !showSponsorName(sponsor.imgPath)') {{ sponsor.name_ja }}
