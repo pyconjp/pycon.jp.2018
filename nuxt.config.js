@@ -37,7 +37,7 @@ module.exports = {
     minify: {
       collapseWhitespace: false
     },
-    routes: ['/', 'code-of-conduct', 'en', 'en/code-of-conduct']
+    routes: ['/', 'en']
   },
   env: {
     //baseUrl: '',
