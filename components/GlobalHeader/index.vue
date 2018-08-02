@@ -17,9 +17,10 @@
       getLangPath (path="") {
         // const _path = (this.$i18n.locale === 'en')? this.$route.fullPath.replace(/^\/[^\/]+/, '') : `/en` + this.$route.fullPath;
         // return process.env.baseUrl + _path;
-        const _path =  '/' + path
-        const __path = (this.$i18n.locale === 'ja')? "/en" + _path: _path
-        return process.env.baseUrl + __path;
+        //const _path =  '/' + path
+        //const __path = (this.$i18n.locale === 'ja')? "/en" + _path: _path
+        //return process.env.baseUrl + __path;
+        return (this.$i18n.locale === 'en') ? '/_2018' + this.$route.fullPath.replace(/^\/[^\/]+/, '') : `/_2018/en` + this.$route.fullPath;
       },
       getPath(path=""){
         // console.log(process.env.baseUrl);

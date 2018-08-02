@@ -30,18 +30,18 @@ module.exports = {
     { src: '~/assets/css/main.sass', lang: 'sass' },
   ],
   router: {
-    middleware: 'i18n'
+    middleware: 'i18n',
+    base: '/_2018/'
   },
   plugins: ['~/plugins/i18n.js'],
   generate: {
     minify: {
       collapseWhitespace: false
     },
-    routes: ['/', 'code-of-conduct', 'en', 'en/code-of-conduct']
+    routes: ['/','/code-of-conduct','/sponsor','/en','/en/code-of-conduct','/en/sponsor']
   },
   env: {
-    //baseUrl: '',
-    baseUrl: baseUrl,
+    baseUrl: '',
     sponsorApiEndpoint: 'https://script.google.com/macros/s/AKfycbyKmE6Ew9aWmOnj3VSwn435T8cx8kF0SkJb9fN7_PdE_ME2QpqP/exec'
   },
   modules: [
