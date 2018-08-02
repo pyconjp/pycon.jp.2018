@@ -31,7 +31,7 @@ module.exports = {
   ],
   router: {
     middleware: 'i18n',
-    base: '/2018/'
+    base: '/_2018/'
   },
   plugins: ['~/plugins/i18n.js'],
   generate: {
@@ -42,7 +42,6 @@ module.exports = {
   },
   env: {
     baseUrl: '',
-    //baseUrl: 'http://nar.matz:8080/2018',
     sponsorApiEndpoint: 'https://script.google.com/macros/s/AKfycbyKmE6Ew9aWmOnj3VSwn435T8cx8kF0SkJb9fN7_PdE_ME2QpqP/exec'
   },
   modules: [
