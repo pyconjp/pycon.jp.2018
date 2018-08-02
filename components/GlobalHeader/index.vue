@@ -20,7 +20,7 @@
         //const _path =  '/' + path
         //const __path = (this.$i18n.locale === 'ja')? "/en" + _path: _path
         //return process.env.baseUrl + __path;
-        return (this.$i18n.locale === 'en') ? this.$route.fullPath.replace(/^\/[^\/]+/, '') : `/en` + this.$route.fullPath;
+        return (this.$i18n.locale === 'en') ? '/2018' + this.$route.fullPath.replace(/^\/[^\/]+/, '') : `/2018/en` + this.$route.fullPath;
       },
       getPath(path=""){
         // console.log(process.env.baseUrl);

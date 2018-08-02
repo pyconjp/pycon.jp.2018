@@ -10,8 +10,8 @@ header#global-header(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk
               li(v-bind:class="{'uk-active':isActive('code-of-conduct')}")
                   nuxt-link(:to="$i18n.path('code-of-conduct')" exact) {{ $t('header.navi.code_of_conduct') }}
               li
-                  a(v-if="isActive('index')" :href="getLangPath()") {{ $t('header.navi.lang') }}
-                  nuxt-link(v-else :to="getLangPath()" exact) {{ $t('header.navi.lang') }}
+                  a(:href="getLangPath()") {{ $t('header.navi.lang') }}
+                  //nuxt-link(v-else :to="getLangPath()" exact) {{ $t('header.navi.lang') }}
 
     div#mobile-nav.uk-container(class="uk-hidden@s").uk-flex
         .uk-offcanvas-content
@@ -31,7 +31,8 @@ header#global-header(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk
                     li(v-bind:class="{'uk-active':isActive('code-of-conduct')}")
                         nuxt-link(:to="$i18n.path('code-of-conduct')" exact)  {{ $t('header.navi.code_of_conduct') }}
                     li
-                      nuxt-link(:to="getLangPath()" exact) {{ $t('header.navi.lang') }}
+                      a(:href="getLangPath()") {{ $t('header.navi.lang') }}
+                      //nuxt-link(:to="getLangPath()" exact) {{ $t('header.navi.lang') }}
 
         nuxt-link(:to="$i18n.path('')" exact)
             img(src='~/static/top/firstview-logo.png', alt='PyConJP 2018')
