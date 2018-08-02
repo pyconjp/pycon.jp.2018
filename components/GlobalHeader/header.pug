@@ -1,22 +1,21 @@
 header#global-header(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar" uk-navbar)
     div#pc-nav.uk-container.uk-flex.uk-flex-middle(class="uk-visible@s")
       h1
-        a(:href="getPath()")
+        //a(:href="getPath()")
+        nuxt-link(:to="$i18n.path('')" exact)
             img(src='~/static/common/global-header-logo.png', alt='PyConJP 2018' width='188' height='26')
       nav#global_nav.uk-navbar-right
           ul.uk-navbar-nav
               li(v-bind:class="{'uk-active':isActive('sponsor')}")
-                  //nuxt-link(:to="$i18n.path('sponsor')" exact)
-                  a(:href="getPath('sponsor')")
-                      | {{ $t('header.navi.sponsor') }}
+                  nuxt-link(:to="$i18n.path('sponsor')" exact) {{ $t('header.navi.sponsor') }}
+                  //a(:href="getPath('sponsor')")
               li(v-bind:class="{'uk-active':isActive('code-of-conduct')}")
-                  //nuxt-link(:to="$i18n.path('code-of-conduct')" exact)
-                  a(:href="getPath('code-of-conduct')")
-                      | {{ $t('header.navi.code_of_conduct') }}
+                  nuxt-link(:to="$i18n.path('code-of-conduct')" exact) {{ $t('header.navi.code_of_conduct') }}
+                  //a(:href="getPath('code-of-conduct')")
               li
-                  a(:href="getLangPath()") {{ $t('header.navi.lang') }}
-                  //a(v-if="isActive('index')" :href="getLangPath()") {{ $t('header.navi.lang') }}
-                  //nuxt-link(v-else :to="getLangPath()" exact) {{ $t('header.navi.lang') }}
+                  //a(:href="getLangPath()") {{ $t('header.navi.lang') }}
+                  a(v-if="isActive('index')" :href="getLangPath()") {{ $t('header.navi.lang') }}
+                  nuxt-link(v-else :to="getLangPath()" exact) {{ $t('header.navi.lang') }}
 
     div#mobile-nav.uk-container(class="uk-hidden@s").uk-flex
         .uk-offcanvas-content
