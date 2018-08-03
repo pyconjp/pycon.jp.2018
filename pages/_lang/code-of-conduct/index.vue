@@ -10,3 +10,5 @@
     },
   }
 </script>
+
+<style src="./index.sass" lang="sass" />
