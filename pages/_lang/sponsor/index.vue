@@ -73,9 +73,6 @@ export default {
 </script>
 
 <style lang="sass">
-*
-  box-sizing: border-box
-
 #pycon-sponsor
   margin-top: 3rem
   @media (max-width: $breakpoint-small)
