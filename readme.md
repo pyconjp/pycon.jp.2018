@@ -17,7 +17,9 @@ node v8.9.1以上
 ```
 $ npm run dev
 開発用コマンド
-http://localhost:3000/
+http://localhost:4000/2018/
+
+※/2018/をベースURLにしている為、上記のアドレスで確認してください
 
 $ npm run build
 本番へ向け、jsやcssをビルドします
