@@ -1,5 +1,4 @@
-console.log(process.env.BASE_URL);
-const baseUrl = process.env.BASE_URL || '';
+const baseUrl = process.env.BASE_URL || '/2018';
 module.exports = {
   head: {
     titleTemplate: '%s - PyCon JP 2018',
@@ -31,7 +30,7 @@ module.exports = {
   ],
   router: {
     middleware: 'i18n',
-    base: '/_2018/'
+    base: '/2018/'
   },
   plugins: ['~/plugins/i18n.js'],
   generate: {
@@ -41,7 +40,7 @@ module.exports = {
     routes: ['/','/code-of-conduct','/sponsor','/en','/en/code-of-conduct','/en/sponsor']
   },
   env: {
-    baseUrl: '',
+    baseUrl: '/2018',
     sponsorApiEndpoint: 'https://script.google.com/macros/s/AKfycbyKmE6Ew9aWmOnj3VSwn435T8cx8kF0SkJb9fN7_PdE_ME2QpqP/exec'
   },
   modules: [
