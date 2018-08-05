@@ -71,7 +71,8 @@
     },
     "keynote": {
       "text": {
-        "head": "Keynote"
+        "head": "Keynote",
+        "subcaption": ""
     },
     "japanese": {
       "text": {

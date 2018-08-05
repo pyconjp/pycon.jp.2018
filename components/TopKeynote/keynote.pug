@@ -1,18 +1,17 @@
 section#TopKeynote.uk-section.uk-section-default
     h2 {{ $t('top.keynote.text.head') }}
-    div(class='uk-child-width-1-2@m' uk-grid)
-        .uk-card.uk-card-default
-            img(src='~/static/keynote/keynote_256x256.png' alt='')
-            h3.uk-card-title {{ $t('top.keynote.japanese.name') }}
-            p
-              |{{ $t('top.keynote.japanese.about') }}
-            p
-              |{{ $t('top.keynote.japanese.title') }}
+      span {{ $t('top.keynote.text.subcaption') }}
+    article.keynote-speakers.uk-flex
+      section#keynote-info-0917.uk-flex
+            img.profile(src='~/static/keynote/keynote_256x256.png' alt='')
+            div.detail
+              h3 {{ $t('top.keynote.japanese.name') }}
+              p
+                |{{ $t('top.keynote.japanese.about') }}
 
-        .uk-card.uk-card-default
-            img(src='~/static/keynote/keynote_256x256.png' alt='')
-            h3.uk-card-title {{ $t('top.keynote.english.name') }}
-            p
-              |{{ $t('top.keynote.english.about') }}
-            p
-              |{{ $t('top.keynote.english.title') }}
+      section#keynote-info-0918.uk-flex
+            img.profile(src='~/static/keynote/keynote_256x256.png' alt='')
+            div.detail
+              h3 {{ $t('top.keynote.english.name') }}
+              p
+                |{{ $t('top.keynote.english.about') }}
