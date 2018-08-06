@@ -70,27 +70,64 @@
       }
     },
     "keynote": {
-      "text": {
-        "head": "Keynote",
-        "subcaption": ""
-    },
-    "japanese": {
-      "text": {
-        "head": "国内のキーノート"
+        "text": {
+          "head": "Keynote",
+          "subcaption": ""
       },
-      "name": "name-ja",
-      "about": "about-ja ",
-      "title":"title-ja"
-    },
-    "english": {
-      "text": {
-        "head": "国外のキーノート"
+      "japanese": {
+        "text": {
+          "head": "day2"
+        },
+        "name": "Ransui Iso",
+        "about":[
+          "Ransui has been using Python 20 years since 1998.",
+          "Among other things, he has researched and developed distributed AI systems, e-commerce platforms, search engines, media servers, metadata management systems and advertisement delivery systems using Python.",
+          "Python is his go to language when coding in his free time.",
+          "He has presented at Python conferences six times, beginning with a presentation titled \"Useless for tomorrow's work\" at PyCon Japan 2011.",
+          "Currently he works as an enterprise support engineer for Amazon Web Services, helping customers solve technical problems."
+          ]
       },
-      "name": "name-en",
-      "about": "about----en ",
-      "title":"title-en"
-    }
-  },
+      "foreigner": {
+        "text": {
+          "head": "day1"
+        },
+        "name": "Manuel Kaufmann",
+        "about": [
+          "Manuel Kaufmann met Python, while performing his university studies, at the PyDay Santa Fe (Argentina) event in 2006 and since that day his life changed forever, literally.",
+          "He fell in love with its syntax and forgot pointers and double-linked list of C to these days. ",
+          "Since then he has become an active member of Python Argentina.",
+          "In these years, he has participated in the translation of the official book of Django and Django Girls Tutorial, among others. ",
+          "He has also worked on projects like One Laptop Per Child and in February 2016 was named \"Python Ambassador\" by the Python Software Foundation for his work with Argentina in Python.",
+          "Currently he is working at Read the Docs as a software developer."
+        ]
+      }
+    },
+    "invited-lecture": {
+      "text": {
+          "head": "Invited lecture",
+          "subcaption": ""
+      },
+      "first": {
+        "name": "Yutaka Matuo",
+        "about":[
+          "1997年 東京大学工学部電子情報工学科卒業。",
+          "2002年 同大学院博士課程修了。博士（工学）。同年より、産業技術総合研究所研究員。",
+          "2005年8月よりスタンフォード大学客員研究員を経て、2007年より、東京大学大学院工学系研究科総合研究機構／知の構造化センター／技術経営戦略学専攻准教授。",
+          "2014年より、東京大学大学院工学系研究科 技術経営戦略学専攻 グローバル消費インテリジェンス寄付講座 共同代表・特任准教授。",
+          "専門分野は、人工知能、ウェブマイニング、ビッグデータ分析。人工知能学会からは論文賞（2002年）、創立20周年記念事業賞（2006年）、現場イノベーション賞（2011年）、功労賞（2013年）の各賞を受賞。",
+          "人工知能学会　学生編集委員、編集委員を経て、2010年から副編集委員長、2012年から編集委員長・理事。",
+          "2014年から2018年まで倫理委員長。2017年より日本ディープラーニング協会理事長。"
+          ]
+      },
+      "second": {
+        "name": "Koraro Nakayama",
+        "about": [
+          "東京大学工学系研究科技術経営戦略学専攻 松尾研究室 特任講師。",
+          "2007年に大阪大学大学院情報科学研究科博士号取得後、大阪大学情報科学研究科特任研究員、東京大学知の構造化センター助教、講師を経て、現在に至る。",
+          "専門分野はAI、Web、大規模データ解析。"
+        ]
+      }
+    },
      "map": {
       "place": "Venue",
       "subcaption": " ",
