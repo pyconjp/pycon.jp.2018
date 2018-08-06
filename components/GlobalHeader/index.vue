@@ -3,9 +3,6 @@
 <script>
   export default {
     name: 'global-header',
-    data: {
-      hideCanvas: false
-    },
     methods: {
       isActive (route_name) {
         // console.log(this.$nuxt.$route.name);
