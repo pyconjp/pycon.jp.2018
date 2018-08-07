@@ -6,6 +6,7 @@ section#TopKeynote.uk-section.uk-section-default
         img.profile(src='~/assets/img/profiles/manuel-kaufmann.png' :alt="$t('top.keynote.foreigner.name')")
         div.detail
           h3 {{ $t('top.keynote.foreigner.name') }}
+          p.date {{ $t('top.keynote.foreigner.date') }}
           p
             span(v-for="word in $t('top.keynote.foreigner.about')") {{ word }}
               br
@@ -13,24 +14,27 @@ section#TopKeynote.uk-section.uk-section-default
         img.profile(src='~/assets/img/profiles/ransui-iso.png' :alt="$t('top.keynote.japanese.name')")
         div.detail
           h3 {{ $t('top.keynote.japanese.name') }}
+          p.date {{ $t('top.keynote.japanese.date') }}
           p
             span(v-for="word in $t('top.keynote.japanese.about')") {{ word }}
               br
 
-    h2#ivited-lecture {{ $t('top.invited-lecture.text.head') }}
+    h2#invited-lecture {{ $t('top.invited-lecture.text.head') }}
       span {{ $t('top.invited-lecture.text.subcaption') }}
-    article.keynote-speakers.uk-flex
-      section#keynote-info-0917.uk-flex
+    article.invited-speakers.uk-flex
+      section#invited-info-0917-1.uk-flex
         img.profile(src='~/assets/img/profiles/yutaka-matsuo.png' :alt="$t('top.invited-lecture.first.name')")
         div.detail
           h3 {{ $t('top.invited-lecture.first.name') }}
+          p.date {{ $t('top.invited-lecture.first.date') }}
           p
             span(v-for="word in $t('top.invited-lecture.first.about')") {{ word }}
               br
-      section#keynote-info-0918.uk-flex
+      section#invited-info-0917-2.uk-flex
         img.profile(src='~/assets/img/profiles/kotaro-nakayama.png' :alt="$t('top.invited-lecture.second.name')")
         div.detail
           h3 {{ $t('top.invited-lecture.second.name') }}
+          p.date {{ $t('top.invited-lecture.second.date') }}
           p
             span(v-for="word in $t('top.invited-lecture.second.about')") {{ word }}
               br

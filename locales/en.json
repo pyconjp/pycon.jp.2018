@@ -75,9 +75,7 @@
           "subcaption": ""
       },
       "japanese": {
-        "text": {
-          "head": "day2"
-        },
+        "date": "September 18th",
         "name": "Ransui Iso",
         "about":[
           "Ransui has been using Python 20 years since 1998.",
@@ -88,14 +86,12 @@
           ]
       },
       "foreigner": {
-        "text": {
-          "head": "day1"
-        },
+        "date": "September 17th",
         "name": "Manuel Kaufmann",
         "about": [
           "Manuel Kaufmann met Python, while performing his university studies, at the PyDay Santa Fe (Argentina) event in 2006 and since that day his life changed forever, literally.",
           "He fell in love with its syntax and forgot pointers and double-linked list of C to these days. ",
-          "Since then he has become an active member of Python Argentina.",
+          "Since then he has become an active member of Python Argentina (travels South America by car to spread Python) .",
           "In these years, he has participated in the translation of the official book of Django and Django Girls Tutorial, among others. ",
           "He has also worked on projects like One Laptop Per Child and in February 2016 was named \"Python Ambassador\" by the Python Software Foundation for his work with Argentina in Python.",
           "Currently he is working at Read the Docs as a software developer."
@@ -108,6 +104,7 @@
           "subcaption": ""
       },
       "first": {
+        "date": "September 17th",
         "name": "Yutaka Matuo",
         "about":[
           "1997年 東京大学工学部電子情報工学科卒業。",
@@ -120,6 +117,7 @@
           ]
       },
       "second": {
+        "date": "September 17th",
         "name": "Koraro Nakayama",
         "about": [
           "東京大学工学系研究科技術経営戦略学専攻 松尾研究室 特任講師。",
