@@ -74,9 +74,7 @@
           "subcaption": "基調講演"
       },
       "japanese": {
-        "text": {
-          "head": "2日目"
-        },
+        "date": "9月18日",
         "name": "磯 蘭水",
         "about":[
           "Pythonは1998年より使い始め、今年で20年になります。",
@@ -87,17 +85,15 @@
           ]
       },
       "foreigner": {
-        "text": {
-          "head": "1日目"
-        },
+        "date": "9月17日",
         "name": "Kaufmann Manuel",
         "about": [
           "Manuel Kaufmannは、大学に在学中の2006年に開催されたPyDay Santa FeでPythonに出会った。",
           "それによって彼の人生が大きく変わった。",
           "彼は、Pythonの文法が好きになり、C言語のポインターや双方向リストを数日で忘れるほどだった。",
-          "その時から、Python Argentinaのアクティブメンバーになった。",
+          "その時から、Python Argentina（車で南米を旅行しPythonを広げる）のアクティブメンバーになった。",
           "しばらくして、Djangoの公式ドキュメントやDjango Girlsチュートリアルの翻訳に参加することになった。",
-          "他にも、One Laptop Per Child(この部分よくわからない)のようなプロジェクトにも参加するようになった。",
+          "他にも、One Laptop Per Childのようなプロジェクトにも参加するようになった。",
           "彼のArgentina in Pythonの活動が、2016年2月にPSF Python Ambassadorとして表彰された。",
           "現在、Read the Docsでソフトウエアエンジニアとして働いている。"
         ]
@@ -109,6 +105,7 @@
           "subcaption": "招待講演"
       },
       "first": {
+        "date": "9月17日",
         "name": "松尾 豊",
         "about":[
           "1997年 東京大学工学部電子情報工学科卒業。",
@@ -123,6 +120,7 @@
           ]
       },
       "second": {
+        "date": "9月17日",
         "name": "中山 浩太郎",
         "about": [
           "東京大学工学系研究科技術経営戦略学専攻 松尾研究室 特任講師。",

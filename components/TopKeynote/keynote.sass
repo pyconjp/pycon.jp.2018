@@ -4,14 +4,15 @@ section#TopKeynote
         span
             @media (max-width: $breakpoint-xsmall-max)
                 margin-top: .4rem
-    h2#ivited-lecture
+    h2#invited-lecture
       margin-top: 140px
-    article.keynote-speakers
+    article.keynote-speakers,article.invited-speakers
         @media (max-width: 900px)
             flex-wrap: wrap
             margin-bottom: 140px
 
-        section[id^="keynote-info"]
+        section[id^="keynote-info"],
+        section[id^="invited-info"]
             position: relative
             z-index: 1
             min-width: calc(200px - 60px)
@@ -22,6 +23,7 @@ section#TopKeynote
             @media (max-width: 1200px)
               flex-wrap: wrap
               margin-bottom: 3rem
+              flex-direction: column
             @media (max-width: $breakpoint-xsmall-max)
               width: 100%
               padding: 2rem
@@ -91,10 +93,16 @@ section#TopKeynote
                 h3
                     font-size: 36px
                     font-weight: 300
+                    line-height: 2.4rem
+                    margin-bottom: .2rem
                     @media (max-width: 1200px)
                       margin-top: 2.3rem
                     @media (max-width: $breakpoint-xsmall-max)
                       font-size: 24px
+                      margin-bottom: 0
+                p.date
+                    color: #9B9B9B
+                    margin: 0 0 0 .2rem
                 p
                     font-size: 14px
                     line-height: 1.5rem
@@ -102,6 +110,7 @@ section#TopKeynote
                     font-stretch: normal
                     letter-spacing: normal
 
-        section#keynote-info-0918
+        section#keynote-info-0918,
+        section#invited-info-0917-2
             &:after
                 background-image: linear-gradient(135deg,  rgba(255, 244, 63, 0.5), rgba(232, 214, 0, 0.5))
