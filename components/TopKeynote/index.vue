@@ -5,3 +5,5 @@
     name: 'top-keynote'
   }
 </script>
+
+<style src="./keynote.sass" lang="sass" />

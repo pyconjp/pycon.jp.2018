@@ -5,6 +5,15 @@ export default {
       showRecruit: false,
     }
   },
+  methods: {
+    decideLocale: function(attr_base){
+      if(this.$store.state.locale === "en" && this.sponsor[attr_base + '_en']){
+        return this.sponsor[attr_base + '_en']
+      } else {
+        return this.sponsor[attr_base + '_ja']
+      }
+    }
+  },
   computed: {
     imgSrc: function(){
       if (!this.sponsor.imgPath || this.sponsor.imgPath === ""){
@@ -14,19 +23,19 @@ export default {
       }
     },
     name: function(){
-      return this.sponsor.name_ja
+      return this.decideLocale('name')
     },
     siteUrl: function(){
-      return this.sponsor.siteUrl_ja
+      return this.decideLocale('siteUrl')
     },
     desc: function(){
-      return this.sponsor.description_ja
+      return this.decideLocale('description')
     },
     recruitText: function(){
-      return this.sponsor.recruitText_ja
+      return this.decideLocale('recruitText')
     },
     recruitUrl: function(){
-      return this.sponsor.recruitUrl_ja
+      return this.decideLocale('recruitUrl')
     }
   }
 }
