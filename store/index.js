@@ -16,7 +16,7 @@ export const getters = {
 
 export const actions = {
   async FETCH_SPONSOR ({ commit }) {
-    const stage = 'prod' // Please change to "prod" if deploying production
+    const stage = 'prod_20180812' // Please change to "prod" if deploying production
     const noCache = false  // Please change to "false" if deploying production
     const sponsorApi = process.env.sponsorApiEndpoint + `?stage=${stage}&noCache=${noCache}`
     const response = await fetch(sponsorApi)
@@ -26,7 +26,7 @@ export const actions = {
     commit('FETCH_SPONSOR', data)
   },
   async FETCH_TOP_SPONSOR ({ commit }) {
-    const stage = 'prod' // Please change to "prod" if deploying production
+    const stage = 'prod_20180812' // Please change to "prod" if deploying production
     const noCache = false  // Please change to "false" if deploying production
     const sponsorApi = process.env.sponsorApiEndpoint + `?stage=${stage}&noCache=${noCache}`
     const response = await fetch(sponsorApi)
