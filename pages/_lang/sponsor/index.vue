@@ -7,6 +7,7 @@
     sprint(:sponsors="sprintSponsors")
     silver(:sponsors="silverSponsors")
     lunch(:sponsors="lunchSponsors")
+    drink(:sponsors="drinkSponsors")
     lanyard(:sponsors="lanyardSponsors")
     water(:sponsors="waterSponsors")
     patron(:sponsors="patron")
@@ -22,6 +23,7 @@ import Gold from '~/components/Sponsor/Gold';
 import Sprint from '~/components/Sponsor/Sprint';
 import Silver from '~/components/Sponsor/Silver';
 import Lunch from '~/components/Sponsor/Lunch';
+import Drink from '~/components/Sponsor/Drink';
 import Lanyard from '~/components/Sponsor/Lanyard';
 import Water from '~/components/Sponsor/Water';
 import Patron from '~/components/Sponsor/Patron';
@@ -36,6 +38,7 @@ export default {
     Sprint,
     Silver,
     Lunch,
+    Drink,
     Lanyard,
     Water,
     Patron,
@@ -54,6 +57,7 @@ export default {
     sprintSponsors() { return this.sponsors.filter(s => s.package == "Sprint") },
     silverSponsors() { return this.sponsors.filter(s => s.package == "Silver") },
     lunchSponsors() { return this.sponsors.filter(s => s.package == "Lunch") },
+    drinkSponsors() { return this.sponsors.filter(s => s.package == "Drink") },
     lanyardSponsors() { return this.sponsors.filter(s => s.package == "Lanyard") },
     waterSponsors() { return this.sponsors.filter(s => s.package == "Water") },
     patron() { return this.sponsors.filter(s => s.package == "Patron") },
