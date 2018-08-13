@@ -14,32 +14,31 @@ export const getters = {
   top_sponsor_loading (state) { return state.top_sponsor_loading}
 }
 
+const sponsorSheetName = 'prod_20180812'// Please change to "prod" if deploying production
+const sponsorNoCache = false  // Please change to "false" if deploying production
+const sponsorApiUri = process.env.sponsorApiEndpoint + `?stage=${sponsorSheetName}&noCache=${sponsorNoCache}`
+
 export const actions = {
+
   async FETCH_SPONSOR ({ commit }) {
-    const stage = 'prod' // Please change to "prod" if deploying production
-    const noCache = false  // Please change to "false" if deploying production
-    const sponsorApi = process.env.sponsorApiEndpoint + `?stage=${stage}&noCache=${noCache}`
-    const response = await fetch(sponsorApi)
+    const response = await fetch(sponsorApiUri)
     const json = await response.json()
     const data = json.data
 
     commit('FETCH_SPONSOR', data)
   },
   async FETCH_TOP_SPONSOR ({ commit }) {
-    const stage = 'prod' // Please change to "prod" if deploying production
-    const noCache = false  // Please change to "false" if deploying production
-    const sponsorApi = process.env.sponsorApiEndpoint + `?stage=${stage}&noCache=${noCache}`
-    const response = await fetch(sponsorApi)
+    const response = await fetch(sponsorApiUri)
     const json = await response.json()
     const data = json.data
 
     // 重複の削除
     let _data = [], names = []
     data.forEach( function ( item ) {
-      if ( names.indexOf( item.idName ) === -1 && item.package) {
+      if ( names.indexOf( item.distinctName ) === -1 && item.package) {
          _data.push(item)
        }
-      names.push( item.idName )
+      names.push( item.distinctName )
     } )
 
     commit('FETCH_TOP_SPONSOR', _data)
