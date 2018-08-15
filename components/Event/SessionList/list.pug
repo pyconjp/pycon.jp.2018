@@ -1,6 +1,31 @@
 article#session-lists
-  ul#lists-navi
-    li tab1
-  div#list-contents
-    ul.talk-session
-      li hoge
+  ul.uk-tab( data-uk-tab="{connect:'#list-contents'}" )
+    li.uk-active
+      a Talk Session
+    li
+      a Lighting Talk
+    li 
+      a Posters
+
+  div#list-contents.uk-switcher.uk-margin
+    div#talk-session.uk-list-divider
+      ul.uk-list
+        li.uk-text-meta
+          span 2018-08-14 17:00 Talk(30min) room-A 
+          span.uk-label.uk-margin-left 初心者
+          span.uk-label.uk-margin-left tag1
+        li
+          dl.uk-description-list
+            dt title
+              dd name
+                a.uk-text-right(href='#') 詳細はこちら
+
+        li.uk-text-meta
+         | 概略…
+      li Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      li Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.
+    div#lighting-talk.uk-list-divider
+      li hoge2
+    div#posters.uk-list-divider
+      li hoge3
+
