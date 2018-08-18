@@ -3,11 +3,6 @@
 <script>
   export default {
     name: 'time-table',
-    data () {
-      return {
-        isFixed: false,
-      }
-    },
     methods:{
       parallelScroll: function (evt, el) {
            const tableHeader = document.getElementById('test')
