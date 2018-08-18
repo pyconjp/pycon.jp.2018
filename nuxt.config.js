@@ -32,7 +32,10 @@ module.exports = {
     middleware: 'i18n',
     base: '/2018/'
   },
-  plugins: ['~/plugins/i18n.js'],
+  plugins: [
+            '~/plugins/i18n.js',
+            '~/plugins/element-scroll.js',
+            ],
   generate: {
     minify: {
       collapseWhitespace: false

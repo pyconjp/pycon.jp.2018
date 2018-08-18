@@ -9,10 +9,31 @@
         font-weight: 300
         padding-bottom: .5rem
 
+  div.t-head
+    background-color: #FFF
+    ul
+      list-style: none
+      height: 30px
+      width: 1296px
+      text-align: center
+      margin: 2.8rem 0 .9rem
+      padding: 0
+      font-weight: 300
+      background-color: #FFF
+      li
+        width: calc((1296px - 4rem) / 6)
+      li.t-time
+        width: 4rem
+  div.headFixed
+    overflow-x: hidden
+    border-top: 1px solid #EEE
+    border-bottom: 1px solid #9B9B9B
+    ul
+      margin-top: .9rem
+
   #tables
     @media (max-width: 1340px)
       overflow-x: scroll
-
   table
     width: 1296px
     border-collapse: collapse
@@ -51,17 +72,19 @@
     time
       display: flex
       align-items: center
-      justify-content: center
+      justify-content: flex-end
       position: absolute
-      top: 0
+      top: -1rem
       left: 0
       width: 4rem
-      min-height: 1.4rem
-      background-color: #666666
-      font-size: 13px
-      text-align: left
-      font-weight: normal
-      color: #FFF
+      height: 2rem
+      //background-color: #666666
+      font-size: 16px
+      text-align: center
+      font-weight: 300
+      padding-right: .7rem
+      //color: #FFF
+
   table#day-1
     td
       width: calc((1296px - 4rem) / 6)
