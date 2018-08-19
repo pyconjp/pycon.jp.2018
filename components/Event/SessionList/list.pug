@@ -9,22 +9,49 @@ article#session-lists
 
   div#list-contents.uk-switcher.uk-margin
     div#talk-session.uk-list-divider
-      table.uk-table.uk-table-responsive.uk-table-divider
-        thead
-          tr
-            th 
-            th  
-        tbody.uk-text-small
-          tr
-            td(colspan='2')
-              span 2018-08-14 17:00 Talk(30min) room-A 
-              span.uk-label.uk-marg 初心者
-              span.uk-label.uk-margin-left tag1
-          tr
-            td title
-            td 
-              a(href='#modal-example', uk-toggle='') 詳細はこちら
+      ul.uk-list
+        li.uk-text-small
+          span 2018-08-14 17:00 Talk(30min) room-A 
+          span.uk-label.uk-marg 初心者
+          span.uk-label.uk-margin-left tag1
+        li
+          span title
+          span
+            a.uk-text-right(href='#modal-session', uk-toggle) 詳細はこちら
+        li
+          | name
+        li
+          | 概要…
+      hr
+      ul.uk-list
+        li.uk-text-small
+          span 2018-08-14 17:00 Talk(30min) room-A 
+          span.uk-label.uk-marg 初心者
+          span.uk-label.uk-margin-left tag1
+        li
+          span title
+          span
+            a.uk-text-right(href='#modal-session', uk-toggle) 詳細はこちら
+        li
+          | name
+        li
+          | 概要…
     div#lighting-talk.uk-list-divider
       li hoge2
     div#posters.uk-list-divider
       li hoge3
+
+
+  div#modal-session(uk-modal)
+    div.uk-modal-dialog.uk-modal-body
+      button.uk-modal-close-default(type='button', uk-close)
+      p
+        | 2018-08-14 17:00 Talk(30min) room-A 
+      p 
+        span.uk-label.uk-marg 初心者
+        span.uk-label.uk-margin-left tag1
+        span.uk-label.uk-margin-left tag1 hogehoge
+      p.uk-modal-title title 
+      p name
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
