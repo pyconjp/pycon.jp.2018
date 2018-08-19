@@ -9,23 +9,22 @@ article#session-lists
 
   div#list-contents.uk-switcher.uk-margin
     div#talk-session.uk-list-divider
-      ul.uk-list
-        li.uk-text-meta
-          span 2018-08-14 17:00 Talk(30min) room-A 
-          span.uk-label.uk-margin-left 初心者
-          span.uk-label.uk-margin-left tag1
-        li
-          dl.uk-description-list
-            dt title
-              dd name
-                a.uk-text-right(href='#') 詳細はこちら
-
-        li.uk-text-meta
-         | 概略…
-      li Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      li Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.
+      table.uk-table.uk-table-responsive.uk-table-divider
+        thead
+          tr
+            th 
+            th  
+        tbody.uk-text-small
+          tr
+            td(colspan='2')
+              span 2018-08-14 17:00 Talk(30min) room-A 
+              span.uk-label.uk-marg 初心者
+              span.uk-label.uk-margin-left tag1
+          tr
+            td title
+            td 
+              a(href='#modal-example', uk-toggle='') 詳細はこちら
     div#lighting-talk.uk-list-divider
       li hoge2
     div#posters.uk-list-divider
       li hoge3
-
