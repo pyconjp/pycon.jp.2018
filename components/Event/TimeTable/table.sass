@@ -1,6 +1,6 @@
+/* Tab style */
 #TimeTable
   margin-bottom: 10rem
-
   ul.uk-tab
     li
       padding-right: 1.2rem
@@ -9,7 +9,7 @@
         font-weight: 300
         padding-bottom: .5rem
 
-  div.t-head
+  .t-head
     background-color: #FFF
     ul
       list-style: none
@@ -20,20 +20,25 @@
       padding: 0
       font-weight: 300
       background-color: #FFF
+      align-items: center
       li
         width: calc((1296px - 4rem) / 6)
       li.t-time
         width: 4rem
-  div.headFixed
+  .headFixed
     overflow-x: hidden
-    border-top: 1px solid #EEE
-    border-bottom: 1px solid #9B9B9B
+    border-top: 1px solid #DDD
+    box-shadow: 0px 3px 2px -2px #CCC
+    //border-bottom: 1px solid #9B9B9B
     ul
-      margin-top: .9rem
+      margin: 1.2rem 0
+  .uk-tab > .uk-active > a
+    border-color: $global-link-color
 
-  #tables
-    @media (max-width: 1340px)
-      overflow-x: scroll
+/* table style */
+#tables
+  @media (max-width: 1340px)
+    overflow-x: scroll
   table
     width: 1296px
     border-collapse: collapse
@@ -58,14 +63,14 @@
       height: 150px
     td
       text-align: center
-      border: 1px solid #9B9B9B
-    tr
-      &:not(.t-session)
-        td
-          &:not(.event)
-            background-color: #d8d8d8
-      td.close
-        background-color: #d8d8d8
+      border-top: 1px solid #9B9B9B
+      background-color: #FFF
+      &:nth-child(even)
+        background-color: rgba(185,195,200,.3)
+        //background-image: linear-gradient(12deg, rgba(40, 170, 226, 0.3), rgba(0, 223, 216, 0.3))
+      &:last-child
+        border-bottom: 1px solid #9B9B9B
+
     th
       position: relative
       font-weight: 300
@@ -78,12 +83,35 @@
       left: 0
       width: 4rem
       height: 2rem
-      //background-color: #666666
       font-size: 16px
       text-align: center
       font-weight: 300
       padding-right: .7rem
-      //color: #FFF
+    tr.t-admission,
+    tr.t-lunch,
+    tr.t-rest,
+    tr.t-closing,
+    tr.t-party
+        height: 60px
+        td
+          height: 60px
+          position: relative
+        span
+          position: absolute
+          top: 0
+          left: 0
+          background-color: rgba(255,255,255,0.7)
+          width: calc((100% * 6) + 6px)
+          height: calc(60px - 1px)
+          align-items: center
+          z-index: 2
+          p
+            margin: 0
+    tr.t-party
+      td
+        border-bottom: 1px solid #9B9B9B
+
+
 
   table#day-1
     td
@@ -93,32 +121,40 @@
     td
       width: calc((1296px - 4rem) / 7)
 
-  article.session-summary
-    padding: .4rem
-    text-align: left
-    span
-      text-align: right
-      color: #9B9B9B
-      font-weight: 300
+
+/* session summary */
+article.session-summary
+  padding: .4rem
+  text-align: left
+  margin: .4rem .3rem
+  border: 1px solid #EEE
+  border-radius: 2px
+  background-color: #FFF
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .15)
+  span
+    text-align: right
+    color: #9B9B9B
+    font-weight: 300
+    font-size: 12px
+  h3
+    margin: .8rem 0 0 0
+    padding-bottom: .4rem
+    font-size: 14px
+    border-bottom: 1px solid #AAA
+  p.name
+    margin: .4rem 0 0 0
+    font-size: 13px
+  p.disc
+    margin: .4rem 0 0 0
+    font-size: 10px
+  ul
+    list-style: none
+    padding: 0
+    margin: .9rem 0 .6rem
+    li
       font-size: 12px
-    h3
-      margin: .8rem 0 0 0
-      font-size: 15px
-    p.name
-      margin: .3rem 0 0 0
-      font-size: 13px
-    p.disc
-      margin: .6rem 0 0 0
-      font-size: 10px
-    ul
-      list-style: none
-      padding: 0
-      margin: .8rem 0 .6rem
-      li
-        font-size: 12px
-        font-weight: 300
-        background-color: #666
-        color: #FFF
-        padding: 0 .2rem
-        margin-right: .3rem
-        margin-top: .2rem
+      font-weight: 300
+      background-color: rgb(255, 244, 63)
+      padding: 0 .2rem
+      margin-right: .3rem
+      margin-top: .2rem

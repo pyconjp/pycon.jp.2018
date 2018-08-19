@@ -1,13 +1,13 @@
 div#TimeTable
-  ul.uk-tab(data-uk-tab="{connect:'#tables'}")
+  ul.uk-tab(uk-tab="{connect:'#tables'}" uk-switcher="{swiping:false}")
     li.uk-active
       a カンファレンスDay1
     li
       a カンファレンスDay2
 
-  div#tables.uk-switcher(v-elScroll="parallelScroll")
-    section#d1
-      div#test.t-head(uk-sticky="offset: 112")
+  div#tables.uk-switcher(v-scroll="fixedHead" v-elScroll="parallelScroll")
+    section
+      div#test.t-head(:class='{headFixed:isFixed}' uk-sticky="offset: 112")
         ul.uk-flex
           li.t-time
           li A+B会議室
@@ -20,29 +20,51 @@ div#TimeTable
         tr.t-admission
           th
             time 9:30
-          td(colspan="6") 入場受付
+          td
+            span.uk-flex.uk-flex-center
+              p 入場受付
+          td 
+          td 
+          td 
+          td 
+          td 
         tr.t-opening
           th
             time 9:45
-          td(colspan="3")
-          td.event オープニング
-          td(colspan="2")
+          td
+          td
+          td
+          td.event 
+            p オープニング
+          td
+          td
         tr.t-keynote
           th
             time 10:10
-          td(colspan="3")
-          td.event 基調講演
-          td(colspan="2")
+          td
+          td
+          td
+          td.event
+            p 基調講演
+          td
+          td
         tr.t-lunch
           th
-            time 10:45
-          td(colspan="6") ランチ（？）
+            time 12:00
+          td
+            span.uk-flex.uk-flex-center
+              p ランチ
+          td 
+          td 
+          td 
+          td 
+          td           
         tr.t-session
           th
             time 13:30
           td
             article.session-summary.uk-flex.uk-flex-column
-              span.room roomA
+              span.room A+B会議室
               span.event-type talk(30min)
               h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
               p.name 帆下 風雅
@@ -51,15 +73,72 @@ div#TimeTable
                 li Keras
                 li MachineLearning
                 li music
-          td talk2
-          td talk3
-          td talk4
-          td talk5
-          td talk6
-        tr.t-reset
+          td
+            article.session-summary.uk-flex.uk-flex-column
+              span.room A+B会議室
+              span.event-type talk(30min)
+              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
+              p.name 帆下 風雅
+              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
+              ul.tag.uk-flex.uk-flex-wrap
+                li Keras
+                li MachineLearning
+                li music
+          td
+            article.session-summary.uk-flex.uk-flex-column
+              span.room A+B会議室
+              span.event-type talk(30min)
+              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
+              p.name 帆下 風雅
+              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
+              ul.tag.uk-flex.uk-flex-wrap
+                li Keras
+                li MachineLearning
+                li music
+          td
+            article.session-summary.uk-flex.uk-flex-column
+              span.room A+B会議室
+              span.event-type talk(30min)
+              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
+              p.name 帆下 風雅
+              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
+              ul.tag.uk-flex.uk-flex-wrap
+                li Keras
+                li MachineLearning
+                li music
+          td
+            article.session-summary.uk-flex.uk-flex-column
+              span.room A+B会議室
+              span.event-type talk(30min)
+              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
+              p.name 帆下 風雅
+              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
+              ul.tag.uk-flex.uk-flex-wrap
+                li Keras
+                li MachineLearning
+                li music
+          td
+            article.session-summary.uk-flex.uk-flex-column
+              span.room A+B会議室
+              span.event-type talk(30min)
+              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
+              p.name 帆下 風雅
+              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
+              ul.tag.uk-flex.uk-flex-wrap
+                li Keras
+                li MachineLearning
+                li music
+        tr.t-rest
           th
             time 14:15
-          td(colspan="6") 休憩
+          td
+            span.uk-flex.uk-flex-center
+              p 休憩
+          td
+          td
+          td
+          td
+          td
         tr.t-session
           th
             time 14:30
@@ -69,10 +148,17 @@ div#TimeTable
           td talk4
           td talk5
           td talk6
-        tr.t-reset
+        tr.t-rest
           th
             time 15:15
-          td(colspan="6") 休憩
+          td
+            span.uk-flex.uk-flex-center
+              p 休憩
+          td
+          td
+          td
+          td
+          td
         tr.t-session
           th
             time 15:45
@@ -82,10 +168,17 @@ div#TimeTable
           td talk4
           td talk5
           td talk6
-        tr.t-reset
+        tr.t-rest
           th
             time 16:15
-          td(colspan="6") 休憩
+          td
+            span.uk-flex.uk-flex-center
+              p 休憩
+          td
+          td
+          td
+          td
+          td
         tr.t-session
           th
             time 16:30
@@ -98,13 +191,29 @@ div#TimeTable
         tr.t-closing
           th
             time 17:00
-          td(colspan="6") セッションクローズ
+          td
+            span.uk-flex.uk-flex-center
+              p セッションクローズ
+          td
+          td
+          td
+          td
+          td          
         tr.t-party
           th
             time 17:30
-          td(colspan="6") パーティ
-
-    section#d2
+          td
+            span.uk-flex.uk-flex-center
+              p パーティ
+          td
+          td
+          td
+          td
+          td
+        tr.t-party-end
+          th
+            time 20:00
+    section
       table#day-2
         tr.t-head
           th.t-time
@@ -165,7 +274,7 @@ div#TimeTable
           td talk5
           td talk6
           td talk7
-        tr.t-reset
+        tr.t-rest
           th
             time 14:15
           td(colspan="7") 休憩
@@ -179,7 +288,7 @@ div#TimeTable
           td talk5
           td talk6
           td talk7
-        tr.t-reset
+        tr.t-rest
           th
             time 15:00
           td(colspan="7") 休憩
@@ -193,7 +302,7 @@ div#TimeTable
           td talk5
           td talk6
           td talk7
-        tr.t-reset
+        tr.t-rest
           th
             time 16:15
           td(colspan="7") 休憩
