@@ -11,24 +11,32 @@ export default {
   },
   methods:{
     parallelScroll: function (evt, el) {
-      let tableHeader = document.getElementById('test')
+      let tableHeader
+      if( document.getElementById("day-1-rooms") != null ){
+          tableHeader = document.getElementById("day-1-rooms")
+      }else {
+          tableHeader = document.getElementById("day-2-rooms")
+      }      
       if(window.scrollY > (112+90)){
         const sLeft = el.scrollLeft
         tableHeader.scrollLeft = sLeft
       }else{
-        //const tableHeader = document.getElementById('test')
         tableHeader.scrollLeft = 0
       }
     },
     fixedHead: function(evt, el) {
-      let tableHeader = document.getElementById('test')
+      let tableHeader
+      if( document.getElementById("day-1-rooms") != null ){
+          tableHeader = document.getElementById("day-1-rooms")
+      }else {
+          tableHeader = document.getElementById("day-2-rooms")
+      }
       if(window.scrollY > (112+89)){
         this.$data.isFixed = true
         const sLeft = el.scrollLeft
         tableHeader.scrollLeft = sLeft
       }else{
         this.$data.isFixed = false
-        //const tableHeader = document.getElementById('test')
         tableHeader.scrollLeft = 0
       }
     }

@@ -25,136 +25,185 @@
         width: calc((1296px - 4rem) / 6)
       li.t-time
         width: 4rem
+  div#day-2-rooms
+    ul
+      li
+        width: calc((1296px - 4rem) / 7)
+      li.t-time
+        width: 4rem
+
   .headFixed
     overflow-x: hidden
     border-top: 1px solid #DDD
     box-shadow: 0px 3px 2px -2px #CCC
-    //border-bottom: 1px solid #9B9B9B
     ul
       margin: 1.2rem 0
+      @media (max-width: $breakpoint-xsmall-max)
+        margin: 1.2rem 0
+
   .uk-tab > .uk-active > a
     border-color: $global-link-color
 
-/* table style */
-#tables
-  @media (max-width: 1340px)
-    overflow-x: scroll
-  table
-    width: 1296px
-    border-collapse: collapse
-    border-spacing: 0
-    font-weight: normal
-    tr > th.t-time
-      width: 4rem
-    tr
-      &:not(.t-head)
+  /* table style */
+  #tables
+    @media (max-width: 1340px)
+      overflow-x: scroll
+    table
+      width: 1296px
+      border-collapse: collapse
+      border-spacing: 0
+      font-weight: normal
+      tr > th.t-time
+        width: 4rem
+      tr
+        &:not(.t-head)
+          th
+            width: 4rem
+      tr.t-head
         th
-          width: 4rem
-    tr.t-head
-      th
-        &:not(.t-time)
-          border-bottom: 1px solid #9B9B9B
-    tr
-      height: 60px
-    tr.t-head
-      height: 60px
-    tr.t-session,
-    tr.t-keynote
-      height: 150px
-    td
-      text-align: center
-      border-top: 1px solid #9B9B9B
-      background-color: #FFF
-      &:nth-child(even)
-        background-color: rgba(185,195,200,.3)
-        //background-image: linear-gradient(12deg, rgba(40, 170, 226, 0.3), rgba(0, 223, 216, 0.3))
-      &:last-child
-        border-bottom: 1px solid #9B9B9B
-
-    th
-      position: relative
-      font-weight: 300
-    time
-      display: flex
-      align-items: center
-      justify-content: flex-end
-      position: absolute
-      top: -1rem
-      left: 0
-      width: 4rem
-      height: 2rem
-      font-size: 16px
-      text-align: center
-      font-weight: 300
-      padding-right: .7rem
-    tr.t-admission,
-    tr.t-lunch,
-    tr.t-rest,
-    tr.t-closing,
-    tr.t-party
+          &:not(.t-time)
+            border-bottom: 1px solid #9B9B9B
+      tr
         height: 60px
-        td
-          height: 60px
-          position: relative
-        span
-          position: absolute
-          top: 0
-          left: 0
-          background-color: rgba(255,255,255,0.7)
-          width: calc((100% * 6) + 6px)
-          height: calc(60px - 1px)
+      tr.t-head
+        height: 60px
+      tr.t-session,
+      tr.t-keynote,
+      tr.t-invited-lecture,
+        height: 150px
+      th
+        position: relative
+        font-weight: 300
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        padding: 0
+        &:after
+          content: ""
+          display: block
+          width: 1rem
+          height: 1rem
+          margin: 0
+          margin-right: -.5rem
+          border-top: 1px solid #9B9B9B
+        time
+          display: flex
           align-items: center
-          z-index: 2
-          p
-            margin: 0
-    tr.t-party
+          justify-content: flex-end
+          position: absolute
+          top: -1rem
+          left: 0
+          width: 4rem
+          height: 2rem
+          font-size: 16px
+          text-align: center
+          font-weight: 300
+          padding-right: .9rem
       td
-        border-bottom: 1px solid #9B9B9B
+        text-align: center
+        border-top: 1px solid #9B9B9B
+        background-color: #FFF
+        &:nth-child(even)
+          background-color: rgba(180,195,200,.3)
+        &:last-child
+          border-bottom: 1px solid #9B9B9B
+      tr.t-admission,
+      tr.t-lunch,
+      tr.t-rest,
+      tr.t-closing,
+      tr.t-party
+          height: 60px
+          td
+            height: 60px
+            position: relative
+          span
+            position: absolute
+            top: 0
+            left: 0
+            background-color: rgba(255,255,255,0.7)
+            width: calc((100% * 6) + 6px)
+            height: calc(60px - 1px)
+            align-items: center
+            z-index: 2
+            p
+              margin: 0
+      tr.t-party
+        td
+          border-bottom: 1px solid #9B9B9B
+
+    table#day-1
+      td
+        width: calc((1296px - 4rem) / 6)
+
+    table#day-2
+      td
+        width: calc((1296px - 4rem) / 7)
+      tr.t-admission,
+      tr.t-lunch,
+      tr.t-rest,
+      tr.t-closing,
+      tr.t-party
+          span
+            width: calc((100% * 7) + 6px)
+      tr.t-opening,
+      tr.t-keynote,
+      tr.t-session
+          td
+            position: relative
+          td.event > p,
+          td.connecting > div
+            position: absolute
+            top: 0
+            left: 0
+            background-color: #FFF
+            width: calc((100% * 2) - .6rem)
+            height: calc(100% - .8rem)
+            z-index: 2
+            margin: .4rem .3rem
+            border: 1px solid #EEE
+            border-radius: 2px
+            background-color: #FFF
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .15)
+          td.event > p
+            align-items: center
+      tr.t-closing
+        td
+          border-bottom: 1px solid #9B9B9B
 
 
-
-  table#day-1
-    td
-      width: calc((1296px - 4rem) / 6)
-
-  table#day-2
-    td
-      width: calc((1296px - 4rem) / 7)
-
-
-/* session summary */
-article.session-summary
-  padding: .4rem
-  text-align: left
-  margin: .4rem .3rem
-  border: 1px solid #EEE
-  border-radius: 2px
-  background-color: #FFF
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .15)
-  span
-    text-align: right
-    color: #9B9B9B
-    font-weight: 300
-    font-size: 12px
-  h3
-    margin: .8rem 0 0 0
-    padding-bottom: .4rem
-    font-size: 14px
-    border-bottom: 1px solid #AAA
-  p.name
-    margin: .4rem 0 0 0
-    font-size: 13px
-  p.disc
-    margin: .4rem 0 0 0
-    font-size: 10px
-  ul
-    list-style: none
-    padding: 0
-    margin: .9rem 0 .6rem
-    li
-      font-size: 12px
+  /* session summary */
+  div.session-summary
+    padding: .4rem
+    text-align: left
+    margin: .4rem .3rem
+    border: 1px solid #EEE
+    border-radius: 2px
+    background-color: #FFF
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .15)
+    span
+      text-align: right
+      color: #9B9B9B
       font-weight: 300
-      background-color: rgb(255, 244, 63)
-      padding: 0 .2rem
-      margin-right: .3rem
-      margin-top: .2rem
+      font-size: 12px
+    h3
+      margin: .8rem 0 0 0
+      padding-bottom: .4rem
+      font-size: 14px
+      border-bottom: 1px solid #AAA
+    p.name
+      margin: .4rem 0 0 0
+      font-size: 13px
+    p.disc
+      margin: .4rem 0 0 0
+      font-size: 10px
+    ul
+      list-style: none
+      padding: 0
+      margin: .9rem 0 .6rem
+      li
+        font-size: 12px
+        font-weight: 300
+        background-color: rgb(255, 244, 63)
+        padding: 0 .2rem
+        margin-right: .3rem
+        margin-top: .2rem

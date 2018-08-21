@@ -7,7 +7,7 @@ div#TimeTable
 
   div#tables.uk-switcher(v-scroll="fixedHead" v-elScroll="parallelScroll")
     section
-      div#test.t-head(:class='{headFixed:isFixed}' uk-sticky="offset: 112")
+      div#day-1-rooms.t-head(:class='{headFixed:isFixed}' uk-sticky="offset: 112; media: @s")
         ul.uk-flex
           li.t-time
           li A+B会議室
@@ -22,30 +22,30 @@ div#TimeTable
             time 9:30
           td
             span.uk-flex.uk-flex-center
-              p 入場受付
+              p 開場
           td 
           td 
           td 
           td 
           td 
-        tr.t-opening
-          th
-            time 9:45
-          td
-          td
-          td
-          td.event 
-            p オープニング
-          td
-          td
         tr.t-keynote
           th
-            time 10:10
+            time 10:00
           td
           td
           td
           td.event
             p 基調講演
+          td
+          td
+        tr.t-invited-lecture
+          th
+            time 11:10
+          td
+          td
+          td
+          td.event
+            p 招待講演
           td
           td
         tr.t-lunch
@@ -63,7 +63,7 @@ div#TimeTable
           th
             time 13:30
           td
-            article.session-summary.uk-flex.uk-flex-column
+            div.session-summary.uk-flex.uk-flex-column
               span.room A+B会議室
               span.event-type talk(30min)
               h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
@@ -74,7 +74,7 @@ div#TimeTable
                 li MachineLearning
                 li music
           td
-            article.session-summary.uk-flex.uk-flex-column
+            div.session-summary.uk-flex.uk-flex-column
               span.room A+B会議室
               span.event-type talk(30min)
               h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
@@ -85,7 +85,7 @@ div#TimeTable
                 li MachineLearning
                 li music
           td
-            article.session-summary.uk-flex.uk-flex-column
+            div.session-summary.uk-flex.uk-flex-column
               span.room A+B会議室
               span.event-type talk(30min)
               h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
@@ -96,7 +96,7 @@ div#TimeTable
                 li MachineLearning
                 li music
           td
-            article.session-summary.uk-flex.uk-flex-column
+            div.session-summary.uk-flex.uk-flex-column
               span.room A+B会議室
               span.event-type talk(30min)
               h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
@@ -107,7 +107,7 @@ div#TimeTable
                 li MachineLearning
                 li music
           td
-            article.session-summary.uk-flex.uk-flex-column
+            div.session-summary.uk-flex.uk-flex-column
               span.room A+B会議室
               span.event-type talk(30min)
               h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
@@ -118,7 +118,7 @@ div#TimeTable
                 li MachineLearning
                 li music
           td
-            article.session-summary.uk-flex.uk-flex-column
+            div.session-summary.uk-flex.uk-flex-column
               span.room A+B会議室
               span.event-type talk(30min)
               h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
@@ -153,7 +153,7 @@ div#TimeTable
             time 15:15
           td
             span.uk-flex.uk-flex-center
-              p 休憩
+              p おやつ
           td
           td
           td
@@ -193,7 +193,18 @@ div#TimeTable
             time 17:00
           td
             span.uk-flex.uk-flex-center
-              p セッションクローズ
+              p 片付け
+          td
+          td
+          td
+          td
+          td  
+        tr.t-closing
+          th
+            time 17:15
+          td
+            span.uk-flex.uk-flex-center
+              p クロージング
           td
           td
           td
@@ -204,6 +215,17 @@ div#TimeTable
             time 17:30
           td
             span.uk-flex.uk-flex-center
+              p Lightning Talk
+          td
+          td
+          td
+          td
+          td
+        tr.t-party
+          th
+            time 18:00
+          td
+            span.uk-flex.uk-flex-center
               p パーティ
           td
           td
@@ -212,40 +234,63 @@ div#TimeTable
           td
         tr.t-party-end
           th
-            time 20:00
+            time 20:30
     section
+      div#day-2-rooms.t-head(:class='{headFixed:isFixed}' uk-sticky="offset: 112; media: @s")
+        ul.uk-flex
+          li.t-time
+          li A+B会議室
+          li 小展示
+          li 特別会議室
+          li コンベンションホール
+            br
+            |梅
+          li コンベンションホール
+            br
+            |鶯
+          li C会議室
+          li D会議室
       table#day-2
-        tr.t-head
-          th.t-time
-          th A+B会議室
-          th 小展示
-          th 特別会議室
-          th コンベンションホール 梅
-          th コンベンションホール 鶯
-          th C会議室
-          th D会議室
         tr.t-admission
           th
             time 9:30
-          td(colspan="7") 入場受付
-        tr.t-opening
-          th
-            time 9:45
-          td(colspan="3")
-          td.event オープニング
-          td(colspan="3")
+          td
+            span.uk-flex.uk-flex-center
+              p 開場
+          td
+          td
+          td
+          td
+          td
+          td
         tr.t-keynote
           th
-            time 10:10
-          td(colspan="3")
-          td.event 基調講演
-          td(colspan="3")
+            time 10:00
+          td
+          td
+          td
+          td.event
+            p 基調講演
+          td
+          td
+          td
+        tr.t-rest
+          th
+            time 11:00
+          td
+            span.uk-flex.uk-flex-center
+              p 休憩
+          td
+          td
+          td
+          td
+          td
         tr.t-session
           th
             time 11:15
           td
-            article.session-summary.uk-flex.uk-flex-column
-              span.room roomA
+            div.session-summary.uk-flex.uk-flex-column
+              span.room A+B会議室
               span.event-type talk(30min)
               h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
               p.name 帆下 風雅
@@ -254,16 +299,74 @@ div#TimeTable
                 li Keras
                 li MachineLearning
                 li music
-          td.close
-          td talk2
-          td talk3
-          td talk4
-          td talk5
-          td talk6
+          td
+            div.session-summary.uk-flex.uk-flex-column
+              span.room A+B会議室
+              span.event-type talk(30min)
+              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
+              p.name 帆下 風雅
+              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
+              ul.tag.uk-flex.uk-flex-wrap
+                li Keras
+                li MachineLearning
+                li music
+          td
+            div.session-summary.uk-flex.uk-flex-column
+              span.room A+B会議室
+              span.event-type talk(30min)
+              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
+              p.name 帆下 風雅
+              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
+              ul.tag.uk-flex.uk-flex-wrap
+                li Keras
+                li MachineLearning
+                li music
+          td.connecting 
+            div.session-summary.uk-flex.uk-flex-column
+              span.room コンベンションホール
+              span.event-type talk(45min)
+              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
+              p.name 帆下 風雅
+              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
+              ul.tag.uk-flex.uk-flex-wrap
+                li Keras
+                li MachineLearning
+                li music
+          td
+          td
+            div.session-summary.uk-flex.uk-flex-column
+              span.room A+B会議室
+              span.event-type talk(30min)
+              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
+              p.name 帆下 風雅
+              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
+              ul.tag.uk-flex.uk-flex-wrap
+                li Keras
+                li MachineLearning
+                li music
+          td
+            div.session-summary.uk-flex.uk-flex-column
+              span.room A+B会議室
+              span.event-type talk(30min)
+              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
+              p.name 帆下 風雅
+              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
+              ul.tag.uk-flex.uk-flex-wrap
+                li Keras
+                li MachineLearning
+                li music
         tr.t-lunch
           th
             time 12:00
-          td(colspan="7") ランチタイム
+          td
+            span.uk-flex.uk-flex-center
+              p ランチ
+          td
+          td
+          td
+          td
+          td
+          td
         tr.t-session
           th
             time 13:30
@@ -277,7 +380,15 @@ div#TimeTable
         tr.t-rest
           th
             time 14:15
-          td(colspan="7") 休憩
+          td
+            span.uk-flex.uk-flex-center
+              p 休憩
+          td
+          td
+          td
+          td
+          td
+          td
         tr.t-session
           th
             time 14:30
@@ -291,7 +402,15 @@ div#TimeTable
         tr.t-rest
           th
             time 15:00
-          td(colspan="7") 休憩
+          td
+            span.uk-flex.uk-flex-center
+              p おやつ
+          td
+          td
+          td
+          td
+          td
+          td
         tr.t-session
           th
             time 15:45
@@ -305,7 +424,15 @@ div#TimeTable
         tr.t-rest
           th
             time 16:15
-          td(colspan="7") 休憩
+          td
+            span.uk-flex.uk-flex-center
+              p 休憩
+          td
+          td
+          td
+          td
+          td
+          td
         tr.t-session
           th
             time 16:30
@@ -319,8 +446,39 @@ div#TimeTable
         tr.t-closing
           th
             time 17:00
-          td(colspan="7") セッションクローズ
+          td
+            span.uk-flex.uk-flex-center
+              p 片付け
+          td
+          td
+          td
+          td
+          td
+          td
         tr.t-party
           th
-            time 17:30
-          td(colspan="7") パーティ
+            time 17:15
+          td
+            span.uk-flex.uk-flex-center
+              p Lightning Talk
+          td
+          td
+          td
+          td
+          td
+          td
+        tr.t-closing
+          th
+            time 18:30
+          td
+            span.uk-flex.uk-flex-center
+              p クロージング
+          td
+          td
+          td
+          td
+          td
+          td
+        tr.t-party-end
+          th
+            time 19:00
