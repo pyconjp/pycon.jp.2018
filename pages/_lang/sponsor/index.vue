@@ -6,10 +6,11 @@
     gold(:sponsors="goldSponsors")
     sprint(:sponsors="sprintSponsors")
     silver(:sponsors="silverSponsors")
+    breakfast(:sponsors="breakfastSponsors")
     lunch(:sponsors="lunchSponsors")
     drink(:sponsors="drinkSponsors")
-    lanyard(:sponsors="lanyardSponsors")
     water(:sponsors="waterSponsors")
+    lanyard(:sponsors="lanyardSponsors")
     patron(:sponsors="patron")
     media(:sponsors="mediaSponsors")
 </template>
@@ -22,10 +23,11 @@ import Platinum from '~/components/Sponsor/Platinum';
 import Gold from '~/components/Sponsor/Gold';
 import Sprint from '~/components/Sponsor/Sprint';
 import Silver from '~/components/Sponsor/Silver';
+import Breakfast from '~/components/Sponsor/Breakfast';
 import Lunch from '~/components/Sponsor/Lunch';
 import Drink from '~/components/Sponsor/Drink';
-import Lanyard from '~/components/Sponsor/Lanyard';
 import Water from '~/components/Sponsor/Water';
+import Lanyard from '~/components/Sponsor/Lanyard';
 import Patron from '~/components/Sponsor/Patron';
 import Media from '~/components/Sponsor/Media';
 
@@ -37,10 +39,11 @@ export default {
     Gold,
     Sprint,
     Silver,
+    Breakfast,
     Lunch,
     Drink,
-    Lanyard,
     Water,
+    Lanyard,
     Patron,
     Media
   },
@@ -56,10 +59,11 @@ export default {
     goldSponsors() { return this.sponsors.filter(s => s.package == "Gold") },
     sprintSponsors() { return this.sponsors.filter(s => s.package == "Sprint") },
     silverSponsors() { return this.sponsors.filter(s => s.package == "Silver") },
+    breakfastSponsors() { return this.sponsors.filter(s => s.package == "Breakfast") },
     lunchSponsors() { return this.sponsors.filter(s => s.package == "Lunch") },
     drinkSponsors() { return this.sponsors.filter(s => s.package == "Drink") },
-    lanyardSponsors() { return this.sponsors.filter(s => s.package == "Lanyard") },
     waterSponsors() { return this.sponsors.filter(s => s.package == "Water") },
+    lanyardSponsors() { return this.sponsors.filter(s => s.package == "Lanyard") },
     patron() { return this.sponsors.filter(s => s.package == "Patron") },
     mediaSponsors() { return this.sponsors.filter(s => s.package == "Media") }
   },
