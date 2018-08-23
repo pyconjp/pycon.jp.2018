@@ -7,16 +7,15 @@ export default {
   data: () => {
     return{
       isFixed: false,
+      currentTab: "day-1",
     }
   },
   methods:{
+    changeTab: function (evt) {
+      this.$data.currentTab = evt.currentTarget.getAttribute('data-tab')
+    },
     parallelScroll: function (evt, el) {
-      let tableHeader
-      if( document.getElementById("day-1-rooms") != null ){
-          tableHeader = document.getElementById("day-1-rooms")
-      }else {
-          tableHeader = document.getElementById("day-2-rooms")
-      }      
+      let tableHeader = this.$refs[this.$data.currentTab]
       if(window.scrollY > (112+90)){
         const sLeft = el.scrollLeft
         tableHeader.scrollLeft = sLeft
@@ -25,13 +24,8 @@ export default {
       }
     },
     fixedHead: function(evt, el) {
-      let tableHeader
-      if( document.getElementById("day-1-rooms") != null ){
-          tableHeader = document.getElementById("day-1-rooms")
-      }else {
-          tableHeader = document.getElementById("day-2-rooms")
-      }
-      if(window.scrollY > (112+89)){
+      let tableHeader = this.$refs[this.$data.currentTab]
+      if(tableHeader && (window.scrollY > (112+89))){
         this.$data.isFixed = true
         const sLeft = el.scrollLeft
         tableHeader.scrollLeft = sLeft

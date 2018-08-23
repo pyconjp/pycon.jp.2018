@@ -1,13 +1,13 @@
 div#TimeTable
   ul.uk-tab(uk-tab="{connect:'#tables'}" uk-switcher="{swiping:false}")
-    li.uk-active
+    li.uk-active(data-tab="day-1" v-on:click="changeTab")
       a カンファレンスDay1
-    li
+    li(data-tab="day-2" v-on:click="changeTab")
       a カンファレンスDay2
 
   div#tables.uk-switcher(v-scroll="fixedHead" v-elScroll="parallelScroll")
     section
-      div#day-1-rooms.t-head(:class='{headFixed:isFixed}' uk-sticky="offset: 112; media: @s")
+      div.t-head(ref="day-1" :class='{headFixed:isFixed}' uk-sticky="offset: 112; media: @s")
         ul.uk-flex
           li.t-time
           li A+B会議室
@@ -190,17 +190,6 @@ div#TimeTable
           td talk6
         tr.t-closing
           th
-            time 17:00
-          td
-            span.uk-flex.uk-flex-center
-              p 片付け
-          td
-          td
-          td
-          td
-          td  
-        tr.t-closing
-          th
             time 17:15
           td
             span.uk-flex.uk-flex-center
@@ -236,7 +225,7 @@ div#TimeTable
           th
             time 20:30
     section
-      div#day-2-rooms.t-head(:class='{headFixed:isFixed}' uk-sticky="offset: 112; media: @s")
+      div#day-2-rooms.t-head(ref="day-2" :class='{headFixed:isFixed}' uk-sticky="offset: 112; media: @s")
         ul.uk-flex
           li.t-time
           li A+B会議室
