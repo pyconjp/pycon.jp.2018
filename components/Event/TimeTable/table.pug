@@ -54,80 +54,16 @@ div#TimeTable
           td
             span.uk-flex.uk-flex-center
               p ランチ
-          td 
-          td 
-          td 
-          td 
-          td           
-        tr.t-session
+          td
+          td
+          td
+          td
+          td          
+        tr
           th
             time 13:30
-          td
-            div.session-summary.uk-flex.uk-flex-column
-              span.room A+B会議室
-              span.event-type talk(30min)
-              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
-              p.name 帆下 風雅
-              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
-              ul.tag.uk-flex.uk-flex-wrap
-                li Keras
-                li MachineLearning
-                li music
-          td
-            div.session-summary.uk-flex.uk-flex-column
-              span.room A+B会議室
-              span.event-type talk(30min)
-              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
-              p.name 帆下 風雅
-              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
-              ul.tag.uk-flex.uk-flex-wrap
-                li Keras
-                li MachineLearning
-                li music
-          td
-            div.session-summary.uk-flex.uk-flex-column
-              span.room A+B会議室
-              span.event-type talk(30min)
-              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
-              p.name 帆下 風雅
-              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
-              ul.tag.uk-flex.uk-flex-wrap
-                li Keras
-                li MachineLearning
-                li music
-          td
-            div.session-summary.uk-flex.uk-flex-column
-              span.room A+B会議室
-              span.event-type talk(30min)
-              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
-              p.name 帆下 風雅
-              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
-              ul.tag.uk-flex.uk-flex-wrap
-                li Keras
-                li MachineLearning
-                li music
-          td
-            div.session-summary.uk-flex.uk-flex-column
-              span.room A+B会議室
-              span.event-type talk(30min)
-              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
-              p.name 帆下 風雅
-              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
-              ul.tag.uk-flex.uk-flex-wrap
-                li Keras
-                li MachineLearning
-                li music
-          td
-            div.session-summary.uk-flex.uk-flex-column
-              span.room A+B会議室
-              span.event-type talk(30min)
-              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
-              p.name 帆下 風雅
-              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
-              ul.tag.uk-flex.uk-flex-wrap
-                li Keras
-                li MachineLearning
-                li music
+          td.t-session(v-for="room in rooms.dayOne")
+            SessionSummary(:talk="getTracks(1,1,room)")
         tr.t-rest
           th
             time 14:15
@@ -142,12 +78,8 @@ div#TimeTable
         tr.t-session
           th
             time 14:30
-          td talk1
-          td talk2
-          td talk3
-          td talk4
-          td talk5
-          td talk6
+          td.t-session(v-for="room in rooms.dayOne")
+            SessionSummary(:talk="getTracks(1,2,room)")
         tr.t-rest
           th
             time 15:15
@@ -162,12 +94,8 @@ div#TimeTable
         tr.t-session
           th
             time 15:45
-          td talk1
-          td talk2
-          td talk3
-          td talk4
-          td talk5
-          td talk6
+          td.t-session(v-for="room in rooms.dayOne")
+            SessionSummary(:talk="getTracks(1,3,room)")
         tr.t-rest
           th
             time 16:15
@@ -182,12 +110,8 @@ div#TimeTable
         tr.t-session
           th
             time 16:30
-          td talk1
-          td talk2
-          td talk3
-          td talk4
-          td talk5
-          td talk6
+          td.t-session(v-for="room in rooms.dayOne")
+            SessionSummary(:talk="getTracks(1,4,room)")
         tr.t-closing
           th
             time 17:15
@@ -274,76 +198,11 @@ div#TimeTable
           td
           td
           td
-        tr.t-session
+        tr.t-session.connect
           th
             time 11:15
-          td
-            div.session-summary.uk-flex.uk-flex-column
-              span.room A+B会議室
-              span.event-type talk(30min)
-              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
-              p.name 帆下 風雅
-              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
-              ul.tag.uk-flex.uk-flex-wrap
-                li Keras
-                li MachineLearning
-                li music
-          td
-            div.session-summary.uk-flex.uk-flex-column
-              span.room A+B会議室
-              span.event-type talk(30min)
-              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
-              p.name 帆下 風雅
-              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
-              ul.tag.uk-flex.uk-flex-wrap
-                li Keras
-                li MachineLearning
-                li music
-          td
-            div.session-summary.uk-flex.uk-flex-column
-              span.room A+B会議室
-              span.event-type talk(30min)
-              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
-              p.name 帆下 風雅
-              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
-              ul.tag.uk-flex.uk-flex-wrap
-                li Keras
-                li MachineLearning
-                li music
-          td.connecting 
-            div.session-summary.uk-flex.uk-flex-column
-              span.room コンベンションホール
-              span.event-type talk(45min)
-              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
-              p.name 帆下 風雅
-              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
-              ul.tag.uk-flex.uk-flex-wrap
-                li Keras
-                li MachineLearning
-                li music
-          td
-          td
-            div.session-summary.uk-flex.uk-flex-column
-              span.room A+B会議室
-              span.event-type talk(30min)
-              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
-              p.name 帆下 風雅
-              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
-              ul.tag.uk-flex.uk-flex-wrap
-                li Keras
-                li MachineLearning
-                li music
-          td
-            div.session-summary.uk-flex.uk-flex-column
-              span.room A+B会議室
-              span.event-type talk(30min)
-              h3 1次元畳み込みフィルターを利用した音楽データのオートエンコーダ
-              p.name 帆下 風雅
-              p.disc 概要はどうしましょう、文字数は20～50文字以内でないとセルの幅的にかなり苦行のようにも思われます。
-              ul.tag.uk-flex.uk-flex-wrap
-                li Keras
-                li MachineLearning
-                li music
+          td.t-session(v-for="room in rooms.dayTwo")
+            SessionSummary.mini(:talk="getTracks(2,1,room)")
         tr.t-lunch
           th
             time 12:00
@@ -359,13 +218,8 @@ div#TimeTable
         tr.t-session
           th
             time 13:30
-          td talk1
-          td talk2
-          td talk3
-          td talk4
-          td talk5
-          td talk6
-          td talk7
+          td.t-session(v-for="room in rooms.dayTwo")
+            SessionSummary.mini(:talk="getTracks(2,2,room)")
         tr.t-rest
           th
             time 14:15
@@ -381,13 +235,8 @@ div#TimeTable
         tr.t-session
           th
             time 14:30
-          td talk1
-          td talk2
-          td talk3
-          td talk4
-          td talk5
-          td talk6
-          td talk7
+          td.t-session(v-for="room in rooms.dayTwo")
+            SessionSummary.mini(:talk="getTracks(2,3,room)")
         tr.t-rest
           th
             time 15:00
@@ -403,13 +252,8 @@ div#TimeTable
         tr.t-session
           th
             time 15:45
-          td talk1
-          td talk2
-          td talk3
-          td talk4
-          td talk5
-          td talk6
-          td talk7
+          td.t-session(v-for="room in rooms.dayTwo")
+            SessionSummary.mini(:talk="getTracks(2,4,room)")
         tr.t-rest
           th
             time 16:15
@@ -425,13 +269,8 @@ div#TimeTable
         tr.t-session
           th
             time 16:30
-          td talk1
-          td talk2
-          td talk3
-          td talk4
-          td talk5
-          td talk6
-          td talk7
+          td.t-session(v-for="room in rooms.dayTwo")
+            SessionSummary.mini(:talk="getTracks(2,5,room)")
         tr.t-closing
           th
             time 17:00

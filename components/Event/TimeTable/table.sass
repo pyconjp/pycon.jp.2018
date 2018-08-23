@@ -103,6 +103,7 @@
         text-align: center
         border-top: 1px solid #9B9B9B
         background-color: #FFF
+        vertical-align: top
         &:nth-child(even)
           background-color: rgba(180,195,200,.3)
         &:last-child
@@ -169,41 +170,22 @@
       tr.t-closing
         td
           border-bottom: 1px solid #9B9B9B
+      tr.connect
+        td
+          &:nth-child(5)
+            div
+              position: absolute
+              top: 0
+              left: 0
+              background-color: #FFF
+              width: calc((100% * 2) - .6rem)
+              z-index: 2
+              margin: .4rem .3rem
+              border: 1px solid #EEE
+              border-radius: 2px
+              background-color: #FFF
+              box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .15)
 
-
-  /* session summary */
-  div.session-summary
-    padding: .4rem
-    text-align: left
-    margin: .4rem .3rem
-    border: 1px solid #EEE
-    border-radius: 2px
-    background-color: #FFF
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .15)
-    span
-      text-align: right
-      color: #9B9B9B
-      font-weight: 300
-      font-size: 12px
-    h3
-      margin: .8rem 0 0 0
-      padding-bottom: .4rem
-      font-size: 14px
-      border-bottom: 1px solid #AAA
-    p.name
-      margin: .4rem 0 0 0
-      font-size: 13px
-    p.disc
-      margin: .4rem 0 0 0
-      font-size: 10px
-    ul
-      list-style: none
-      padding: 0
-      margin: .9rem 0 .6rem
-      li
-        font-size: 12px
-        font-weight: 300
-        background-color: rgb(255, 244, 63)
-        padding: 0 .2rem
-        margin-right: .3rem
-        margin-top: .2rem
+  .mini
+    //width: 160px
+    width: calc((1296px - 9.9rem) / 7)
