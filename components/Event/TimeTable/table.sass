@@ -50,7 +50,7 @@
       overflow-x: scroll
     table
       width: 1296px
-      border-collapse: collapse
+      //border-collapse: collapse
       border-spacing: 0
       font-weight: normal
       tr > th.t-time
@@ -106,8 +106,12 @@
         vertical-align: top
         &:nth-child(even)
           background-color: rgba(180,195,200,.3)
-        &:last-child
-          border-bottom: 1px solid #9B9B9B
+
+      tr.end
+        td
+          height: 0
+          background: none
+
       tr.t-admission,
       tr.t-lunch,
       tr.t-rest,
@@ -128,9 +132,6 @@
             z-index: 2
             p
               margin: 0
-      tr.t-party
-        td
-          border-bottom: 1px solid #9B9B9B
 
     table#day-1
       td
@@ -167,9 +168,7 @@
             box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .15)
           td.event > p
             align-items: center
-      tr.t-closing
-        td
-          border-bottom: 1px solid #9B9B9B
+
       tr.connect
         td
           &:nth-child(5)
@@ -187,5 +186,4 @@
               box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .15)
 
   .mini
-    //width: 160px
     width: calc((1296px - 9.9rem) / 7)
