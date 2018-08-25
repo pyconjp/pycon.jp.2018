@@ -1,13 +1,13 @@
-<template lang="pug" src="./time-schedule.pug"/>
+<template lang="pug" src="./conference.pug"/>
 
 <script>
 import TimeTable from '~/components/Event/TimeTable'
 
   export default {
-    name: 'time-schedule',
+    name: 'conference',
     head () {
       return {
-        title: 'タイムスケジュール',
+        title: this.$t('event.conference.title'),
       }
     },
     components: {
@@ -16,4 +16,4 @@ import TimeTable from '~/components/Event/TimeTable'
   }
 </script>
 
-<style src="./time-schedule.sass" lang="sass" />
+<style src="./conference.sass" lang="sass" />

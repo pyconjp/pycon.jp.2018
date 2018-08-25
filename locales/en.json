@@ -191,5 +191,38 @@
     "title": "Sponsor",
     "recruitTitle": "Recruitment",
     "companyInfoTitle": "Company"
+  },
+  "event": {
+    "title": "event",
+    "warnning": "Please always check the latest information, because event information may be updated untile the conference day.",
+    "conference": {
+      "title": "conference",
+      "tab": {
+        "day1": "September 17th",
+        "day2": "September 18th"
+      },
+      "rooms": {
+        "roomA": "A+B conference room",
+        "roomB": "small exhibition room",
+        "roomC": "Special conference room",
+        "roomD": "convention room",
+        "roomD2": "convention room  \b \"UME\" ",
+        "roomD3": "convention room \"UGUISU\"",
+        "roomE": "C conference room",
+        "roomF": "D conference room"
+      },
+      "timeEvent": {
+        "regist": "Conference Registration",
+        "opening": "opening",
+        "keynote": "keynote",
+        "invitedLecture": "Invited lecture",
+        "break": "break time",
+        "lunch": "lunch time",
+        "snack": "snack time",
+        "closing": "closing",
+        "lightningTalk": "Lightning Talk",
+        "party": "party"
+      }
+    }
   }
 }

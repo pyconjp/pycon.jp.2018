@@ -1,33 +1,46 @@
 div#TimeTable
   ul.uk-tab(uk-tab="{connect:'#tables'}" uk-switcher="{swiping:false}")
     li.uk-active(data-tab="day-1" v-on:click="changeTab")
-      a カンファレンスDay1
+      a {{ $t('event.conference.tab.day1') }} 
     li(data-tab="day-2" v-on:click="changeTab")
-      a カンファレンスDay2
+      a {{ $t('event.conference.tab.day2') }} 
 
   div#tables.uk-switcher(v-scroll="fixedHead" v-elScroll="parallelScroll")
     section
       div.t-head(ref="day-1" :class='{headFixed:isFixed}' uk-sticky="offset: 112; media: @s")
         ul.uk-flex
           li.t-time
-          li A+B会議室
-          li 小展示
-          li 特別会議室
-          li コンベンションホール
-          li C会議室
-          li D会議室
+          li {{ $t('event.conference.rooms.roomA') }} 
+          li {{ $t('event.conference.rooms.roomB') }} 
+          li {{ $t('event.conference.rooms.roomC') }} 
+          li {{ $t('event.conference.rooms.roomD') }} 
+          li {{ $t('event.conference.rooms.roomE') }} 
+          li {{ $t('event.conference.rooms.roomF') }} 
       table#day-1
         tr.t-admission
           th
             time 9:30
           td
             span.uk-flex.uk-flex-center
-              p 開場
-          td 
-          td 
-          td 
-          td 
-          td 
+              p {{ $t('event.conference.timeEvent.regist') }} 
+          td
+          td
+          td
+          td
+          td
+        tr.t-opening
+          th
+            time 9:45
+          td
+          td
+          td
+          td.event
+            div.session-summary.uk-flex.uk-flex-column
+              span.room {{ $t('event.conference.rooms.roomD') }} 
+              span.event-type 15min
+              p {{ $t('event.conference.timeEvent.opening') }} 
+          td
+          td
         tr.t-keynote
           th
             time 10:00
@@ -35,7 +48,12 @@ div#TimeTable
           td
           td
           td.event
-            p 基調講演
+            div.session-summary.uk-flex.uk-flex-column
+              span.langage.uk-flex.uk-flex-middle.uk-flex-center en
+              span.room {{ $t('event.conference.rooms.roomD') }} 
+              span.event-type 60min
+              h3 {{ $t('event.conference.timeEvent.keynote') }} 
+              p.name {{ $t('top.keynote.foreigner.name') }}
           td
           td
         tr.t-invited-lecture
@@ -45,7 +63,13 @@ div#TimeTable
           td
           td
           td.event
-            p 招待講演
+            div.event-box
+              div.session-summary.uk-flex.uk-flex-column
+                span.langage.uk-flex.uk-flex-middle.uk-flex-center ja
+                span.room {{ $t('event.conference.rooms.roomD') }}
+                span.event-type 45min
+                h3 {{ $t('event.conference.timeEvent.invitedLecture') }} 
+                p.name {{ $t('top.invited-lecture.second.name') }}
           td
           td
         tr.t-lunch
@@ -53,7 +77,7 @@ div#TimeTable
             time 12:00
           td
             span.uk-flex.uk-flex-center
-              p ランチ
+              p {{ $t('event.conference.timeEvent.lunch') }} 
           td
           td
           td
@@ -69,7 +93,7 @@ div#TimeTable
             time 14:15
           td
             span.uk-flex.uk-flex-center
-              p 休憩
+              p {{ $t('event.conference.timeEvent.break') }} 
           td
           td
           td
@@ -80,12 +104,12 @@ div#TimeTable
             time 14:30
           td.t-session(v-for="room in rooms.dayOne")
             SessionSummary(:talk="getTracks(1,2,room)")
-        tr.t-rest
+        tr.t-rest.t-snack
           th
             time 15:15
           td
             span.uk-flex.uk-flex-center
-              p おやつ
+              p {{ $t('event.conference.timeEvent.snack') }} 
           td
           td
           td
@@ -101,7 +125,7 @@ div#TimeTable
             time 16:15
           td
             span.uk-flex.uk-flex-center
-              p 休憩
+              p {{ $t('event.conference.timeEvent.break') }} 
           td
           td
           td
@@ -117,7 +141,7 @@ div#TimeTable
             time 17:15
           td
             span.uk-flex.uk-flex-center
-              p クロージング
+              p {{ $t('event.conference.timeEvent.closing') }} 
           td
           td
           td
@@ -128,7 +152,7 @@ div#TimeTable
             time 17:30
           td
             span.uk-flex.uk-flex-center
-              p Lightning Talk
+              p {{ $t('event.conference.timeEvent.lightningTalk') }} 
           td
           td
           td
@@ -139,7 +163,7 @@ div#TimeTable
             time 18:00
           td
             span.uk-flex.uk-flex-center
-              p パーティ
+              p {{ $t('event.conference.timeEvent.party') }} 
           td
           td
           td
@@ -159,38 +183,39 @@ div#TimeTable
       div#day-2-rooms.t-head(ref="day-2" :class='{headFixed:isFixed}' uk-sticky="offset: 112; media: @s")
         ul.uk-flex
           li.t-time
-          li A+B会議室
-          li 小展示
-          li 特別会議室
-          li コンベンションホール
-            br
-            |梅
-          li コンベンションホール
-            br
-            |鶯
-          li C会議室
-          li D会議室
+            li {{ $t('event.conference.rooms.roomA') }} 
+            li {{ $t('event.conference.rooms.roomB') }} 
+            li {{ $t('event.conference.rooms.roomC') }} 
+            li {{ $t('event.conference.rooms.roomD2') }} 
+            li {{ $t('event.conference.rooms.roomD3') }} 
+            li {{ $t('event.conference.rooms.roomE') }} 
+            li {{ $t('event.conference.rooms.roomF') }} 
       table#day-2
         tr.t-admission
           th
             time 9:30
           td
             span.uk-flex.uk-flex-center
-              p 開場
+              p {{ $t('event.conference.timeEvent.regist') }} 
           td
           td
           td
           td
           td
           td
-        tr.t-keynote
+        tr.t-keynote.connect
           th
             time 10:00
           td
           td
           td
-          td.event
-            p 基調講演
+          td.event.keynote
+            div.session-summary.uk-flex.uk-flex-column
+              span.langage.uk-flex.uk-flex-middle.uk-flex-center ja
+              span.room {{ $t('event.conference.rooms.roomD') }}
+              span.event-type 60min
+              h3 {{ $t('event.conference.timeEvent.keynote') }} 
+              p.name {{ $t('top.keynote.japanese.name') }}
           td
           td
           td
@@ -199,7 +224,7 @@ div#TimeTable
             time 11:00
           td
             span.uk-flex.uk-flex-center
-              p 休憩
+              p {{ $t('event.conference.timeEvent.break') }} 
           td
           td
           td
@@ -216,7 +241,7 @@ div#TimeTable
             time 12:00
           td
             span.uk-flex.uk-flex-center
-              p ランチ
+              p {{ $t('event.conference.timeEvent.lunch') }} 
           td
           td
           td
@@ -233,7 +258,7 @@ div#TimeTable
             time 14:15
           td
             span.uk-flex.uk-flex-center
-              p 休憩
+              p {{ $t('event.conference.timeEvent.break') }} 
           td
           td
           td
@@ -250,7 +275,7 @@ div#TimeTable
             time 15:00
           td
             span.uk-flex.uk-flex-center
-              p おやつ
+              p {{ $t('event.conference.timeEvent.snack') }} 
           td
           td
           td
@@ -267,7 +292,7 @@ div#TimeTable
             time 16:15
           td
             span.uk-flex.uk-flex-center
-              p 休憩
+              p {{ $t('event.conference.timeEvent.break') }} 
           td
           td
           td
@@ -279,24 +304,12 @@ div#TimeTable
             time 16:30
           td.t-session(v-for="room in rooms.dayTwo")
             SessionSummary.mini(:talk="getTracks(2,5,room)")
-        tr.t-closing
-          th
-            time 17:00
-          td
-            span.uk-flex.uk-flex-center
-              p 片付け
-          td
-          td
-          td
-          td
-          td
-          td
         tr.t-party
           th
             time 17:15
           td
             span.uk-flex.uk-flex-center
-              p Lightning Talk
+              p {{ $t('event.conference.timeEvent.lightningTalk') }} 
           td
           td
           td
@@ -308,7 +321,7 @@ div#TimeTable
             time 18:30
           td
             span.uk-flex.uk-flex-center
-              p クロージング
+              p {{ $t('event.conference.timeEvent.closing') }} 
           td
           td
           td

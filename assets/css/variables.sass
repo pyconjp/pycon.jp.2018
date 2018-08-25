@@ -40,7 +40,6 @@ $offcanvas-bar-color-mode: light !default
 
 $pycon-global-footer-bg-color: #f6f6f6
 
-
 // ---
 // sponsor contents
 // ---
@@ -89,3 +88,17 @@ $sponsor-1-4-width: 270px
   &:nth-child(2n)
     &:after
       background-image: linear-gradient(62deg, rgba(255, 244, 63, 0.5), rgba(232, 214, 0, 0.5))
+
+
+// ---
+// event contents
+// ---
+@mixin event-box
+  min-height: 150px
+  padding: .4rem
+  text-align: left
+  margin: .4rem .3rem
+  border: solid 1px #d0d0d0
+  border-radius: 4px
+  background-color: #FFF
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .15)

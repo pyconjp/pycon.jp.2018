@@ -193,5 +193,38 @@
     "title": "スポンサー",
     "recruitTitle": "採用について",
     "companyInfoTitle": "企業概要"
+  },
+  "event": {
+    "title": "イベント",
+    "warnning": "イベントについては開催当日まで内容が変更される可能性があります。都度最新の情報をご確認ください。",
+    "conference": {
+      "title": "カンファレンス",
+      "tab": {
+        "day1": "9月17日",
+        "day2": "9月18日"
+      },
+      "rooms": {
+        "roomA": "A+B会議室",
+        "roomB": "小展示",
+        "roomC": "特別会議室",
+        "roomD": "コンベンションホール",
+        "roomD2": "コンベンションホール 梅",
+        "roomD3": "コンベンションホール 鶯",
+        "roomE": "C会議室",
+        "roomF": "D会議室"
+      },
+      "timeEvent": {
+        "regist": "開場",
+        "opening": "オープニング",
+        "keynote": "基調講演",
+        "invitedLecture": "招待講演",
+        "break": "休憩",
+        "lunch": "ランチタイム",
+        "snack": "おやつタイム",
+        "closing": "クロージング",
+        "lightningTalk": "Lightning Talk",
+        "party": "パーティ"
+      }
+    }
   }
 }
