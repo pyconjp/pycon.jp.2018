@@ -1,0 +1,10 @@
+div.session-summary.uk-flex.uk-flex-column(v-if="room")
+  span.langage.uk-flex.uk-flex-middle.uk-flex-center {{ langage }}
+  span.room {{ room }}
+  span.event-type {{ talk_format }}
+  h3 {{ title }}
+  p.name {{ name }}
+  p.disc 
+  h4 keywords:
+  ul.tag.uk-flex.uk-flex-wrap
+    li( v-for="item in tags") {{ item }}

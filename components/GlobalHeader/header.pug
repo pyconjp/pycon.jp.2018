@@ -5,12 +5,18 @@ header#global-header(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk
           img(src='~/static/common/global-header-logo.png', alt='PyConJP 2018' width='188' height='26')
       nav#global_nav.uk-navbar-right
           ul.uk-navbar-nav
-              li(v-bind:class="{'uk-active':isActive('sponsor')}")
-                  nuxt-link(:to="$i18n.path('sponsor')" exact) {{ $t('header.navi.sponsor') }}
-              li(v-bind:class="{'uk-active':isActive('code-of-conduct')}")
-                  nuxt-link(:to="$i18n.path('code-of-conduct')" exact) {{ $t('header.navi.code_of_conduct') }}
-              li
-                  a(:href="getLangPath()") {{ $t('header.navi.lang') }}
+            li(v-bind:class="{'uk-active':isActive('conference')}")
+              a {{ $t('header.navi.event') }}
+            div.nav-dropdown(uk-dropdown="offset: -10;delay-hide: 200")
+              ul.uk-nav.uk-dropdown-nav
+                li
+                  nuxt-link(:to="$i18n.path('event/conference')" exact) {{ $t('header.navi.conference') }}
+            li(v-bind:class="{'uk-active':isActive('sponsor')}")
+                nuxt-link(:to="$i18n.path('sponsor')" exact) {{ $t('header.navi.sponsor') }}
+            li(v-bind:class="{'uk-active':isActive('code-of-conduct')}")
+                nuxt-link(:to="$i18n.path('code-of-conduct')" exact) {{ $t('header.navi.code_of_conduct') }}
+            li
+                a(:href="getLangPath()") {{ $t('header.navi.lang') }}
 
     div#mobile-nav.uk-container(class="uk-hidden@s").uk-flex
         .uk-offcanvas-content
@@ -25,6 +31,8 @@ header#global-header(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk
                   ul
                     nuxt-link(:to="$i18n.path('')" exact tag="li")
                         a.uk-offcanvas-close {{ $t('header.navi.top.top') }}
+                    nuxt-link(:to="$i18n.path('event/conference')" exact tag="li")
+                        a.uk-offcanvas-close {{ $t('header.navi.conference') }}
                     nuxt-link(:to="$i18n.path('sponsor')" exact tag="li")
                         a.uk-offcanvas-close {{ $t('header.navi.sponsor') }}
                     nuxt-link(:to="$i18n.path('code-of-conduct')" exact tag="li")
