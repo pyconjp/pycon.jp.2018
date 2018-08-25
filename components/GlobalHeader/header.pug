@@ -6,11 +6,11 @@ header#global-header(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk
       nav#global_nav.uk-navbar-right
           ul.uk-navbar-nav
             li(v-bind:class="{'uk-active':isActive('conference')}")
-              a イベント
+              a {{ $t('header.navi.event') }}
             div.nav-dropdown(uk-dropdown="offset: -10;delay-hide: 200")
               ul.uk-nav.uk-dropdown-nav
                 li
-                  nuxt-link(:to="$i18n.path('event/conference')" exact) カンファレンス
+                  nuxt-link(:to="$i18n.path('event/conference')" exact) {{ $t('header.navi.conference') }}
             li(v-bind:class="{'uk-active':isActive('sponsor')}")
                 nuxt-link(:to="$i18n.path('sponsor')" exact) {{ $t('header.navi.sponsor') }}
             li(v-bind:class="{'uk-active':isActive('code-of-conduct')}")
@@ -32,7 +32,7 @@ header#global-header(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk
                     nuxt-link(:to="$i18n.path('')" exact tag="li")
                         a.uk-offcanvas-close {{ $t('header.navi.top.top') }}
                     nuxt-link(:to="$i18n.path('event/conference')" exact tag="li")
-                        a.uk-offcanvas-close カンファレンス
+                        a.uk-offcanvas-close {{ $t('header.navi.conference') }}
                     nuxt-link(:to="$i18n.path('sponsor')" exact tag="li")
                         a.uk-offcanvas-close {{ $t('header.navi.sponsor') }}
                     nuxt-link(:to="$i18n.path('code-of-conduct')" exact tag="li")

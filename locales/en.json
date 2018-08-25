@@ -10,6 +10,8 @@
         "sponsor":"Sponsor",
         "staff":"Staff"
       },
+      "event":"event",
+      "conference":"conference",
       "sponsor":"Sponsor",
       "code_of_conduct":"Code of Conduct",
       "lang": "日本語"

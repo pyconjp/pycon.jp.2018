@@ -57,7 +57,8 @@ export default {
     },
     fixedHead (evt, el) {
       let tableHeader = this.$refs[this.$data.currentTab]
-      if(tableHeader && (window.scrollY > (112+89))){
+      let windowWidth = window.innerWidth
+      if(windowWidth > 640 && tableHeader && (window.scrollY > (112+89))){
         this.$data.isFixed = true
         const sLeft = el.scrollLeft
         tableHeader.scrollLeft = sLeft
