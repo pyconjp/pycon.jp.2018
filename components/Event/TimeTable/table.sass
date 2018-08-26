@@ -287,17 +287,6 @@
       tr.t-session
           td
             position: relative
-          td.event > p,
-          td.connecting > div
-            @include event-box
-            position: absolute
-            top: 0
-            left: 0
-            background-color: #FFF
-            width: calc((100% * 2) - .6rem)
-            height: calc(100% - .8rem)
-            z-index: 2
-            margin: .4rem .3rem
           td.event > p
             align-items: center
 
@@ -315,6 +304,8 @@
               width: calc((100% * 2) - .6rem)
               z-index: 2
               margin: .4rem .3rem
+              @media (max-width: $breakpoint-xsmall-max)
+                position: static
 
     tr.t-opening
       td
