@@ -104,7 +104,8 @@
     "invited-lecture": {
       "text": {
           "head": "Invited lecture",
-          "subcaption": "招待講演"
+          "subcaption": "招待講演",
+          "coution": "講演を予定しておりました松尾 豊氏に関しましては都合により出演中止となりましたのでご了承ください。"
       },
       "first": {
         "date": "9月17日",
