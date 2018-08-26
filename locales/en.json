@@ -103,7 +103,8 @@
     "invited-lecture": {
       "text": {
           "head": "Invited lecture",
-          "subcaption": ""
+          "subcaption": "",
+          "coution": "Unfortunately, Mr Yukata Matsuo will not be able to give his session as was scheduled."
       },
       "first": {
         "date": "September 17th",

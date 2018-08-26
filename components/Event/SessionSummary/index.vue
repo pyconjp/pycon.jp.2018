@@ -29,7 +29,6 @@
             let tagStr = String(this.talk.tags)
             tags = tagStr.split(',')
             if(Object.keys(tags).length <= 0 || tags[0] === ""){
-              console.log(tags)
                tags = false
               }
         }

@@ -48,23 +48,27 @@ export default {
     },
     parallelScroll (evt, el) {
       let tableHeader = this.$refs[this.$data.currentTab]
-      if(window.scrollY > (112+90)){
-        const sLeft = el.scrollLeft
-        tableHeader.scrollLeft = sLeft
-      }else{
-        tableHeader.scrollLeft = 0
+      if(tableHeader != undefined) {
+        if(window.scrollY > (112+90)){
+          const sLeft = el.scrollLeft
+          tableHeader.scrollLeft = sLeft
+        }else{
+          tableHeader.scrollLeft = 0
+        }
       }
     },
     fixedHead (evt, el) {
       let tableHeader = this.$refs[this.$data.currentTab]
       let windowWidth = window.innerWidth
-      if(windowWidth > 640 && tableHeader && (window.scrollY > (112+89))){
-        this.$data.isFixed = true
-        const sLeft = el.scrollLeft
-        tableHeader.scrollLeft = sLeft
-      }else{
-        this.$data.isFixed = false
-        tableHeader.scrollLeft = 0
+      if(tableHeader != undefined){
+        if(windowWidth > 640 && (window.scrollY > (112+89)) ){
+          this.$data.isFixed = true
+          const sLeft = el.scrollLeft
+          tableHeader.scrollLeft = sLeft
+        }else{
+          this.$data.isFixed = false
+          tableHeader.scrollLeft = 0
+        }
       }
     }
   }
