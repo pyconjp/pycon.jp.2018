@@ -6,7 +6,7 @@
     props: ['talk'],
     computed: {
       langage() {
-        return (this.talk && this.talk.hasOwnProperty('lang')) ?  this.talk.lang : ""
+        return (this.talk && this.talk.hasOwnProperty('lang_of_talk') && this.talk.lang_of_talk !="" ) ?  this.talk.lang_of_talk : "-"
       },
       room() {
         return (this.talk && this.talk.hasOwnProperty('room')) ?  this.talk.room : ""
@@ -20,11 +20,18 @@
       name() {
         return (this.talk && this.talk.hasOwnProperty('name')) ?  this.talk.name : ""
       },
+      level() {
+        return (this.talk && this.talk.hasOwnProperty('audience_level') ) ?  this.talk.audience_level : "-"
+      },
       tags() {
         let tags = []
         if(this.talk && this.talk.hasOwnProperty('tags')){
-            let tagStr = this.talk.tags
+            let tagStr = String(this.talk.tags)
             tags = tagStr.split(',')
+            if(Object.keys(tags).length <= 0 || tags[0] === ""){
+              console.log(tags)
+               tags = false
+              }
         }
         return tags
       }

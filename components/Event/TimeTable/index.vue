@@ -34,11 +34,11 @@ export default {
     }),
     getTracks (day,no,room) {
       let currentDayTracks = this.talks.filter( (item, index) => {
-                                                if(item.day === day) return true
+                                                if(parseInt(item.day) === parseInt(day)) return true
                                                 })
       if(currentDayTracks[0]){
           return currentDayTracks.filter( (track) => {
-                                          if(track.no == no  && track.room_id == room ) return true
+                                          if(parseInt(track.no) === parseInt(no)  && String(track.room_id) === String(room) ) return true
                                           })[0]
       }
       return ""

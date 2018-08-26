@@ -47,16 +47,27 @@
   #tables
     @media (max-width: 1340px)
       overflow-x: scroll
+      @media (max-width: $breakpoint-xsmall-max)
+        overflow-x: auto
     table
       width: 1296px
       border-spacing: 0
       font-weight: normal
+      @media (max-width: $breakpoint-xsmall-max)
+        width: 100%
+      td,th
+        @media (max-width: $breakpoint-xsmall-max)
+          display: block
       tr > th.t-time
         width: 4rem
       tr
         &:not(.t-head)
           th
             width: 4rem
+            @media (max-width: $breakpoint-xsmall-max)
+              width: 100%
+              margin: 0
+
       tr.t-head
         th
           &:not(.t-time)
@@ -76,14 +87,18 @@
         flex-direction: column
         align-items: flex-end
         padding: 0
-        &:after
-          content: ""
+        @media (max-width: $breakpoint-xsmall-max)
+          width: 100%
           display: block
-          width: 1rem
-          height: 1rem
-          margin: 0
-          margin-right: -.5rem
-          border-top: 1px solid #9B9B9B
+        &:after
+          @media (min-width: 639px)
+            content: ""
+            display: block
+            width: 1rem
+            height: 1rem
+            margin: 0
+            margin-right: -.5rem
+            border-top: 1px solid #9B9B9B
         time
           display: flex
           align-items: center
@@ -97,13 +112,23 @@
           text-align: center
           font-weight: 300
           padding-right: .9rem
+          @media (max-width: $breakpoint-xsmall-max)
+            position: static
+            width: 100%
+            justify-content: center
+            background-color: rgba(180,195,200,.3)
       td
         text-align: center
         border-top: 1px solid #9B9B9B
         background-color: #FFF
         vertical-align: top
+        @media (max-width: $breakpoint-xsmall-max)
+          border: none
         &:nth-child(even)
           background-color: rgba(180,195,200,.3)
+          @media (max-width: $breakpoint-xsmall-max)
+            background-color: #FFF
+
       .session-summary
         @include event-box
         span
@@ -139,12 +164,16 @@
           background: none
 
       tr.t-admission,
+      tr.t-lunch,
       tr.t-rest,
       tr.t-closing
           height: 60px
           td
             height: 60px
             position: relative
+            &:not(.mass-event)
+              @media (max-width: $breakpoint-xsmall-max)
+                height: 0
           span
             position: absolute
             top: 0
@@ -154,15 +183,20 @@
             height: calc(60px - 1px)
             align-items: center
             z-index: 2
+            @media (max-width: $breakpoint-xsmall-max)
+              width: calc(100% - .8rem)
             p
               margin: 0
-      tr.t-lunch,
+
       tr.t-snack,
       tr.t-party
           height: 100px
           td
             height: 100px
             position: relative
+            &:not(.mass-event)
+              @media (max-width: $breakpoint-xsmall-max)
+                height: 0
           span
             position: absolute
             top: 0
@@ -172,16 +206,73 @@
             height: calc(100px - 1px)
             align-items: center
             z-index: 2
+            @media (max-width: $breakpoint-xsmall-max)
+              width: 100%
             p
               margin: 0
 
+      tr.t-sponsor-event
+        height: 80px
+        th.dotline
+          &:after
+            @media (min-width: 639px)
+              content: ""
+              display: block
+              width: .6rem
+              height: 1rem
+              margin: 0
+              margin-right: -.2rem
+              border-top: 1px dotted #AAA
+          time
+            @media (max-width: $breakpoint-xsmall-max)
+              height: 50%
+              background-color: rgba(180,195,200,.2)
+              background-image: linear-gradient(90deg,rgba(180,195,200,.1) 50%, #fff 50%)
+              background-size: 3px 100%
+        td
+          border-top: 1px dotted #AAA
+          height: 80px
+          @media (max-width: $breakpoint-xsmall-max)
+            border: none
+            height: 120px
+            &:not(.event)
+              height: 0
+          &:not(.event)
+            padding: 0
+            &:after
+              @media (min-width: 639px)
+                content: ""
+                display: block
+                width: 100%
+                height: 120px
+                margin: 0
+                background-color: rgba(255,255,255,0.7)
+          div.session-summary
+            min-height: 100px
+            height: 100px
+            p
+              margin: 2.4rem 0 .2rem
     table#day-1
       td
         width: calc((1296px - 4rem) / 6)
+        @media (max-width: $breakpoint-xsmall-max)
+          width: 100%
 
     table#day-2
       td
         width: calc((1296px - 4rem) / 7)
+        @media (max-width: $breakpoint-xsmall-max)
+          width: 100%
+      tr.t-lunch
+          height: 100px
+          td
+            height: 100px
+            position: relative
+            &:not(.mass-event)
+              @media (max-width: $breakpoint-xsmall-max)
+                height: 0
+            span
+              height: calc(100px - 1px)
       tr.t-admission,
       tr.t-lunch,
       tr.t-rest,
@@ -189,6 +280,8 @@
       tr.t-party
           span
             width: calc((100% * 7) + 6px)
+            @media (max-width: $breakpoint-xsmall-max)
+              width: calc(100% - .8rem)
       tr.t-opening,
       tr.t-keynote,
       tr.t-session
@@ -239,3 +332,5 @@
 
   .mini
     width: calc((1296px - 9.9rem) / 7)
+    @media (max-width: $breakpoint-xsmall-max)
+      width: calc(100% - .8rem)

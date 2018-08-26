@@ -7,7 +7,7 @@ div#TimeTable
 
   div#tables.uk-switcher(v-scroll="fixedHead" v-elScroll="parallelScroll")
     section
-      div.t-head(ref="day-1" :class='{headFixed:isFixed}' uk-sticky="offset: 112; media: @s")
+      div.t-head(ref="day-1" :class='{headFixed:isFixed}' class="uk-visible@s" uk-sticky="offset: 112; media: @s" )
         ul.uk-flex
           li.t-time
           li {{ $t('event.conference.rooms.roomA') }} 
@@ -20,7 +20,7 @@ div#TimeTable
         tr.t-admission
           th
             time 9:30
-          td
+          td.mass-event
             span.uk-flex.uk-flex-center
               p {{ $t('event.conference.timeEvent.regist') }} 
           td
@@ -75,14 +75,26 @@ div#TimeTable
         tr.t-lunch
           th
             time 12:00
-          td
+          td.mass-event
             span.uk-flex.uk-flex-center
               p {{ $t('event.conference.timeEvent.lunch') }} 
           td
           td
           td
           td
-          td          
+          td
+        tr.t-sponsor-event
+          th.dotline
+            time 12:20
+          td
+          td
+          td
+          td.event
+            div.session-summary.uk-flex.uk-flex-column
+              span.room {{ $t('event.conference.rooms.roomD') }} 
+              p スポンサー企画
+          td
+          td
         tr
           th
             time 13:30
@@ -91,7 +103,7 @@ div#TimeTable
         tr.t-rest
           th
             time 14:15
-          td
+          td.mass-event
             span.uk-flex.uk-flex-center
               p {{ $t('event.conference.timeEvent.break') }} 
           td
@@ -107,7 +119,7 @@ div#TimeTable
         tr.t-rest.t-snack
           th
             time 15:15
-          td
+          td.mass-event
             span.uk-flex.uk-flex-center
               p {{ $t('event.conference.timeEvent.snack') }} 
           td
@@ -123,7 +135,7 @@ div#TimeTable
         tr.t-rest
           th
             time 16:15
-          td
+          td.mass-event
             span.uk-flex.uk-flex-center
               p {{ $t('event.conference.timeEvent.break') }} 
           td
@@ -139,7 +151,7 @@ div#TimeTable
         tr.t-closing
           th
             time 17:15
-          td
+          td.mass-event
             span.uk-flex.uk-flex-center
               p {{ $t('event.conference.timeEvent.closing') }} 
           td
@@ -150,7 +162,7 @@ div#TimeTable
         tr.t-party
           th
             time 17:30
-          td
+          td.mass-event
             span.uk-flex.uk-flex-center
               p {{ $t('event.conference.timeEvent.lightningTalk') }} 
           td
@@ -161,7 +173,7 @@ div#TimeTable
         tr.t-party
           th
             time 18:00
-          td
+          td.mass-event
             span.uk-flex.uk-flex-center
               p {{ $t('event.conference.timeEvent.party') }} 
           td
@@ -180,7 +192,7 @@ div#TimeTable
           td
 
     section
-      div#day-2-rooms.t-head(ref="day-2" :class='{headFixed:isFixed}' uk-sticky="offset: 112; media: @s")
+      div#day-2-rooms.t-head(ref="day-2" :class='{headFixed:isFixed}' class="uk-visible@s"  uk-sticky="offset: 112; media: @s")
         ul.uk-flex
           li.t-time
             li {{ $t('event.conference.rooms.roomA') }} 
@@ -194,7 +206,7 @@ div#TimeTable
         tr.t-admission
           th
             time 9:30
-          td
+          td.mass-event
             span.uk-flex.uk-flex-center
               p {{ $t('event.conference.timeEvent.regist') }} 
           td
@@ -222,7 +234,7 @@ div#TimeTable
         tr.t-rest
           th
             time 11:00
-          td
+          td.mass-event
             span.uk-flex.uk-flex-center
               p {{ $t('event.conference.timeEvent.break') }} 
           td
@@ -239,7 +251,7 @@ div#TimeTable
         tr.t-lunch
           th
             time 12:00
-          td
+          td.mass-event
             span.uk-flex.uk-flex-center
               p {{ $t('event.conference.timeEvent.lunch') }} 
           td
@@ -256,7 +268,7 @@ div#TimeTable
         tr.t-rest
           th
             time 14:15
-          td
+          td.mass-event
             span.uk-flex.uk-flex-center
               p {{ $t('event.conference.timeEvent.break') }} 
           td
@@ -270,10 +282,10 @@ div#TimeTable
             time 14:30
           td.t-session(v-for="room in rooms.dayTwo")
             SessionSummary.mini(:talk="getTracks(2,3,room)")
-        tr.t-rest
+        tr.t-rest.t-snack
           th
             time 15:00
-          td
+          td.mass-event
             span.uk-flex.uk-flex-center
               p {{ $t('event.conference.timeEvent.snack') }} 
           td
@@ -290,7 +302,7 @@ div#TimeTable
         tr.t-rest
           th
             time 16:15
-          td
+          td.mass-event
             span.uk-flex.uk-flex-center
               p {{ $t('event.conference.timeEvent.break') }} 
           td
@@ -307,7 +319,7 @@ div#TimeTable
         tr.t-party
           th
             time 17:15
-          td
+          td.mass-event
             span.uk-flex.uk-flex-center
               p {{ $t('event.conference.timeEvent.lightningTalk') }} 
           td
@@ -319,7 +331,7 @@ div#TimeTable
         tr.t-closing
           th
             time 18:30
-          td
+          td.mass-event
             span.uk-flex.uk-flex-center
               p {{ $t('event.conference.timeEvent.closing') }} 
           td
