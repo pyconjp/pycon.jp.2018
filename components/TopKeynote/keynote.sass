@@ -6,11 +6,20 @@ section#TopKeynote
                 margin-top: .4rem
     h2#invited-lecture
       margin-top: 140px
+      margin-bottom: .3rem
+    p.coution
+      font-size: 13px
+      color: $pycon-global-color-red
+      margin-top: 0
+      margin-bottom: 4rem
+      margin-left: .2rem
+      @media (max-width: $breakpoint-xsmall-max)
+        margin: 0 calc(20px + .2rem) 4rem
+
     article.keynote-speakers,article.invited-speakers
         @media (max-width: 900px)
             flex-wrap: wrap
             margin-bottom: 140px
-
         section[id^="keynote-info"],
         section[id^="invited-info"]
             position: relative
@@ -47,6 +56,7 @@ section#TopKeynote
             &:after
                 content: " "
                 position: absolute
+                border-radius: 4px
                 background-image: linear-gradient(135deg, rgba(40, 170, 226, 0.5), rgba(0, 223, 216, 0.5))
                 transform: rotate(5deg)
                 width: 100%
@@ -113,4 +123,5 @@ section#TopKeynote
         section#keynote-info-0918,
         section#invited-info-0917-2
             &:after
+                border-radius: 4px
                 background-image: linear-gradient(135deg,  rgba(255, 244, 63, 0.5), rgba(232, 214, 0, 0.5))

@@ -10,6 +10,8 @@
         "sponsor":"Sponsor",
         "staff":"Staff"
       },
+      "event":"event",
+      "conference":"conference",
       "sponsor":"Sponsor",
       "code_of_conduct":"Code of Conduct",
       "lang": "日本語"
@@ -101,7 +103,8 @@
     "invited-lecture": {
       "text": {
           "head": "Invited lecture",
-          "subcaption": ""
+          "subcaption": "",
+          "coution": "Unfortunately, Mr Yukata Matsuo will not be able to give his session as was scheduled."
       },
       "first": {
         "date": "September 17th",
@@ -191,5 +194,39 @@
     "title": "Sponsor",
     "recruitTitle": "Recruitment",
     "companyInfoTitle": "Company"
+  },
+  "event": {
+    "title": "event",
+    "warnning": "Please always check the latest information, because event information may be updated untile the conference day.",
+    "conference": {
+      "title": "conference",
+      "tab": {
+        "day1": "Sep. 17th",
+        "day2": "Sep. 18th"
+      },
+      "rooms": {
+        "roomA": "A+B conference room",
+        "roomB": "small exhibition hall",
+        "roomC": "Special conference room",
+        "roomD": "convention hall",
+        "roomD2": "convention  hall \"UME\" ",
+        "roomD3": "convention hall \"UGUISU\"",
+        "roomE": "C conference room",
+        "roomF": "D conference room"
+      },
+      "timeEvent": {
+        "regist": "Conference Registration",
+        "opening": "opening",
+        "keynote": "keynote",
+        "invitedLecture": "Invited lecture",
+        "break": "break time",
+        "lunch": "lunch time",
+        "sponsorEvent": "sponsor event",
+        "snack": "snack time",
+        "closing": "closing",
+        "lightningTalk": "Lightning Talk",
+        "party": "party"
+      }
+    }
   }
 }
