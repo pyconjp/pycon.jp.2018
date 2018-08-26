@@ -200,16 +200,16 @@
     "conference": {
       "title": "conference",
       "tab": {
-        "day1": "September 17th",
-        "day2": "September 18th"
+        "day1": "Sep. 17th",
+        "day2": "Sep. 18th"
       },
       "rooms": {
         "roomA": "A+B conference room",
-        "roomB": "small exhibition room",
+        "roomB": "small exhibition hall",
         "roomC": "Special conference room",
-        "roomD": "convention room",
-        "roomD2": "convention room  \b \"UME\" ",
-        "roomD3": "convention room \"UGUISU\"",
+        "roomD": "convention hall",
+        "roomD2": "convention  hall \"UME\" ",
+        "roomD3": "convention hall \"UGUISU\"",
         "roomE": "C conference room",
         "roomF": "D conference room"
       },

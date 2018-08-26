@@ -22,7 +22,7 @@ const sponsorApiUri = process.env.sponsorApiEndpoint + `?stage=${sponsorSheetNam
 
 /* for Session API's URI */
 let getSessinsAPIUri = () => {
-  const talkSheetName = 'dev'// Please change to "prod_yyyymmdd" if deploying production
+  const talkSheetName = 'prod_20180826'// Please change to "prod_yyyymmdd" if deploying production
   const talkNoCache = false  // Please change to "false" if deploying production
   let talkApiUri
   // chose endpoint
