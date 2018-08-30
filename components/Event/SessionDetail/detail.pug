@@ -1,13 +1,28 @@
 div#modal-session(uk-modal)
-  div.uk-modal-dialog.uk-modal-body
-    button.uk-modal-close-default(type='button', uk-close='')
-    p
-      | 2018-08-14 17:00 Talk(30min) room-A 
-    p 
-      span.uk-label.uk-marg 初心者
-      span.uk-label.uk-margin-left tag1
-      span.uk-label.uk-margin-left tag1 hogehoge
-    p.uk-modal-title title 
-    p name
-    p
-      | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  div.detail-innter.uk-modal-dialog.uk-modal-body
+    button.uk-modal-close-default(type='button', uk-close)
+    div.talk-schedule
+      time {{ dates }}
+      span.event-type ({{ talk_format }})
+      span.room {{ room }}
+    dl.talk-property.uk-flex
+      dt.talk-langage 発表言語
+      dd.uk-label {{ langage }}
+      dt.doc-langage 資料言語
+      dd.uk-label {{ slide_langage }}
+      dt.talk-level 対象
+      dd.uk-label {{ level }}
+    h3.uk-modal-title {{ title }}
+    p {{ abstract }}
+    h4 発表者 
+    dl
+      dt {{ name }}
+      dd
+      | {{ profile }}
+    h4 講演詳細
+    //span
+      a(@click="showDescription()") more
+    p.desc {{ description }}
+    h4(v-if="tags") keywords
+    ul.tag.uk-flex.uk-flex-wrap
+      li( v-for="item in tags") {{ item }}

@@ -3,7 +3,8 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import SessionSummary from '~/components/Event/SessionSummary';
+import SessionSummary from '~/components/Event/SessionSummary'
+import SessionDetail from '~/components/Event/SessionDetail'
 
 export default {
   name: 'time-table',
@@ -14,11 +15,17 @@ export default {
       rooms: {
               "dayOne": ["ra","rb","rc","rd1","re","rf"],
               "dayTwo": ["ra","rb","rc","rd2","rd3","re","rf"]
-              }
+              },
+      currentTalkDetail: {
+          talk: "",
+          date: "",
+          no: ""
+      }
     }
   },
   components: {
     SessionSummary,
+    SessionDetail
   },
   mounted(){
     this.FETCH_TALK()
@@ -32,7 +39,18 @@ export default {
     ...mapActions({
       FETCH_TALK: "FETCH_TALK"
     }),
-    getTracks (day,no,room) {
+    showDetail (day,no,room) {
+      const talk = this.getTalk(day,no,room)
+      this.$data.currentTalkDetail.talk = talk
+      this.$data.currentTalkDetail.date = day
+      this.$data.currentTalkDetail.no = no
+
+      // show UIkit modal
+      const uikit = require('uikit')
+      uikit.modal('#modal-session').show()
+
+    },
+    getTalk (day,no,room) {
       let currentDayTracks = this.talks.filter( (item, index) => {
                                                 if(parseInt(item.day) === parseInt(day)) return true
                                                 })
@@ -48,23 +66,27 @@ export default {
     },
     parallelScroll (evt, el) {
       let tableHeader = this.$refs[this.$data.currentTab]
-      if(window.scrollY > (112+90)){
-        const sLeft = el.scrollLeft
-        tableHeader.scrollLeft = sLeft
-      }else{
-        tableHeader.scrollLeft = 0
+      if( tableHeader != undefined) {
+        if(window.scrollY > (112+90)){
+          const sLeft = el.scrollLeft
+          tableHeader.scrollLeft = sLeft
+        }else{
+          tableHeader.scrollLeft = 0
+        }
       }
     },
     fixedHead (evt, el) {
       let tableHeader = this.$refs[this.$data.currentTab]
       let windowWidth = window.innerWidth
-      if(windowWidth > 640 && tableHeader && (window.scrollY > (112+89))){
-        this.$data.isFixed = true
-        const sLeft = el.scrollLeft
-        tableHeader.scrollLeft = sLeft
-      }else{
-        this.$data.isFixed = false
-        tableHeader.scrollLeft = 0
+      if( tableHeader != undefined) {
+        if(windowWidth > 640  && (window.scrollY > (112+89))){
+          this.$data.isFixed = true
+          const sLeft = el.scrollLeft
+          tableHeader.scrollLeft = sLeft
+        }else{
+          this.$data.isFixed = false
+          tableHeader.scrollLeft = 0
+        }
       }
     }
   }
