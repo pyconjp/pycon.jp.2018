@@ -4,10 +4,7 @@ div.session-summary.uk-flex.uk-flex-column(v-if="room")
   span.event-type {{ talk_format }}
   h3 {{ title }}
   p.name {{ name }}
-  p.disc 
   dl.talk-property.uk-flex
     dt.talk-level level :
     dd(:class="{all: level == 'All', beginner: level == 'Beginner', intermediate: level == 'Intermediate', advanced: level == 'Advanced'}") {{ level }}
-  h4(v-if="tags") keywords :
-  ul.tag.uk-flex.uk-flex-wrap
-    li( v-for="item in tags") {{ item }}
+  a.detail(@click="toModal()") {{ $t('event.conference.sessionSummary.detail')}}

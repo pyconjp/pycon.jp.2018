@@ -34,13 +34,13 @@ module.exports = {
   },
   plugins: [
             '~/plugins/i18n.js',
-            '~/plugins/element-scroll.js',
+            {src: '~/plugins/element-scroll.js', ssr: false},
             ],
   generate: {
     minify: {
       collapseWhitespace: false
     },
-    routes: ['/','/code-of-conduct','/sponsor','/en','/en/code-of-conduct','/en/sponsor']
+    routes: ['/','/code-of-conduct','/sponsor','/event/conference','/en','/en/code-of-conduct','/en/sponsor','/en/event/conference']
   },
   env: {
     baseUrl: '/2018',

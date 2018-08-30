@@ -2,7 +2,9 @@
 
 <script>
   export default {
-    name: 'session-list'
+    name: 'session-list',
+    methods: {
+    }
   }
 </script>
 
