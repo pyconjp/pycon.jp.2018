@@ -167,6 +167,11 @@
     "warnning": "イベントについては開催当日まで内容が変更される可能性があります。都度最新の情報をご確認ください。",
     "conference": {
       "title": "カンファレンス",
+      "language": {
+        "japanese": "日本語",
+        "english": "英語",
+        "multi": "日本語/英語"
+      },
       "tab": {
         "day1": "9月17日",
         "day2": "9月18日"
@@ -193,6 +198,16 @@
         "closing": "クロージング",
         "lightningTalk": "Lightning Talk",
         "party": "パーティ"
+      },
+      "sessionDetail": {
+        "talkLanguage": "発表言語",
+        "slideLanguage": "資料言語",
+        "audience": "Level",
+        "speaker": "発表者",
+        "description": "発表詳細"
+      },
+      "sessionSummary": {
+        "detail": "詳細"
       }
     }
   }

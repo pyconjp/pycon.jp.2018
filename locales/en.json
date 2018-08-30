@@ -169,6 +169,11 @@
     "warnning": "Please always check the latest information, because event information may be updated untile the conference day.",
     "conference": {
       "title": "conference",
+      "language": {
+        "japanese": "Japanese",
+        "english": "English",
+        "multi": "Japanise/English"
+      },
       "tab": {
         "day1": "Sep. 17th",
         "day2": "Sep. 18th"
@@ -195,6 +200,16 @@
         "closing": "closing",
         "lightningTalk": "Lightning Talk",
         "party": "party"
+      },
+      "sessionDetail": {
+        "talkLanguage": "talk-language",
+        "slideLanguage": "slide-language",
+        "audience": "Level",
+        "speaker": "Speaker",
+        "description": "talk-Description"
+      },
+      "sessionSummary": {
+        "detail": "more"
       }
     }
   }

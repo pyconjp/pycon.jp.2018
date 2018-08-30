@@ -7,6 +7,7 @@
     name: 'session-details',
     props: ['talk','date','no'],
     mixins: [sessionsMixin],
+
     computed: {
       dates () {
         let _day
@@ -58,8 +59,30 @@
       description() {
         return (this.talk && this.talk.hasOwnProperty('description') && this.talk.description !="" ) ?  this.talk.description : "-"
       },
+      langage() {
+        let _lang = ""
+        if (this.talk && this.talk.hasOwnProperty('lang_of_talk') && this.talk.lang_of_talk !="" ){
+            _lang = this.talk.lang_of_talk
+            if(_lang == "ja") {
+              _lang = this.$i18n.t("event.conference.language.japanese")
+            }else if(_lang  == "en"){
+              _lang = this.$i18n.t("event.conference.language.english")
+          }
+        }
+        return _lang
+      },
       slide_langage() {
-        return (this.talk && this.talk.hasOwnProperty('lang_of_slide') && this.talk.lang_of_slide !="" ) ?  this.talk.lang_of_slide : "-"
+        let _lang = ""
+        if (this.talk && this.talk.hasOwnProperty('lang_of_slide') && this.talk.lang_of_slide !="" ){
+            _lang = this.talk.lang_of_slide
+            if(_lang == "ja") {
+              _lang = this.$i18n.t("event.conference.language.japanese")
+            }else if(_lang  == "en"){
+              _lang = this.$i18n.t("event.conference.language.english")
+          }else if(_lang == "ja_en")
+              _lang = this.$i18n.t("event.conference.language.multi")
+        }
+        return _lang
       },
       tags() {
         let tags = []

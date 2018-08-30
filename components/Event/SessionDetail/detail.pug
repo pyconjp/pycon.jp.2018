@@ -1,28 +1,23 @@
 div#modal-session(uk-modal)
   div.detail-innter.uk-modal-dialog.uk-modal-body
-    button.uk-modal-close-default(type='button', uk-close)
+    a.uk-modal-close-default(uk-close)
     div.talk-schedule
       time {{ dates }}
       span.event-type ({{ talk_format }})
       span.room {{ room }}
-    dl.talk-property.uk-flex
-      dt.talk-langage 発表言語
-      dd.uk-label {{ langage }}
-      dt.doc-langage 資料言語
-      dd.uk-label {{ slide_langage }}
-      dt.talk-level 対象
-      dd.uk-label {{ level }}
+    dl.talk-property.uk-flex.uk-flex-wrap
+      dt.talk-langage {{ $t('event.conference.sessionDetail.talkLanguage') }} :
+      dd {{ langage }}
+      dt.doc-langage {{ $t('event.conference.sessionDetail.slideLanguage') }} :
+      dd {{ slide_langage }}
+      dt.talk-level {{ $t('event.conference.sessionDetail.audience') }} :
+      dd {{ level }}
     h3.uk-modal-title {{ title }}
     p {{ abstract }}
-    h4 発表者 
-    dl
-      dt {{ name }}
-      dd
-      | {{ profile }}
-    h4 講演詳細
-    //span
-      a(@click="showDescription()") more
+    h4.name {{ name }}
+    p.profile {{ profile }}
+    h4 {{ $t('event.conference.sessionDetail.description') }}
     p.desc {{ description }}
-    h4(v-if="tags") keywords
+    h4.keyword(v-if="tags") keywords
     ul.tag.uk-flex.uk-flex-wrap
       li( v-for="item in tags") {{ item }}
