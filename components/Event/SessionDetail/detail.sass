@@ -12,6 +12,8 @@
       width: calc(100% - (1rem*2))
 
     .talk-schedule
+      @media (max-width: $breakpoint-xsmall-max)
+        margin-bottom: .3rem
       time,span
         font-weight: 300
         color: #808080
@@ -37,13 +39,16 @@
         margin-right: .3rem
         @media (max-width: $breakpoint-xsmall-max)
           margin: 0
-          width: 4.2rem
+          width: 100%
+          line-height: 1.4rem
       dd
         font-weight: 300
         margin-right: 1rem
+        color: #666
         @media (max-width: $breakpoint-xsmall-max)
-          margin: 0
-          width: calc(100% - 4.2rem)
+          margin: 0 0 .4rem .1rem
+          &:last-child
+            margin-bottom: 0
 
     h3.uk-modal-title
       margin: 1.2rem auto .5rem
