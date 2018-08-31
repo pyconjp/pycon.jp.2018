@@ -16,7 +16,7 @@ module.exports = {
       { property: 'og:title', content: 'PyCon JP 2018 in Tokyo | Sep 17th &ndash; Sep 18th' },
       { property: 'og:description', content: 'PyCon JP 2018 ひろがるpython' },
       { property: 'og:url', content: 'https://pycon.jp/2018' },
-      { property: 'og:image', content: baseUrl + '/common/ogp_image.png' }
+      { property: 'og:image', content: 'https://pycon.jp/2018/common/ogp_image.png' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: baseUrl + '/common/favicon.ico'}
