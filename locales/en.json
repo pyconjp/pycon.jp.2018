@@ -3,15 +3,15 @@
     "navi": {
       "top":{
         "top": "TOP",
-        "keynote":"Key note",
+        "keynote":"Keynote",
         "news":"News",
         "place":"Place",
         "other":"Other",
         "sponsor":"Sponsor",
         "staff":"Staff"
       },
-      "event":"event",
-      "conference":"conference",
+      "event":"Event",
+      "conference":"Schedule",
       "sponsor":"Sponsor",
       "code_of_conduct":"Code of Conduct",
       "lang": "日本語"
@@ -66,8 +66,8 @@
           "head": "Application"
         },
         "talk": "Apply for talk",
-        "staff": "Apply for the staff",
-        "ticket": "Get Your tickets",
+        "staff": "Apply to become staff",
+        "ticket": "Get your tickets",
         "ticket-comming-soon": "coming soon!"
       }
     },
@@ -89,7 +89,7 @@
     },
     "invited-lecture": {
       "text": {
-          "head": "Invited lecture",
+          "head": "Invited Lecture",
           "subcaption": "",
           "coution": "Unfortunately, Mr Yukata Matsuo will not be able to give his session as was scheduled."
       },
@@ -169,38 +169,38 @@
     "title": "event",
     "warnning": "Please always check the latest information, because event information may be updated untile the conference day.",
     "conference": {
-      "title": "conference",
+      "title": "Schedule",
       "language": {
         "japanese": "Japanese",
         "english": "English",
-        "multi": "Japanise/English"
+        "multi": "Japanese/English"
       },
       "tab": {
         "day1": "Sep. 17th",
         "day2": "Sep. 18th"
       },
       "rooms": {
-        "roomA": "A+B conference room",
-        "roomB": "small exhibition hall",
-        "roomC": "Special conference room",
-        "roomD": "convention hall",
-        "roomD2": "convention  hall \"UME\" ",
-        "roomD3": "convention hall \"UGUISU\"",
-        "roomE": "C conference room",
-        "roomF": "D conference room"
+        "roomA": "Conference Rooms A+B",
+        "roomB": "Small Exhibition Hall",
+        "roomC": "Special Conference Room",
+        "roomD": "Convention Hall",
+        "roomD2": "Convention  Hall \"UME\" ",
+        "roomD3": "Convention Hall \"UGUISU\"",
+        "roomE": "Conference Room C",
+        "roomF": "Conference Room D"
       },
       "timeEvent": {
         "regist": "Conference Registration",
-        "opening": "opening",
-        "keynote": "keynote",
-        "invitedLecture": "Invited lecture",
-        "break": "break time",
-        "lunch": "lunch time",
-        "sponsorEvent": "sponsor event",
-        "snack": "snack time",
-        "closing": "closing",
+        "opening": "Opening",
+        "keynote": "Keynote",
+        "invitedLecture": "Invited Lecture",
+        "break": "Break",
+        "lunch": "Lunch",
+        "sponsorEvent": "Sponsor Event",
+        "snack": "Snack",
+        "closing": "Closing",
         "lightningTalk": "Lightning Talk",
-        "party": "party"
+        "party": "Party"
       },
       "sessionDetail": {
         "talkLanguage": "talk-language",
