@@ -59,7 +59,7 @@
       description() {
         return (this.session && this.session.hasOwnProperty('description') && this.session.description !="" ) ?  this.session.description : "-"
       },
-      langage() {
+      language() {
         let _lang = ""
         if (this.session && this.session.hasOwnProperty('lang_of_talk') && this.session.lang_of_talk !="" ){
             _lang = this.session.lang_of_talk

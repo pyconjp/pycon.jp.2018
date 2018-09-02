@@ -22,7 +22,7 @@
           }
           return _lang
         }
-
+        return ""
       },
       dates () {
         if(this.category === "talk"){
