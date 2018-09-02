@@ -88,7 +88,7 @@
     },
     "invited-lecture": {
       "text": {
-          "head": "Invited lecture",
+          "head": "Invited Lecture",
           "subcaption": "招待講演",
           "coution": "講演を予定しておりました松尾 豊氏に関しましては都合により出演中止となりましたのでご了承ください。"
       },
@@ -209,6 +209,10 @@
       },
       "sessionSummary": {
         "detail": "詳細"
+      },
+      "posterSummary": {
+          "coretime": "2018-09-18 15:00 - 15:40",
+          "room": "大展示ホール"
       }
     }
   }

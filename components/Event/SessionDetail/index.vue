@@ -5,7 +5,7 @@
   import sessionsMixin from '~/components/Event/mixins/sessionsMixin'
   export default {
     name: 'session-details',
-    props: ['talk','date','no'],
+    props: ['session','date','no'],
     mixins: [sessionsMixin],
 
     computed: {
@@ -51,18 +51,18 @@
         return _day + " " + _time
       },
       abstract() {
-        return (this.talk && this.talk.hasOwnProperty('abstract') && this.talk.abstruct !="" ) ?  this.talk.abstract : "-"
+        return (this.session && this.session.hasOwnProperty('abstract') && this.session.abstruct !="" ) ?  this.session.abstract : "-"
       },
       profile() {
-        return (this.talk && this.talk.hasOwnProperty('profile') && this.talk.profile !="" ) ?  this.talk.profile : "-"
+        return (this.session && this.session.hasOwnProperty('profile') && this.session.profile !="" ) ?  this.session.profile : "-"
       },
       description() {
-        return (this.talk && this.talk.hasOwnProperty('description') && this.talk.description !="" ) ?  this.talk.description : "-"
+        return (this.session && this.session.hasOwnProperty('description') && this.session.description !="" ) ?  this.session.description : "-"
       },
       langage() {
         let _lang = ""
-        if (this.talk && this.talk.hasOwnProperty('lang_of_talk') && this.talk.lang_of_talk !="" ){
-            _lang = this.talk.lang_of_talk
+        if (this.session && this.session.hasOwnProperty('lang_of_talk') && this.session.lang_of_talk !="" ){
+            _lang = this.session.lang_of_talk
             if(_lang == "ja") {
               _lang = this.$i18n.t("event.conference.language.japanese")
             }else if(_lang  == "en"){
@@ -71,23 +71,10 @@
         }
         return _lang
       },
-      slide_langage() {
-        let _lang = ""
-        if (this.talk && this.talk.hasOwnProperty('lang_of_slide') && this.talk.lang_of_slide !="" ){
-            _lang = this.talk.lang_of_slide
-            if(_lang == "ja") {
-              _lang = this.$i18n.t("event.conference.language.japanese")
-            }else if(_lang  == "en"){
-              _lang = this.$i18n.t("event.conference.language.english")
-          }else if(_lang == "ja_en")
-              _lang = this.$i18n.t("event.conference.language.multi")
-        }
-        return _lang
-      },
       tags() {
         let tags = []
-        if(this.talk && this.talk.hasOwnProperty('tags')){
-            let tagStr = String(this.talk.tags)
+        if(this.session && this.session.hasOwnProperty('tags')){
+            let tagStr = String(this.session.tags)
             tags = tagStr.split(',')
             if(Object.keys(tags).length <= 0 || tags[0] === ""){
                tags = false

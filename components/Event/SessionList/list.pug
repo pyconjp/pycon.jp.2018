@@ -1,82 +1,37 @@
 article#session-lists
-  ul.uk-tab( data-uk-tab="{connect:'#list-contents'}" )
-    li.uk-active
+  ul.category-tab.uk-tab( data-uk-tab="{connect:'#list-contents'}" uk-switcher="{swiping:false}" )
+    li.uk-active(data-tab="talks")
       a Talk Session
-    li
-      a Lighting Talk
-    li 
+    li(data-tab="posters")
       a Posters
+    li(data-tab="lts")
+      a lightningTalks
 
   div#list-contents.uk-switcher
-    ul#talk-session.uk-list-divider
-      li.uk-flex.uk-flex-wrap
-        div.session-summary.uk-flex.uk-flex-column(class="uk-width-3-4@m uk-width-xxlarge@s")
-          div.talk-schedule
-            time 2018-08-17 10:30
-            span.event-type Talk(30min)
-            span.room room-A
-          dl.talk-property.uk-flex
-            dt.talk-langage 発表言語
-            dd.uk-label ja
-            dt.doc-langage 資料言語
-            dd.uk-label ja
-            dt.talk-level 対象
-            dd.uk-label All
-          ul.talk-tags.uk-flex.uk-flex-wrap
-            li.uk-label Web programming including frameworks (Django / Flask / Pylons etc.)
-            li.uk-label Anything else basically which doesn’t really fall into the types of topics above
-          h3.talk-title Migrating from Py2 application to Py3: first trial in MonotaRO / Python2 から Python3 への移植: MonotaRO での取り組み
-          p.speaker-name Yasushi Masuda
-          p.talk-detail 概要 【空の場合は "coming soon" 又は　非表示】
-            br
-            | 概要２行目 
-        span.detail(class="uk-width-1-4@m uk-width-xxlarge@s")
-          a.uk-text-right(href='#modal-session', uk-toggle) 詳細はこちら
-      li.uk-flex.uk-flex-wrap
-        div.session-summary.uk-flex.uk-flex-column(class="uk-width-3-4@m uk-width-xxlarge@s")
-          div.talk-schedule
-            time 2018-08-17 10:30
-            span.event-type Talk(30min)
-            span.room room-A
-          dl.talk-property.uk-flex
-            dt.talk-langage 発表言語
-            dd.uk-label ja
-            dt.doc-langage 資料言語
-            dd.uk-label ja
-            dt.talk-level 対象
-            dd.uk-label All
-          ul.talk-tags.uk-flex.uk-flex-wrap
-            li.uk-label Web programming including frameworks (Django / Flask / Pylons etc.)
-            li.uk-label Anything else basically which doesn’t really fall into the types of topics above
-          h3.talk-title Migrating from Py2 application to Py3: first trial in MonotaRO / Python2 から Python3 への移植: MonotaRO での取り組み
-          p.speaker-name Yasushi Masuda
-          p.talk-detail 概要 【空の場合は "coming soon" 又は　非表示】
-        span.detail(class="uk-width-1-4@m uk-width-xxlarge@s")
-          a.uk-text-right(href='#modal-session', uk-toggle) 詳細はこちら
+    div#talks 
+      ul.sessions
+        li.uk-flex.uk-flex-wrap(v-for="talk in talks")
+          sessionSummary(:session="talk" category="talk" isList="true")
+        //li.uk-flex.uk-flex-wrap(v-for="talk in talks")
+          div.session-summary.uk-flex.uk-flex-column(class="uk-width-3-4@m uk-width-xxlarge@s")
+            div.talk-schedule
+              time 2018-08-17 10:30
+              span.event-type Talk(30min)
+              span.room room-A
+            dl.talk-property.uk-flex
+              dt.talk-langage 発表言語
+              dd.uk-label {{ langage }}
+              dt.doc-langage 資料言語
+              dd.uk-label ja
+              dt.talk-level 対象
+              dd.uk-label All
+            h3.talk-title Migrating from Py2 application to Py3: first trial in MonotaRO / Python2 から Python3 への移植: MonotaRO での取り組み
+            p.speaker-name Yasushi Masuda
+          span.detail(class="uk-width-1-4@m uk-width-xxlarge@s")
+            a.uk-text-right 詳細
 
-    ul#lighting-talk.uk-list-divider
-      li hoge2
     ul#posters.uk-list-divider
       li hoge3
 
-  div#modal-session(uk-modal)
-    div.uk-modal-dialog.uk-modal-body
-      button.uk-modal-close-default(type='button', uk-close)
-      div.talk-schedule
-        time 2018-08-17 10:30
-        span.event-type Talk(30min)
-        span.room room-A
-      dl.talk-property.uk-flex
-        dt.talk-langage 発表言語
-        dd.uk-label ja
-        dt.doc-langage 資料言語
-        dd.uk-label ja
-        dt.talk-level 対象
-        dd.uk-label All
-      h3.uk-modal-title talk title
-      p abstruct
-      h4 more detail
-      p session detail
-      h4 speaker name
-      p
-        | profile
+    ul#lts.uk-list-divider
+      li hoge2

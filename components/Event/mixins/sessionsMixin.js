@@ -1,23 +1,32 @@
 export default {
   computed: {
-    langage() {
-      return (this.talk && this.talk.hasOwnProperty('lang_of_talk') && this.talk.lang_of_talk !="" ) ?  this.talk.lang_of_talk : "-"
+    room () {
+      return (this.session && this.session.hasOwnProperty('room')) ?  this.session.room : ""
     },
-    room() {
-      return (this.talk && this.talk.hasOwnProperty('room')) ?  this.talk.room : ""
+    talk_format () {
+      return (this.session && this.session.hasOwnProperty('talk_format')) ?  this.session.talk_format + "min" : ""
     },
-    talk_format() {
-      return (this.talk && this.talk.hasOwnProperty('talk_format')) ?  this.talk.talk_format + "min" : ""
+    title () {
+      return (this.session && this.session.hasOwnProperty('title')) ?  this.session.title : ""
     },
-    title() {
-      return (this.talk && this.talk.hasOwnProperty('title')) ?  this.talk.title : ""
+    name () {
+      return (this.session && this.session.hasOwnProperty('name')) ?  this.session.name : ""
     },
-    name() {
-      return (this.talk && this.talk.hasOwnProperty('name')) ?  this.talk.name : ""
+    level () {
+      return (this.session && this.session.hasOwnProperty('audience_level') ) ?  this.session.audience_level : "-"
     },
-    level() {
-      return (this.talk && this.talk.hasOwnProperty('audience_level') ) ?  this.talk.audience_level : "-"
+    slide_language () {
+      let _lang = ""
+      if (this.session && this.session.hasOwnProperty('lang_of_slide') && this.session.lang_of_slide !="" ){
+          _lang = this.session.lang_of_slide
+          if(_lang == "ja") {
+            _lang = this.$i18n.t("event.conference.language.japanese")
+          }else if(_lang  == "en"){
+            _lang = this.$i18n.t("event.conference.language.english")
+        }else if(_lang == "ja_en")
+            _lang = this.$i18n.t("event.conference.language.multi")
+      }
+      return _lang
     }
-
   }
 }

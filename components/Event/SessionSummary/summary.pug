@@ -1,10 +1,21 @@
-div.session-summary.uk-flex.uk-flex-column(v-if="room")
-  span.langage.uk-flex.uk-flex-middle.uk-flex-center {{ langage }}
-  span.room {{ room }}
-  span.event-type {{ talk_format }}
+div.session-summary.uk-flex.uk-flex-column
+  span.langage.uk-flex.uk-flex-middle.uk-flex-center(v-if="(category ==='talk') && !isList") {{ language }}
+  span.room(v-if="(category === 'talk') && !isList") {{ room }}
+  span.event-type(v-if="(category === 'talk') && !isList") {{ talk_format }}
+  div.talk-schedule.uk-flex(v-if="(category === 'talk') && isList")
+    time {{ dates }}
+    span.event-type Talk({{ talk_format }})
+    span.room {{ room }}
+    dl.talk-property.uk-flex(v-if="(category === 'talk') && isList")
+      dt.talk-langage 発表言語
+      dd {{ language }}
+      dt.doc-langage 資料言語
+      dd {{ slide_language }}
+      dt.talk-level 対象
+      dd {{ level }}
   h3 {{ title }}
   p.name {{ name }}
-  dl.talk-property.uk-flex
-    dt.talk-level level :
+  dl.talk-property.uk-flex(v-if="(category === 'talk') && !isList")
+    dt.talk-level Level :
     dd(:class="{all: level == 'All', beginner: level == 'Beginner', intermediate: level == 'Intermediate', advanced: level == 'Advanced'}") {{ level }}
   a.detail(@click="toModal()") {{ $t('event.conference.sessionSummary.detail')}}

@@ -5,7 +5,8 @@ export const state = () => ({
   sponsor_array:[],
   top_sponsor_array:[],
   top_sponsor_loading: 'enable',
-  talk_array: []
+  talk_array: [],
+  poster_array: []
 })
 
 export const getters = {
@@ -13,7 +14,8 @@ export const getters = {
   sponsor_array (state) { return state.sponsor_array },
   top_sponsor_array (state) { return state.top_sponsor_array },
   top_sponsor_loading (state) { return state.top_sponsor_loading},
-  talk_array (state) { return state.talk_array}
+  talk_array (state) { return state.talk_array},
+  poster_array (state) { return state.poster_array}
 }
 
 const sponsorSheetName = 'prod_20180818'// Please change to "prod" if deploying production
@@ -21,16 +23,20 @@ const sponsorNoCache = false  // Please change to "false" if deploying productio
 const sponsorApiUri = process.env.sponsorApiEndpoint + `?stage=${sponsorSheetName}&noCache=${sponsorNoCache}`
 
 /* for Session API's URI */
-let getSessinsAPIUri = () => {
-  const talkSheetName = 'prod_20180831'// Please change to "prod_yyyymmdd" if deploying production
-  const talkNoCache = false  // Please change to "false" if deploying production
-  let talkApiUri
-  // chose endpoint
-  talkApiUri = process.env.talkApiEndpoint + `?stage=${talkSheetName}&noCache=${talkNoCache}`
+let getSessinsAPIUri = (category) => {
+  let apiUri
+  let sheetName
+  const noCache = false
 
-  return talkApiUri
+  if(category === 'talk'){
+    sheetName = 'prod_20180831'// Please change to "prod_yyyymmdd" if deploying production
+    apiUri = process.env.talkApiEndpoint + `?stage=${sheetName}&noCache=${noCache}`
+  }else if( category === 'poster'){
+    sheetName = 'dev'// Please change to "prod_yyyymmdd" if deploying production
+    apiUri = process.env.posterApiEndpoint + `?stage=${sheetName}&noCache=${noCache}`
+  }
+  return apiUri
 }
-
 
 export const actions = {
 
@@ -61,11 +67,19 @@ export const actions = {
     commit('SET_TOP_SPONSOR_LOADING', 'disable')
   },
   async FETCH_TALK ({ commit }) {
-    const uri = getSessinsAPIUri()
+    const uri = getSessinsAPIUri('talk')
     const response = await fetch(uri)
     const json = await response.json()
     const data = json.data
     commit('FETCH_TALK', data)
+  },
+  async FETCH_POSTER ({ commit }) {
+    const uri = getSessinsAPIUri('poster')
+    const response = await fetch(uri)
+    const json = await response.json()
+    const data = json.data
+    console.log(data)
+    commit('FETCH_POSTER', data)
   }
 }
 
@@ -87,4 +101,7 @@ export const mutations = {
   FETCH_TALK(state, data) {
     state.talk_array = data
   },
+  FETCH_POSTER(state, data) {
+    state.poster_array = data
+  }
 }
