@@ -16,7 +16,7 @@ export const getters = {
   talk_array (state) { return state.talk_array}
 }
 
-const sponsorSheetName = 'prod_20180818'// Please change to "prod" if deploying production
+const sponsorSheetName = 'prod_20180903'// Please change to "prod" if deploying production
 const sponsorNoCache = false  // Please change to "false" if deploying production
 const sponsorApiUri = process.env.sponsorApiEndpoint + `?stage=${sponsorSheetName}&noCache=${sponsorNoCache}`
 
