@@ -13,8 +13,10 @@ article#session-lists
         li.uk-flex.uk-flex-wrap(v-for="talk in talks")
           sessionSummary(:session="talk" category="talk" isList="true" @summary-event="showDetail('talk',talk)")
 
-    ul#posters.uk-list-divider
-      li hoge3
+    div#posters
+      ul.sessions
+        li.uk-flex.uk-flex-wrap(v-for="poster in posters")
+          sessionSummary(:session="poster" category="poster" isList="true" @summary-event="showDetail('poster',poster)")
 
     ul#lts.uk-list-divider
       li hoge2

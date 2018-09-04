@@ -2,15 +2,16 @@ div.session-summary.uk-flex.uk-flex-column
   span.langage.uk-flex.uk-flex-middle.uk-flex-center(v-if="(category ==='talk') && !isList") {{ language }}
   span.room(v-if="(category === 'talk') && !isList") {{ room }}
   span.event-type(v-if="(category === 'talk') && !isList") {{ talk_format }}
-  div.talk-schedule.uk-flex.uk-flex-wrap(v-if="(category === 'talk') && isList")
+  div.talk-schedule.uk-flex.uk-flex-wrap(v-if="isList")
     time {{ dates }}
-    span.event-type Talk({{ talk_format }})
-    span.room {{ room }}
+    span.event-type(v-if="category === 'talk'") Talk({{ talk_format }})
+    span.room(v-if="category === 'talk'") {{ room }}
+    span.room(v-if="category === 'poster'") 大展示ホール
     dl.talk-property.uk-flex.uk-flex-wrap
-      dt.talk-langage 発表言語:
-      dd {{ language }}
-      dt.doc-langage 資料言語:
-      dd {{ slide_language }}
+      dt.talk-langage(v-if="category === 'talk'") 発表言語:
+      dd(v-if="category === 'talk'") {{ language }}
+      dt.doc-langage(v-if="category === 'talk'") 資料言語:
+      dd(v-if="category === 'talk'") {{ slide_language }}
       dt.talk-level 対象:
       dd {{ level }}
   h3 {{ title }}

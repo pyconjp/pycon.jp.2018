@@ -3,13 +3,14 @@ div#modal-session(uk-modal)
     a.uk-modal-close-default(uk-close)
     div.talk-schedule
       time {{ dates }}
-      span.event-type ({{ talk_format }})
-      span.room {{ room }}
+      span.event-type(v-if="category === 'talk'") ({{ talk_format }})
+      span.room(v-if="category === 'talk'") {{ room }}
+      span.room(v-if="category === 'poster'") 大展示ホール
     dl.talk-property.uk-flex.uk-flex-wrap
-      dt.talk-langage {{ $t('event.conference.sessionDetail.talkLanguage') }} :
-      dd {{ language }}
-      dt.doc-langage {{ $t('event.conference.sessionDetail.slideLanguage') }} :
-      dd {{ slide_language }}
+      dt.talk-langage(v-if="category === 'talk'") {{ $t('event.conference.sessionDetail.talkLanguage') }} :
+      dd(v-if="category === 'talk'") {{ language }}
+      dt.doc-langage(v-if="category === 'talk'") {{ $t('event.conference.sessionDetail.slideLanguage') }} :
+      dd(v-if="category === 'talk'") {{ slide_language }}
       dt.talk-level {{ $t('event.conference.sessionDetail.audience') }} :
       dd {{ level }}
     h3.uk-modal-title {{ title }}

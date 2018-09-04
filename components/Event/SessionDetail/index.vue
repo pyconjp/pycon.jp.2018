@@ -49,6 +49,9 @@
                 break
             }
           }
+        } else if( this.category === 'poster'){
+          _day =  "2018-9-18"
+          _time = "15:10 - 15:45"
         }
         return _day + " " + _time
       },
@@ -56,7 +59,11 @@
         return (this.session && this.session.hasOwnProperty('abstract') && this.session.abstruct !="" ) ?  this.session.abstract : "-"
       },
       profile() {
-        return (this.session && this.session.hasOwnProperty('profile') && this.session.profile !="" ) ?  this.session.profile : "-"
+        if(this.category === 'talk'){
+          return (this.session && this.session.hasOwnProperty('profile') && this.session.profile !="" ) ?  this.session.profile : "-"
+        }else{
+        return (this.session && this.session.hasOwnProperty('bio') && this.session.bio !="" ) ?  this.session.bio : "-"
+        }
       },
       description() {
         return (this.session && this.session.hasOwnProperty('description') && this.session.description !="" ) ?  this.session.description : "-"

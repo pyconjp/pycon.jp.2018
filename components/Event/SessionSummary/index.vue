@@ -25,9 +25,10 @@
         return ""
       },
       dates () {
+        let _day
+        let _time
+
         if(this.category === "talk"){
-          let _day
-          let _time
           if( this.session.day === 1 ){
             _day =  "2018-9-17"
             switch(this.session.no){
@@ -64,6 +65,11 @@
                 break
             }
           }
+          return _day + " " + _time
+        } else if( this.category === 'poster'){
+          _day =  "2018-9-18"
+          _time = "15:10 - 15:45"
+
           return _day + " " + _time
         }
         return ""
