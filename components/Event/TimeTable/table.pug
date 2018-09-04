@@ -54,7 +54,10 @@ div#TimeTable
                 span.langage.uk-flex.uk-flex-middle.uk-flex-center en
                 span.room {{ $t('event.conference.rooms.roomD') }} 
                 span.event-type 60min
-                h3 {{ $t('event.conference.timeEvent.keynote') }} 
+                h3
+                  span {{ $t('event.conference.timeEvent.keynote') }}
+                  br
+                  | {{ $t('top.keynote.foreigner.theme') }} 
                 p.name {{ $t('top.keynote.foreigner.name') }}
             td
             td
@@ -65,13 +68,15 @@ div#TimeTable
             td
             td
             td.event
-              div.event-box
-                div.session-summary.uk-flex.uk-flex-column
-                  span.langage.uk-flex.uk-flex-middle.uk-flex-center ja
-                  span.room {{ $t('event.conference.rooms.roomD') }}
-                  span.event-type 45min
-                  h3 {{ $t('event.conference.timeEvent.invitedLecture') }} 
-                  p.name {{ $t('top.invited-lecture.second.name') }}
+              div.session-summary.uk-flex.uk-flex-column
+                span.langage.uk-flex.uk-flex-middle.uk-flex-center ja
+                span.room {{ $t('event.conference.rooms.roomD') }}
+                span.event-type 45min
+                h3 
+                  span {{ $t('event.conference.timeEvent.invitedLecture') }} 
+                  br
+                  | {{ $t('top.invited-lecture.second.theme') }} 
+                p.name {{ $t('top.invited-lecture.second.name') }}
             td
             td
           tr.t-lunch
@@ -230,7 +235,10 @@ div#TimeTable
                 span.langage.uk-flex.uk-flex-middle.uk-flex-center ja
                 span.room {{ $t('event.conference.rooms.roomD') }}
                 span.event-type 60min
-                h3 {{ $t('event.conference.timeEvent.keynote') }} 
+                h3
+                  span {{ $t('event.conference.timeEvent.keynote') }}
+                  br
+                  | {{ $t('top.keynote.japanese.theme') }}
                 p.name {{ $t('top.keynote.japanese.name') }}
             td
             td
