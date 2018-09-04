@@ -12,6 +12,7 @@
       },
       "event":"Event",
       "conference":"Schedule",
+      "sessions":"Sessions",
       "sponsor":"Sponsor",
       "code_of_conduct":"Code of Conduct",
       "lang": "日本語"
@@ -196,10 +197,10 @@
         "invitedLecture": "Invited Lecture",
         "break": "Break",
         "lunch": "Lunch",
-        "sponsorEvent": "Sponsor Event",
+        "sponsorEvent": "Job Fair",
         "snack": "Snack",
         "closing": "Closing",
-        "lightningTalk": "Lightning Talk",
+        "lightningTalk": "Lightning Talks",
         "party": "Party"
       },
       "sessionDetail": {
@@ -207,10 +208,15 @@
         "slideLanguage": "slide-language",
         "audience": "Level",
         "speaker": "Speaker",
-        "description": "talk-Description"
+        "description": "Session Description"
       },
       "sessionSummary": {
         "detail": "more"
+      },
+      "sessionCategory": {
+        "talk": "Talk",
+        "poster": "Poster Session",
+        "lt": "Lightning Talk"
       },
       "posterSummary": {
           "coretime": "2018-09-18 15:00 - 15:40",

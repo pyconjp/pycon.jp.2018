@@ -12,6 +12,7 @@
       },
       "event":"イベント",
       "conference":"カンファレンス",
+      "sessions":"セッション一覧",
       "sponsor":"スポンサー",
       "code_of_conduct":"行動規範",
       "lang": "ENGLISH"
@@ -194,10 +195,10 @@
         "invitedLecture": "招待講演",
         "break": "休憩",
         "lunch": "ランチタイム",
-        "sponsorEvent": "スポンサー企画",
+        "sponsorEvent": "ジョブフェア",
         "snack": "おやつタイム",
         "closing": "クロージング",
-        "lightningTalk": "Lightning Talk",
+        "lightningTalk": "Lightning Talks",
         "party": "パーティ"
       },
       "sessionDetail": {
@@ -209,6 +210,11 @@
       },
       "sessionSummary": {
         "detail": "詳細"
+      },
+      "sessionCategory": {
+        "talk": "Talk",
+        "poster": "Poster Session",
+        "lt": "Lightning Talk"
       },
       "posterSummary": {
           "coretime": "2018-09-18 15:00 - 15:40",

@@ -3,20 +3,21 @@ div.session-summary.uk-flex.uk-flex-column(v-if="session")
   span.room(v-if="(category === 'talk') && !isList") {{ room }}
   span.event-type(v-if="(category === 'talk') && !isList") {{ talk_format }}
   div.talk-schedule.uk-flex.uk-flex-wrap(v-if="isList")
-    time {{ dates }}
+    time(v-if="category === 'talk'") {{ dates }}
+    time(v-if="category === 'poster'") {{ $t('event.conference.posterSummary.coretime') }}
     span.event-type(v-if="category === 'talk'") Talk({{ talk_format }})
     span.room(v-if="category === 'talk'") {{ room }}
-    span.room(v-if="category === 'poster'") 大展示ホール
+    span.room(v-if="category === 'poster'") {{ $t('event.conference.posterSummary.room') }}
     dl.talk-property.uk-flex.uk-flex-wrap
-      dt.talk-langage(v-if="category === 'talk'") 発表言語:
+      dt.talk-langage(v-if="category === 'talk'") {{ $t('event.conference.sessionDetail.talkLanguage') }}:
       dd(v-if="category === 'talk'") {{ language }}
-      dt.doc-langage(v-if="category === 'talk'") 資料言語:
+      dt.doc-langage(v-if="category === 'talk'") {{ $t('event.conference.sessionDetail.slideLanguage') }}:
       dd(v-if="category === 'talk'") {{ slide_language }}
-      dt.talk-level 対象:
+      dt.talk-level {{ $t('event.conference.sessionDetail.audience') }}:
       dd {{ level }}
   h3 {{ title }}
   p.name {{ name }}
   dl.talk-property.uk-flex(v-if="(category === 'talk') && !isList")
-    dt.talk-level Level :
+    dt.talk-level {{ $t('event.conference.sessionDetail.audience') }}:
     dd(:class="{all: level == 'All', beginner: level == 'Beginner', intermediate: level == 'Intermediate', advanced: level == 'Advanced'}") {{ level }}
   a.detail(@click="toModal()") {{ $t('event.conference.sessionSummary.detail')}}

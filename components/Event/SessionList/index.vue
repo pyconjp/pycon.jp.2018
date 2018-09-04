@@ -15,11 +15,6 @@
     data: () => {
       return{
         isFixed: false,
-        currentTab: "talk",
-        rooms: {
-                "dayOne": ["ra","rb","rc","rd1","re","rf"],
-                "dayTwo": ["ra","rb","rc","rd2","rd3","re","rf"]
-        },
         currentSessionDetail: {
             category: "",
             session: "",

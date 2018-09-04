@@ -2,10 +2,12 @@ div#modal-session(uk-modal)
   div.detail-innter.uk-modal-dialog.uk-modal-body
     a.uk-modal-close-default(uk-close)
     div.talk-schedule
-      time {{ dates }}
-      span.event-type(v-if="category === 'talk'") ({{ talk_format }})
+      time(v-if="category === 'talk'") {{ dates }}
+      time(v-if="category === 'poster'") {{ $t('event.conference.posterSummary.coretime') }}
+      span.event-type(v-if="category === 'talk'") {{ $t('event.conference.sessionCategory.talk') }}({{ talk_format }})
+      span.event-type(v-if="category === 'poster'") {{ $t('event.conference.sessionCategory.poster') }}
       span.room(v-if="category === 'talk'") {{ room }}
-      span.room(v-if="category === 'poster'") 大展示ホール
+      span.room(v-if="category === 'poster'") {{ $t('event.conference.posterSummary.room') }}
     dl.talk-property.uk-flex.uk-flex-wrap
       dt.talk-langage(v-if="category === 'talk'") {{ $t('event.conference.sessionDetail.talkLanguage') }} :
       dd(v-if="category === 'talk'") {{ language }}

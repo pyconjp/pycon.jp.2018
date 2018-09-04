@@ -9,16 +9,24 @@ article#session-lists
 
   div#list-contents.uk-switcher
     div#talks
+      div.loading.uk-flex.uk-flex-center.uk-flex-column(v-if="talks == ''")
+        div(uk-spinner="ratio:1.5")
+        p now loading
       ul.sessions
         li.uk-flex.uk-flex-wrap(v-for="talk in talks")
           sessionSummary(:session="talk" category="talk" isList="true" @summary-event="showDetail('talk',talk)")
 
+
     div#posters
+      div.loading.uk-flex.uk-flex-center.uk-flex-column(v-if="posters == ''")
+        div(uk-spinner="ratio:1.5")
+        p now loading
       ul.sessions
         li.uk-flex.uk-flex-wrap(v-for="poster in posters")
           sessionSummary(:session="poster" category="poster" isList="true" @summary-event="showDetail('poster',poster)")
 
-    ul#lts.uk-list-divider
-      li hoge2
+    div#Lts
+      ul.sessions
+        li.comingsoon coming soon
 
   SessionDetail(:category="currentSessionDetail.category" :session="currentSessionDetail.session", :date="currentSessionDetail.date", :no="currentSessionDetail.no")
