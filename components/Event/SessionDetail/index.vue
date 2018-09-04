@@ -5,47 +5,49 @@
   import sessionsMixin from '~/components/Event/mixins/sessionsMixin'
   export default {
     name: 'session-details',
-    props: ['session','date','no'],
+    props: ['category','session','date','no'],
     mixins: [sessionsMixin],
 
     computed: {
       dates () {
         let _day
         let _time
-        if( this.date === 1 ){
-          _day =  "2018-9-17"
-          switch(this.no){
-            case 1:
-              _time = "13:30"
-              break
-            case 2:
-              _time = "14:30"
-              break
-            case 3:
-              _time = "15:45"
-              break
-            case 4:
-              _time = "16:30"
-              break
-          }
-        }else if( this.date === 2){
-          _day =  "2018-9-18"
-          switch(this.no){
-            case 1:
-              _time = "11:15"
-              break
-            case 2:
-              _time = "13:30"
-              break
-            case 3:
-              _time = "14:30"
-              break
-            case 4:
-              _time = "15:45"
-              break
-            case 5:
-              _time = "16:30"
-              break
+        if(this.category === 'talk'){
+          if( this.date === 1 ){
+            _day =  "2018-9-17"
+            switch(this.no){
+              case 1:
+                _time = "13:30"
+                break
+              case 2:
+                _time = "14:30"
+                break
+              case 3:
+                _time = "15:45"
+                break
+              case 4:
+                _time = "16:30"
+                break
+            }
+          }else if( this.date === 2){
+            _day =  "2018-9-18"
+            switch(this.no){
+              case 1:
+                _time = "11:15"
+                break
+              case 2:
+                _time = "13:30"
+                break
+              case 3:
+                _time = "14:30"
+                break
+              case 4:
+                _time = "15:45"
+                break
+              case 5:
+                _time = "16:30"
+                break
+            }
           }
         }
         return _day + " " + _time

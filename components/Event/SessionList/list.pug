@@ -8,30 +8,15 @@ article#session-lists
       a lightningTalks
 
   div#list-contents.uk-switcher
-    div#talks 
+    div#talks
       ul.sessions
         li.uk-flex.uk-flex-wrap(v-for="talk in talks")
-          sessionSummary(:session="talk" category="talk" isList="true")
-        //li.uk-flex.uk-flex-wrap(v-for="talk in talks")
-          div.session-summary.uk-flex.uk-flex-column(class="uk-width-3-4@m uk-width-xxlarge@s")
-            div.talk-schedule
-              time 2018-08-17 10:30
-              span.event-type Talk(30min)
-              span.room room-A
-            dl.talk-property.uk-flex
-              dt.talk-langage 発表言語
-              dd.uk-label {{ langage }}
-              dt.doc-langage 資料言語
-              dd.uk-label ja
-              dt.talk-level 対象
-              dd.uk-label All
-            h3.talk-title Migrating from Py2 application to Py3: first trial in MonotaRO / Python2 から Python3 への移植: MonotaRO での取り組み
-            p.speaker-name Yasushi Masuda
-          span.detail(class="uk-width-1-4@m uk-width-xxlarge@s")
-            a.uk-text-right 詳細
+          sessionSummary(:session="talk" category="talk" isList="true" @summary-event="showDetail('talk',talk)")
 
     ul#posters.uk-list-divider
       li hoge3
 
     ul#lts.uk-list-divider
       li hoge2
+
+  SessionDetail(:category="currentSessionDetail.category" :session="currentSessionDetail.session", :date="currentSessionDetail.date", :no="currentSessionDetail.no")

@@ -21,6 +21,7 @@
                 "dayTwo": ["ra","rb","rc","rd2","rd3","re","rf"]
         },
         currentSessionDetail: {
+            category: "",
             session: "",
             date: "",
             no: ""
@@ -41,7 +42,27 @@
       ...mapActions({
         FETCH_TALK: "FETCH_TALK",
         FETCH_POSTER: "FETCH_POSTER"
-      })
+      }),
+      getTalk (day,no,room) {
+        let currentDayTrack = this.talks.filter( (item, index) => {
+                                                  if(parseInt(item.day) === parseInt(day)) return true
+                                                  })
+        if(currentDayTrack[0]){
+            return currentDayTrack.filter( (track) => {
+                                            if(parseInt(track.no) === parseInt(no)  && String(track.room_id) === String(room) ) return true
+                                            })[0]
+        }
+        return ""
+      },
+      showDetail (category,session) {
+      this.$data.currentSessionDetail.category = category
+        this.$data.currentSessionDetail.session = session
+        this.$data.currentSessionDetail.date = session.day
+        this.$data.currentSessionDetail.no = session.no
+        // show UIkit modal
+        const uikit = require('uikit')
+        uikit.modal('#modal-session').show()
+      },
     }
   }
 </script>
