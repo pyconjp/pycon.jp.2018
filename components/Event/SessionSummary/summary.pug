@@ -1,4 +1,4 @@
-div.session-summary.uk-flex.uk-flex-column
+div.session-summary.uk-flex.uk-flex-column(v-if="session")
   span.langage.uk-flex.uk-flex-middle.uk-flex-center(v-if="(category ==='talk') && !isList") {{ language }}
   span.room(v-if="(category === 'talk') && !isList") {{ room }}
   span.event-type(v-if="(category === 'talk') && !isList") {{ talk_format }}
