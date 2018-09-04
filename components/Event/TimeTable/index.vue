@@ -17,6 +17,7 @@ export default {
               "dayTwo": ["ra","rb","rc","rd2","rd3","re","rf"]
               },
       currentTalkDetail: {
+          category: "talk",
           talk: "",
           date: "",
           no: ""
@@ -29,6 +30,10 @@ export default {
   },
   mounted(){
     this.FETCH_TALK()
+  },
+  destroyed() {
+    let _modal = document.getElementById("modal-session")
+    if(_modal != undefined) _modal.remove()
   },
   computed: {
     ...mapGetters({

@@ -27,6 +27,11 @@
       this.FETCH_TALK()
       this.FETCH_POSTER()
     },
+    destroyed(){
+      // !uikitのmodalを利用すると閉じたあとnodeの位置が変ってしまい、ページ遷移の度に元の位置にあった分のコンポーネントがロードされてしまうのでdestroyedの度に場外（になってるはず）のmodalを殺しておく。
+      let _modal = document.getElementById("modal-session")
+      if(_modal != undefined) _modal.remove()
+    },
     computed: {
       ...mapGetters({
         "talks": "talk_array",
