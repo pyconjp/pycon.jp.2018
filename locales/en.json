@@ -222,6 +222,9 @@
           "coretime": "2018-09-18 15:00 - 15:40",
           "room": "Big Exhibition Hall"
       }
+    },
+    "sessions": {
+      "title": "Sessions"
     }
   }
 }
