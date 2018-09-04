@@ -11,6 +11,8 @@ header#global-header(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk
               ul.uk-nav.uk-dropdown-nav
                 li
                   nuxt-link(:to="$i18n.path('event/conference')" exact) {{ $t('header.navi.conference') }}
+                li
+                  nuxt-link(:to="$i18n.path('event/sessions')" exact) {{ $t('header.navi.sessions') }}
             li(v-bind:class="{'uk-active':isActive('sponsor')}")
                 nuxt-link(:to="$i18n.path('sponsor')" exact) {{ $t('header.navi.sponsor') }}
             li(v-bind:class="{'uk-active':isActive('code-of-conduct')}")
@@ -33,6 +35,8 @@ header#global-header(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk
                         a.uk-offcanvas-close {{ $t('header.navi.top.top') }}
                     nuxt-link(:to="$i18n.path('event/conference')" exact tag="li")
                         a.uk-offcanvas-close {{ $t('header.navi.conference') }}
+                    nuxt-link(:to="$i18n.path('event/sessions')" exact tag="li")
+                        a.uk-offcanvas-close {{ $t('header.navi.sessions') }}
                     nuxt-link(:to="$i18n.path('sponsor')" exact tag="li")
                         a.uk-offcanvas-close {{ $t('header.navi.sponsor') }}
                     nuxt-link(:to="$i18n.path('code-of-conduct')" exact tag="li")
