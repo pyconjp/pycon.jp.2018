@@ -1,11 +1,53 @@
 <template src="./list.pug" lang="pug"/>
+<style src="./list.sass" lang="sass" />
 
 <script>
+  import { mapGetters, mapActions } from 'vuex'
+  import SessionSummary from '~/components/Event/SessionSummary'
+  import SessionDetail from '~/components/Event/SessionDetail'
+
   export default {
     name: 'session-list',
-    methods: {
+    components: {
+      SessionSummary,
+      SessionDetail
+    },
+    data: () => {
+      return{
+        isFixed: false,
+        currentSessionDetail: {
+            category: "",
+            session: "",
+            date: "",
+            no: ""
+        }
+      }
+    },
+    mounted(){
+      this.FETCH_TALK()
+      this.FETCH_POSTER()
+    },
+    computed: {
+      ...mapGetters({
+        "talks": "talk_array",
+        "posters": "poster_array"
+      })
+    },
+    methods:{
+      ...mapActions({
+        FETCH_TALK: "FETCH_TALK",
+        FETCH_POSTER: "FETCH_POSTER"
+      }),
+      showDetail (category,session) {
+        this.$data.currentSessionDetail.category = category
+        this.$data.currentSessionDetail.session = session
+        this.$data.currentSessionDetail.date = session.day
+        this.$data.currentSessionDetail.no = session.no
+
+        // show UIkit modal
+        const uikit = require('uikit')
+        uikit.modal('#modal-session').show()
+      },
     }
   }
 </script>
-
-<style src="./list.sass" lang="sass" />
