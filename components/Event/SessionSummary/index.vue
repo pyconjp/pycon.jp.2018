@@ -28,7 +28,6 @@
         if(this.category === "talk"){
           let _day
           let _time
-          console.log(this.session)
           if( this.session.day === 1 ){
             _day =  "2018-9-17"
             switch(this.session.no){

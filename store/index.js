@@ -78,7 +78,6 @@ export const actions = {
     const response = await fetch(uri)
     const json = await response.json()
     const data = json.data
-    console.log(data)
     commit('FETCH_POSTER', data)
   }
 }

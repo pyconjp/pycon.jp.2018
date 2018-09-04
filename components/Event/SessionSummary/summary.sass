@@ -52,11 +52,15 @@ article#session-lists
         li
           div.talk-schedule
             margin-bottom: .3rem
+            @media (max-width: $breakpoint-xsmall-max)
+              margin-bottom: .5rem
             time,span
               font-size: 13px
               margin-right: .5rem
           dl.talk-property
             margin: 0
+            @media (max-width: $breakpoint-xsmall-max)
+              width: 100%
             dt,dd
               font-size: 13px
             dt
@@ -72,13 +76,17 @@ article#session-lists
               margin-bottom: .2rem
               font-size: 10px
       h3
-        margin: 0 0 .3rem
+        margin: 0 0 .1rem
         font-size: 16px
       p.name
         margin: 0 0 0 .1rem
         font-size: 13px
+        @media (max-width: $breakpoint-xsmall-max)
+          width: 100%
       a.detail
         margin-top: -1.3rem
         align-self: right
         text-align: right
         margin-right: .4rem
+        @media (max-width: $breakpoint-xsmall-max)
+          margin-top: .2rem
