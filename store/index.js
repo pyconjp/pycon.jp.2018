@@ -17,7 +17,8 @@ export const getters = {
   top_sponsor_loading (state) { return state.top_sponsor_loading},
   talk_array (state) { return state.talk_array},
   poster_array (state) { return state.poster_array},
-  lt_array (state) { return state.lt_array}
+  lt_array (state) {return state.lit_array},
+  news_list (state) { return state.news_list }
 }
 
 const sponsorSheetName = 'prod_20180903'// Please change to "prod" if deploying production
@@ -92,6 +93,13 @@ export const actions = {
     const json = await response.json()
     const data = json.data
     commit('FETCH_LT', data)
+  },
+  async FETCH_NEWS ({ commit }) {
+    console.log(process.env.newsApiEndpoint)
+    const response = await fetch(process.env.newsApiEndpoint)
+    const json = await response.json()
+    const data = json.item
+    commit('FETCH_NEWS', data)
   }
 }
 
@@ -118,5 +126,8 @@ export const mutations = {
   },
   FETCH_LT(state, data) {
     state.lt_array = data
+  },
+  FETCH_NEWS(state, data) {
+    state.news_list = data
   }
 }

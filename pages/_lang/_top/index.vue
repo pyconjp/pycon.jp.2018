@@ -1,7 +1,8 @@
 <template lang="pug" src="./index.pug"/>
+<style src="./index.sass" lang="sass" />
 
 <script>
-  // import { mapGetters } from 'vuex'
+  import { mapGetters, mapActions } from 'vuex'
   import TopHero from '~/components/TopHero'
   import TopKeynote from '~/components/TopKeynote'
   import TopNews from '~/components/TopNews'
@@ -10,8 +11,8 @@
   import TopSponsor from '~/components/TopSponsor'
   import TopStaff from '~/components/TopStaff'
   import GlobalFooter from '~/components/GlobalFooter'
-  import fetch from 'node-fetch'
-  import convert from 'xml-js'
+  //import fetch from 'node-fetch'
+  //import convert from 'xml-js'
 
   export default {
     name: 'top',
@@ -30,20 +31,18 @@
         title: this.$t('top.title'),
       }
     },
-    async asyncData(){
-      // try{
-      //   //Todo::ハードコード
-      //   const response = await fetch('http://pyconjp.blogspot.com/feeds/posts/default/-/pyconjp2018?alt=rss&max-results=5')
-      //   const text = await response.text()
-      //   const json_text = convert.xml2json(text, {compact: true, spaces: 4})
-      //   const blog_data = JSON.parse(json_text)
-      //   return {blog_data}
-      // } catch (e) {
-      //   console.log(e)
-      // }
-
+    mounted(){
+      this.FETCH_NEWS()
+    },
+    computed: {
+      ...mapGetters({
+        "news": "news_list"
+      })
+    },
+    methods:{
+      ...mapActions({
+        FETCH_NEWS: "FETCH_NEWS"
+      })
     }
   }
 </script>
-
-<style src="./index.sass" lang="sass" />

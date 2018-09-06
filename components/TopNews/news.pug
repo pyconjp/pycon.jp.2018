@@ -3,9 +3,9 @@ section#TopNews.uk-section.uk-section-default.uk-flex.uk-flex-left
       span {{ $t('top.news.subcaption') }}
     div.news-list.uk-flex.uk-flex-right.uk-flex-wrap
         ul.uk-list.uk-list-large
-            li(v-for="item in blog_data.rss.channel.item")
+            li(v-for="item in blog_data")
                 .uk-text-lead.uk-flex.uk-flex-middle
-                  p {{item.title._text}}
+                  p {{item.title}}
                   p.news-link
-                      a(:href='item.link._text' target="_blank")  {{ $t('top.news.detail') }}
+                      a(:href='item.link' target="_blank")  {{ $t('top.news.detail') }}
         a.uk-button.uk-button-default(href="http://pyconjp.blogspot.jp/" target="_blank") {{ $t('top.news.more') }}
