@@ -47,7 +47,7 @@ module.exports = {
     sponsorApiEndpoint: 'https://script.google.com/macros/s/AKfycbyKmE6Ew9aWmOnj3VSwn435T8cx8kF0SkJb9fN7_PdE_ME2QpqP/exec',
     talkApiEndpoint: 'https://script.google.com/macros/s/AKfycbyW6ECkWGiV6godDT9zWpwC2somqXW2UnTQfigMGAdJ2Uhy-50/exec',
     posterApiEndpoint: 'https://script.google.com/macros/s/AKfycbw9iy2_I5n5mxKcrX_wghzz18f5fUSdeROGpdic2Q/exec',
-    lightningTalklApiEndpoint: 'https://script.google.com/macros/s/AKfycbw6udsETgpLvHJxooAy1RjYKqQ0QECHITnT2oRHRA/exec'
+    ltApiEndpoint: 'https://script.google.com/macros/s/AKfycbw6udsETgpLvHJxooAy1RjYKqQ0QECHITnT2oRHRA/exec'
   },
   modules: [
     ['nuxt-sass-resources-loader', [

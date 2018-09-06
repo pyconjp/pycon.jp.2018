@@ -6,7 +6,8 @@ export const state = () => ({
   top_sponsor_array:[],
   top_sponsor_loading: 'enable',
   talk_array: [],
-  poster_array: []
+  poster_array: [],
+  lt_array: []
 })
 
 export const getters = {
@@ -15,7 +16,8 @@ export const getters = {
   top_sponsor_array (state) { return state.top_sponsor_array },
   top_sponsor_loading (state) { return state.top_sponsor_loading},
   talk_array (state) { return state.talk_array},
-  poster_array (state) { return state.poster_array}
+  poster_array (state) { return state.poster_array},
+  lt_array (state) { return state.lt_array}
 }
 
 const sponsorSheetName = 'prod_20180903'// Please change to "prod" if deploying production
@@ -29,12 +31,16 @@ let getSessinsAPIUri = (category) => {
   const noCache = false
 
   if(category === 'talk'){
-    sheetName = 'prod_20180831'// Please change to "prod_yyyymmdd" if deploying production
+    sheetName = 'prod_20180831'
     apiUri = process.env.talkApiEndpoint + `?stage=${sheetName}&noCache=${noCache}`
   }else if( category === 'poster'){
-    sheetName = 'dev'// Please change to "prod_yyyymmdd" if deploying production
+    sheetName = 'prod'
     apiUri = process.env.posterApiEndpoint + `?stage=${sheetName}&noCache=${noCache}`
+  }else if( category === 'lt'){
+    sheetName = 'dev'
+    apiUri = process.env.ltApiEndpoint + `?stage=${sheetName}&noCache=${noCache}`
   }
+
   return apiUri
 }
 
@@ -79,6 +85,13 @@ export const actions = {
     const json = await response.json()
     const data = json.data
     commit('FETCH_POSTER', data)
+  },
+  async FETCH_LT ({ commit }) {
+    const uri = getSessinsAPIUri('lt')
+    const response = await fetch(uri)
+    const json = await response.json()
+    const data = json.data
+    commit('FETCH_LT', data)
   }
 }
 
@@ -102,5 +115,8 @@ export const mutations = {
   },
   FETCH_POSTER(state, data) {
     state.poster_array = data
+  },
+  FETCH_LT(state, data) {
+    state.lt_array = data
   }
 }

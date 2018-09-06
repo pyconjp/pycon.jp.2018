@@ -86,7 +86,7 @@
       "foreigner": {
         "date": "September 17th",
         "name": "Manuel Kaufmann",
-        "theme": "\"Argentina in Python: community, dreams, travels and learning\"",
+        "theme": "Argentina in Python: community, dreams, travels and learning",
         "about": "Manuel Kaufmann met Python, while performing his university studies, at the PyDay Santa Fe (Argentina) event in 2006 and since that day his life changed forever, literally.\nHe fell in love with its syntax and forgot pointers and double-linked list of C to these days. \nSince then he has become an active member of Python Argentina (travels South America by car to spread Python) .\nIn these years, he has participated in the translation of the official book of Django and Django Girls Tutorial, among others. \nHe has also worked on projects like One Laptop Per Child and in February 2016 was named \"Python Ambassador\" by the Python Software Foundation for his work with Argentina in Python.\nCurrently he is working at Read the Docs as a software developer."
       }
     },
@@ -99,6 +99,7 @@
       "second": {
         "date": "September 17th",
         "name": "Kotaro Nakayama",
+        "theme": "東大松尾研流 実践的AI人材育成法",
         "about": "東京大学工学系研究科技術経営戦略学専攻 松尾研究室 リサーチディレクター。\n2007年に大阪大学大学院情報科学研究科博士号取得後、大阪大学情報科学研究科特任研究員、東京大学知の構造化センター助教、講師を経て、現在に至る。\n専門分野はAI、Web、大規模データ解析。"
       }
     },
@@ -221,7 +222,11 @@
         "lt": "Lightning Talk"
       },
       "posterSummary": {
-          "coretime": "2018-09-18 15:00 - 15:40",
+          "coretime": "2018-09-18 15:15 - 15:40",
+          "room": "Big Exhibition Hall"
+      },
+      "ltSummary": {
+          "talkTime": "5min",
           "room": "Big Exhibition Hall"
       }
     },
