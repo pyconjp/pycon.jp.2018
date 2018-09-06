@@ -34,7 +34,7 @@ let getSessinsAPIUri = (category) => {
     sheetName = 'prod_20180831'
     apiUri = process.env.talkApiEndpoint + `?stage=${sheetName}&noCache=${noCache}`
   }else if( category === 'poster'){
-    sheetName = 'dev'
+    sheetName = 'prod'
     apiUri = process.env.posterApiEndpoint + `?stage=${sheetName}&noCache=${noCache}`
   }else if( category === 'lt'){
     sheetName = 'dev'
