@@ -40,14 +40,14 @@ module.exports = {
     minify: {
       collapseWhitespace: false
     },
-    routes: ['/','/code-of-conduct','/sponsor','/event/conference','/en','/en/code-of-conduct','/en/sponsor','/en/event/conference']
+    routes: ['/','/code-of-conduct','/sponsor','/event/conference','/event/sessions','/en','/en/code-of-conduct','/en/sponsor','/en/event/conference','/en/event/sessions']
   },
   env: {
     baseUrl: '/2018',
     sponsorApiEndpoint: 'https://script.google.com/macros/s/AKfycbyKmE6Ew9aWmOnj3VSwn435T8cx8kF0SkJb9fN7_PdE_ME2QpqP/exec',
     talkApiEndpoint: 'https://script.google.com/macros/s/AKfycbyW6ECkWGiV6godDT9zWpwC2somqXW2UnTQfigMGAdJ2Uhy-50/exec',
     posterApiEndpoint: 'https://script.google.com/macros/s/AKfycbw9iy2_I5n5mxKcrX_wghzz18f5fUSdeROGpdic2Q/exec',
-    lightningTalklApiEndpoint: 'https://script.google.com/macros/s/AKfycbw6udsETgpLvHJxooAy1RjYKqQ0QECHITnT2oRHRA/exec',
+    ltApiEndpoint: 'https://script.google.com/macros/s/AKfycbw6udsETgpLvHJxooAy1RjYKqQ0QECHITnT2oRHRA/exec',
     newsApiEndpoint: 'https://script.googleusercontent.com/macros/echo?user_content_key=tio5y4jp6m05ZSErm9pLF1zXPMh0XpOUDZq-ZWmMlWDOVQZQklATugjR-TLj-rYhYb3V0yVHpS9hqTUsUS1s79t63mokgpNUm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnJ9mZKgggRSOURRQ0WvbGHmV5NYIYqOUFVR_DbOCwbvdNONDik88y9c0VZXY9HZEGr0uJ9YYKCWC&lib=MnV3PmCdam9EutRvBBsyupNVJGv4Fseyb'
   },
   modules: [

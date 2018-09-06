@@ -49,6 +49,9 @@
                 break
             }
           }
+        } else if( this.category === 'lt'){
+          _day = this.session.day === 1 ? "2018-9-17":"2018-9-18"
+          _time = this.session.no ? "no." + this.session.no : ""
         } else if( this.category === 'poster'){
           _day =  "2018-9-18"
           _time = "15:10 - 15:45"

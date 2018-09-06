@@ -85,7 +85,7 @@
       "foreigner": {
         "date": "9月17日",
         "name": "Kaufmann Manuel",
-        "theme": "\"Argentina in Python: community, dreams, travels and learning\"",
+        "theme": "Argentina in Python: community, dreams, travels and learning",
         "about": "Manuel Kaufmannは、大学に在学中の2006年に開催されたPyDay Santa FeでPythonに出会った。\nそれによって彼の人生が大きく変わった。\n彼は、Pythonの文法が好きになり、C言語のポインターや双方向リストを数日で忘れるほどだった。\nその時から、Python Argentina（車で南米を旅行しPythonを広げる）のアクティブメンバーになった。\nしばらくして、Djangoの公式ドキュメントやDjango Girlsチュートリアルの翻訳に参加することになった。\n他にも、One Laptop Per Childのようなプロジェクトにも参加するようになった。\n彼のArgentina in Pythonの活動が、2016年2月にPSF Python Ambassadorとして表彰された。\n現在、Read the Docsでソフトウエアエンジニアとして働いている。"
       }
     },
@@ -98,7 +98,7 @@
       "second": {
         "date": "9月17日",
         "name": "中山 浩太郎",
-        "theme": "「東大松尾研流 実践的AI人材育成法」",
+        "theme": "東大松尾研流 実践的AI人材育成法",
         "about": "東京大学工学系研究科技術経営戦略学専攻 松尾研究室 リサーチディレクター。\n2007年に大阪大学大学院情報科学研究科博士号取得後、大阪大学情報科学研究科特任研究員、東京大学知の構造化センター助教、講師を経て、現在に至る。\n専門分野はAI、Web、大規模データ解析。"
       }
     },
@@ -220,7 +220,11 @@
         "lt": "Lightning Talk"
       },
       "posterSummary": {
-          "coretime": "2018-09-18 15:00 - 15:40",
+          "coretime": "2018-09-18 15:15 - 15:45",
+          "room": "大展示ホール"
+      },
+      "ltSummary": {
+          "talkTime": "5min",
           "room": "大展示ホール"
       }
     },

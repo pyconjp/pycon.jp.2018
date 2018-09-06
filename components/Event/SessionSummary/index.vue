@@ -66,9 +66,14 @@
             }
           }
           return _day + " " + _time
+        } else if( this.category === 'lt'){
+          _day = this.session.day === 1 ? "2018-9-17":"2018-9-18"
+          _time = this.session.no ? "no." + this.session.no : ""
+
+          return _day + " " + _time
         } else if( this.category === 'poster'){
           _day =  "2018-9-18"
-          _time = "15:10 - 15:45"
+          _time = "15:00 - 15:45"
 
           return _day + " " + _time
         }
