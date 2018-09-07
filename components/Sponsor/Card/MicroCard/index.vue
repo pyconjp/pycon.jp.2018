@@ -1,8 +1,8 @@
 <template lang="pug">
 .card.uk-flex.uk-flex-row
-  a.img-link(:href="this.siteUrl" target="_blank")
-    .img-block
-      img.img(:src="this.imgSrc")
+  //- a.img-link(:href="this.siteUrl" target="_blank")
+    //- .img-block
+    //-   img.img(:src="this.imgSrc")
   .text-block
     a.name(:href="this.siteUrl" target="_blank") {{this.name}}
 </template>
@@ -56,7 +56,7 @@ a.img-block
   display: flex
   justify-content: center
   align-items: center
-  padding: 0
+  padding: 0 20px
   margin-right: 1rem
 
 .name
