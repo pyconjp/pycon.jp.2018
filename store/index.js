@@ -29,10 +29,10 @@ const sponsorApiUri = process.env.sponsorApiEndpoint + `?stage=${sponsorSheetNam
 let getSessinsAPIUri = (category) => {
   let apiUri
   let sheetName
-  const noCache = false
+  const noCache = false 
 
   if(category === 'talk'){
-    sheetName = 'prod_20180831'
+    sheetName = 'prod_20180907'
     apiUri = process.env.talkApiEndpoint + `?stage=${sheetName}&noCache=${noCache}`
   }else if( category === 'poster'){
     sheetName = 'prod'
