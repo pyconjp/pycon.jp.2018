@@ -12,6 +12,7 @@
       },
       "event":"Event",
       "conference":"Schedule",
+      "sessions":"Sessions",
       "sponsor":"Sponsor",
       "code_of_conduct":"Code of Conduct",
       "lang": "日本語"
@@ -79,11 +80,13 @@
       "japanese": {
         "date": "September 18th",
         "name": "Ransui Iso",
+        "theme": "「Pythonでやってみた」：広がるプログラミングの愉しみ",
         "about":"Ransui has been using Python 20 years since 1998.\nAmong other things, he has researched and developed distributed AI systems, e-commerce platforms, search engines, media servers, metadata management systems and advertisement delivery systems using Python.\nPython is his go to language when coding in his free time.\nHe has presented at Python conferences six times, beginning with a presentation titled \"Useless for tomorrow's work\" at PyCon Japan 2011.\nCurrently he works as an enterprise support engineer for Amazon Web Services, helping customers solve technical problems."
       },
       "foreigner": {
         "date": "September 17th",
         "name": "Manuel Kaufmann",
+        "theme": "Argentina in Python: community, dreams, travels and learning",
         "about": "Manuel Kaufmann met Python, while performing his university studies, at the PyDay Santa Fe (Argentina) event in 2006 and since that day his life changed forever, literally.\nHe fell in love with its syntax and forgot pointers and double-linked list of C to these days. \nSince then he has become an active member of Python Argentina (travels South America by car to spread Python) .\nIn these years, he has participated in the translation of the official book of Django and Django Girls Tutorial, among others. \nHe has also worked on projects like One Laptop Per Child and in February 2016 was named \"Python Ambassador\" by the Python Software Foundation for his work with Argentina in Python.\nCurrently he is working at Read the Docs as a software developer."
       }
     },
@@ -96,7 +99,8 @@
       "second": {
         "date": "September 17th",
         "name": "Kotaro Nakayama",
-        "about": "東京大学工学系研究科技術経営戦略学専攻 松尾研究室 特任講師。\n2007年に大阪大学大学院情報科学研究科博士号取得後、大阪大学情報科学研究科特任研究員、東京大学知の構造化センター助教、講師を経て、現在に至る。\n専門分野はAI、Web、大規模データ解析。"
+        "theme": "東大松尾研流 実践的AI人材育成法",
+        "about": "東京大学工学系研究科技術経営戦略学専攻 松尾研究室 リサーチディレクター。\n2007年に大阪大学大学院情報科学研究科博士号取得後、大阪大学情報科学研究科特任研究員、東京大学知の構造化センター助教、講師を経て、現在に至る。\n専門分野はAI、Web、大規模データ解析。"
       }
     },
      "map": {
@@ -196,10 +200,10 @@
         "invitedLecture": "Invited Lecture",
         "break": "Break",
         "lunch": "Lunch",
-        "sponsorEvent": "Sponsor Event",
+        "sponsorEvent": "Job Fair",
         "snack": "Snack",
         "closing": "Closing",
-        "lightningTalk": "Lightning Talk",
+        "lightningTalk": "Lightning Talks",
         "party": "Party"
       },
       "sessionDetail": {
@@ -207,11 +211,27 @@
         "slideLanguage": "slide-language",
         "audience": "Level",
         "speaker": "Speaker",
-        "description": "talk-Description"
+        "description": "Session Description"
       },
       "sessionSummary": {
         "detail": "more"
+      },
+      "sessionCategory": {
+        "talk": "Talk",
+        "poster": "Poster Session",
+        "lt": "Lightning Talk"
+      },
+      "posterSummary": {
+          "coretime": "2018-09-18 15:15 - 15:40",
+          "room": "Big Exhibition Hall"
+      },
+      "ltSummary": {
+          "talkTime": "5min",
+          "room": "Big Exhibition Hall"
       }
+    },
+    "sessions": {
+      "title": "Sessions"
     }
   }
 }

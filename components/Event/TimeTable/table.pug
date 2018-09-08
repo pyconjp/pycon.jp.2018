@@ -54,7 +54,10 @@ div#TimeTable
                 span.langage.uk-flex.uk-flex-middle.uk-flex-center en
                 span.room {{ $t('event.conference.rooms.roomD') }} 
                 span.event-type 60min
-                h3 {{ $t('event.conference.timeEvent.keynote') }} 
+                h3
+                  span {{ $t('event.conference.timeEvent.keynote') }}
+                  br
+                  | {{ $t('top.keynote.foreigner.theme') }} 
                 p.name {{ $t('top.keynote.foreigner.name') }}
             td
             td
@@ -65,13 +68,15 @@ div#TimeTable
             td
             td
             td.event
-              div.event-box
-                div.session-summary.uk-flex.uk-flex-column
-                  span.langage.uk-flex.uk-flex-middle.uk-flex-center ja
-                  span.room {{ $t('event.conference.rooms.roomD') }}
-                  span.event-type 45min
-                  h3 {{ $t('event.conference.timeEvent.invitedLecture') }} 
-                  p.name {{ $t('top.invited-lecture.second.name') }}
+              div.session-summary.uk-flex.uk-flex-column
+                span.langage.uk-flex.uk-flex-middle.uk-flex-center ja
+                span.room {{ $t('event.conference.rooms.roomD') }}
+                span.event-type 45min
+                h3 
+                  span {{ $t('event.conference.timeEvent.invitedLecture') }} 
+                  br
+                  | {{ $t('top.invited-lecture.second.theme') }} 
+                p.name {{ $t('top.invited-lecture.second.name') }}
             td
             td
           tr.t-lunch
@@ -101,7 +106,7 @@ div#TimeTable
             th
               time 13:30
             td.t-session(v-for="room in rooms.dayOne")
-              SessionSummary(:talk="getTalk(1,1,room)" @summary-event="showDetail(1,1,room)")
+              SessionSummary(category="talk" :session="getTalk(1,1,room)" @summary-event="showDetail(1,1,room)")
           tr.t-rest
             th
               time 14:15
@@ -117,7 +122,7 @@ div#TimeTable
             th
               time 14:30
             td.t-session(v-for="room in rooms.dayOne")
-              SessionSummary(:talk="getTalk(1,2,room)" @summary-event="showDetail(1,2,room)")
+              SessionSummary(category="talk" :session="getTalk(1,2,room)" @summary-event="showDetail(1,2,room)")
           tr.t-rest.t-snack
             th
               time 15:15
@@ -133,7 +138,7 @@ div#TimeTable
             th
               time 15:45
             td.t-session(v-for="room in rooms.dayOne")
-              SessionSummary(:talk="getTalk(1,3,room)" @summary-event="showDetail(1,3,room)")
+              SessionSummary(category="talk" :session="getTalk(1,3,room)" @summary-event="showDetail(1,3,room)")
           tr.t-rest
             th
               time 16:15
@@ -149,7 +154,7 @@ div#TimeTable
             th
               time 16:30
             td.t-session(v-for="room in rooms.dayOne")
-              SessionSummary(:talk="getTalk(1,4,room)" @summary-event="showDetail(1,4,room)")
+              SessionSummary(category="talk" :session="getTalk(1,4,room)" @summary-event="showDetail(1,4,room)")
           tr.t-closing
             th
               time 17:15
@@ -230,7 +235,10 @@ div#TimeTable
                 span.langage.uk-flex.uk-flex-middle.uk-flex-center ja
                 span.room {{ $t('event.conference.rooms.roomD') }}
                 span.event-type 60min
-                h3 {{ $t('event.conference.timeEvent.keynote') }} 
+                h3
+                  span {{ $t('event.conference.timeEvent.keynote') }}
+                  br
+                  | {{ $t('top.keynote.japanese.theme') }}
                 p.name {{ $t('top.keynote.japanese.name') }}
             td
             td
@@ -251,7 +259,7 @@ div#TimeTable
             th
               time 11:15
             td.t-session(v-for="room in rooms.dayTwo")
-              SessionSummary.mini(:talk="getTalk(2,1,room)" @summary-event="showDetail(2,1,room)")
+              SessionSummary.mini(category="talk" :session="getTalk(2,1,room)" @summary-event="showDetail(2,1,room)")
           tr.t-lunch
             th
               time 12:00
@@ -268,7 +276,7 @@ div#TimeTable
             th
               time 13:30
             td.t-session(v-for="room in rooms.dayTwo")
-              SessionSummary.mini(:talk="getTalk(2,2,room)" @summary-event="showDetail(2,2,room)")
+              SessionSummary.mini(category="talk" :session="getTalk(2,2,room)" @summary-event="showDetail(2,2,room)")
           tr.t-rest
             th
               time 14:15
@@ -285,7 +293,7 @@ div#TimeTable
             th
               time 14:30
             td.t-session(v-for="room in rooms.dayTwo")
-              SessionSummary.mini(:talk="getTalk(2,3,room)" @summary-event="showDetail(2,3,room)")
+              SessionSummary.mini(category="talk" :session="getTalk(2,3,room)" @summary-event="showDetail(2,3,room)")
           tr.t-rest.t-snack
             th
               time 15:00
@@ -302,7 +310,7 @@ div#TimeTable
             th
               time 15:45
             td.t-session(v-for="room in rooms.dayTwo")
-              SessionSummary.mini(:talk="getTalk(2,4,room)" @summary-event="showDetail(2,4,room)")
+              SessionSummary.mini(category="talk" :session="getTalk(2,4,room)" @summary-event="showDetail(2,4,room)")
           tr.t-rest
             th
               time 16:15
@@ -319,7 +327,7 @@ div#TimeTable
             th
               time 16:30
             td.t-session(v-for="room in rooms.dayTwo")
-              SessionSummary.mini(:talk="getTalk(2,5,room)" @summary-event="showDetail(2,5,room)")
+              SessionSummary.mini(category="talk" :session="getTalk(2,5,room)" @summary-event="showDetail(2,5,room)")
           tr.t-party
             th
               time 17:15
@@ -355,4 +363,4 @@ div#TimeTable
             td
             td
   
-  SessionDetail(:talk="currentTalkDetail.talk", :date="currentTalkDetail.date", :no="currentTalkDetail.no")
+  SessionDetail(category="talk" :session="currentTalkDetail.talk", :date="currentTalkDetail.date", :no="currentTalkDetail.no")

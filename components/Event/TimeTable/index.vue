@@ -17,6 +17,7 @@ export default {
               "dayTwo": ["ra","rb","rc","rd2","rd3","re","rf"]
               },
       currentTalkDetail: {
+          category: "talk",
           talk: "",
           date: "",
           no: ""
@@ -29,6 +30,10 @@ export default {
   },
   mounted(){
     this.FETCH_TALK()
+  },
+  destroyed() {
+    let _modal = document.getElementById("modal-session")
+    if(_modal != undefined) _modal.remove()
   },
   computed: {
     ...mapGetters({
@@ -48,14 +53,13 @@ export default {
       // show UIkit modal
       const uikit = require('uikit')
       uikit.modal('#modal-session').show()
-
     },
     getTalk (day,no,room) {
-      let currentDayTracks = this.talks.filter( (item, index) => {
+      let currentDayTrack = this.talks.filter( (item, index) => {
                                                 if(parseInt(item.day) === parseInt(day)) return true
                                                 })
-      if(currentDayTracks[0]){
-          return currentDayTracks.filter( (track) => {
+      if(currentDayTrack[0]){
+          return currentDayTrack.filter( (track) => {
                                           if(parseInt(track.no) === parseInt(no)  && String(track.room_id) === String(room) ) return true
                                           })[0]
       }

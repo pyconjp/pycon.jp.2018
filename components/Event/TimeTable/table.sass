@@ -163,6 +163,10 @@
           height: 0
           background: none
 
+      tr.t-keynote > td.event > div,
+      tr.t-invited-lecture > td.event > div
+        padding-bottom: .6rem
+
       tr.t-admission,
       tr.t-lunch,
       tr.t-rest,
@@ -292,7 +296,9 @@
 
       tr.connect
         td.keynote
-          height: 165px
+          height: calc(165px + .3rem)
+          div.session-summary
+            padding-bottom: .6rem
         td
           &:nth-child(5)
             div
