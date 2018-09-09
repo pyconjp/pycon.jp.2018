@@ -13,6 +13,10 @@
       "event":"イベント",
       "conference":"カンファレンス",
       "sessions":"セッション一覧",
+      "sprint": "スプリント",
+      "tutorial": "チュートリアル",
+      "youth_coder_workshop": "Youth Coder Workshop",
+      "community_booth": "コミュニティブース",
       "sponsor":"スポンサー",
       "code_of_conduct":"行動規範",
       "lang": "ENGLISH"
