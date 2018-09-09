@@ -13,6 +13,10 @@
       "event":"Event",
       "conference":"Schedule",
       "sessions":"Sessions",
+      "sprint": "Sprint",
+      "tutorial": "Tutorial",
+      "youth_coder_workshop": "Youth Coder Workshop",
+      "community_booth": "Community Booth",
       "sponsor":"Sponsor",
       "code_of_conduct":"Code of Conduct",
       "lang": "日本語"
