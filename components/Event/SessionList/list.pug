@@ -24,13 +24,11 @@ article#session-lists
         li.uk-flex.uk-flex-wrap(v-for="poster in posters")
           sessionSummary(:session="poster" category="poster" isList="true" @summary-event="showDetail('poster',poster)")
 
-    div#Lts
-      ul.sessions
-        li.comingsoon coming soon
-      //div.loading.uk-flex.uk-flex-center.uk-flex-column(v-if="lts == ''")
+    div#lts
+      div.loading.uk-flex.uk-flex-center.uk-flex-column(v-if="lts == ''")
         div(uk-spinner="ratio:1.5")
         p now loading
-      //ul.sessions
+      ul.sessions
         li.uk-flex.uk-flex-wrap(v-for="lt in lts")
           sessionSummary(:session="lt" category="lt" isList="true" @summary-event="showDetail('lt',lt)")
 
