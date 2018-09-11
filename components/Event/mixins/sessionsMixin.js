@@ -13,7 +13,7 @@ export default {
       return (this.session && this.session.hasOwnProperty('name')) ?  this.session.name : ""
     },
     level () {
-      return (this.session && this.session.hasOwnProperty('audience_level') ) ?  this.session.audience_level : "-"
+      return (this.session && this.session.hasOwnProperty('audience_level') && this.session.audience_level != "") ?  this.session.audience_level : "-"
     },
     slide_language () {
       let _lang = ""

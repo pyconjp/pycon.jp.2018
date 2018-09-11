@@ -11,8 +11,8 @@ div.session-summary.uk-flex.uk-flex-column(v-if="session")
     span.room(v-if="category === 'poster'") {{ $t('event.conference.posterSummary.room') }}
     span.room(v-if="category === 'lt'") {{ $t('event.conference.posterSummary.room') }}
     dl.talk-property.uk-flex.uk-flex-wrap
-      dt.talk-langage(v-if="category === 'talk' || category === 'lt'") {{ $t('event.conference.sessionDetail.talkLanguage') }}:
-      dd(v-if="category === 'talk' || category === 'lt'") {{ language }}
+      dt.talk-langage(v-if="category === 'talk'") {{ $t('event.conference.sessionDetail.talkLanguage') }}:
+      dd(v-if="category === 'talk'") {{ language }}
       dt.doc-langage(v-if="category === 'talk'") {{ $t('event.conference.sessionDetail.slideLanguage') }}:
       dd(v-if="category === 'talk'") {{ slide_language }}
       dt.talk-level {{ $t('event.conference.sessionDetail.audience') }}:
