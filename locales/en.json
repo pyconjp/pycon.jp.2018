@@ -3,13 +3,20 @@
     "navi": {
       "top":{
         "top": "TOP",
-        "keynote":"Key note",
+        "keynote":"Keynote",
         "news":"News",
         "place":"Place",
         "other":"Other",
         "sponsor":"Sponsor",
         "staff":"Staff"
       },
+      "event":"Event",
+      "conference":"Schedule",
+      "sessions":"Sessions",
+      "sprint": "Sprint",
+      "tutorial": "Tutorial",
+      "youth_coder_workshop": "Youth Coder Workshop",
+      "community_booth": "Community Booth",
       "sponsor":"Sponsor",
       "code_of_conduct":"Code of Conduct",
       "lang": "日本語"
@@ -64,32 +71,42 @@
           "head": "Application"
         },
         "talk": "Apply for talk",
-        "staff": "Apply for the staff",
-        "ticket": "Get Your tickets",
+        "staff": "Apply to become staff",
+        "ticket": "Get your tickets",
         "ticket-comming-soon": "coming soon!"
       }
     },
     "keynote": {
-      "text": {
-        "head": "Keynote"
-    },
-    "japanese": {
-      "text": {
-        "head": "国内のキーノート"
+        "text": {
+          "head": "Keynote",
+          "subcaption": ""
       },
-      "name": "name-ja",
-      "about": "about-ja ",
-      "title":"title-ja"
-    },
-    "english": {
-      "text": {
-        "head": "国外のキーノート"
+      "japanese": {
+        "date": "September 18th",
+        "name": "Ransui Iso",
+        "theme": "「Pythonでやってみた」：広がるプログラミングの愉しみ",
+        "about":"Ransui has been using Python 20 years since 1998.\nAmong other things, he has researched and developed distributed AI systems, e-commerce platforms, search engines, media servers, metadata management systems and advertisement delivery systems using Python.\nPython is his go to language when coding in his free time.\nHe has presented at Python conferences six times, beginning with a presentation titled \"Useless for tomorrow's work\" at PyCon Japan 2011.\nCurrently he works as an enterprise support engineer for Amazon Web Services, helping customers solve technical problems."
       },
-      "name": "name-en",
-      "about": "about----en ",
-      "title":"title-en"
-    }
-  },
+      "foreigner": {
+        "date": "September 17th",
+        "name": "Manuel Kaufmann",
+        "theme": "Argentina in Python: community, dreams, travels and learning",
+        "about": "Manuel Kaufmann met Python, while performing his university studies, at the PyDay Santa Fe (Argentina) event in 2006 and since that day his life changed forever, literally.\nHe fell in love with its syntax and forgot pointers and double-linked list of C to these days. \nSince then he has become an active member of Python Argentina (travels South America by car to spread Python) .\nIn these years, he has participated in the translation of the official book of Django and Django Girls Tutorial, among others. \nHe has also worked on projects like One Laptop Per Child and in February 2016 was named \"Python Ambassador\" by the Python Software Foundation for his work with Argentina in Python.\nCurrently he is working at Read the Docs as a software developer."
+      }
+    },
+    "invited-lecture": {
+      "text": {
+          "head": "Invited Lecture",
+          "subcaption": "",
+          "coution": "Unfortunately, Mr Yukata Matsuo will not be able to give his session as was scheduled."
+      },
+      "second": {
+        "date": "September 17th",
+        "name": "Kotaro Nakayama",
+        "theme": "東大松尾研流 実践的AI人材育成法",
+        "about": "東京大学工学系研究科技術経営戦略学専攻 松尾研究室 リサーチディレクター。\n2007年に大阪大学大学院情報科学研究科博士号取得後、大阪大学情報科学研究科特任研究員、東京大学知の構造化センター助教、講師を経て、現在に至る。\n専門分野はAI、Web、大規模データ解析。"
+      }
+    },
      "map": {
       "place": "Venue",
       "subcaption": " ",
@@ -102,7 +119,7 @@
          "post-code": " ",
          "primary": "1 Chome-20-２０ Minamikamata, Ōta, TOKYO,144-0035 JAPAN"
        },
-      "access": "京浜急行電鉄本線・空港線京急蒲田駅から徒歩3分"
+      "access": "Approx 3 min walk from Keikyu Kamata Station (KK11)."
     },
       "sprint": {
         "text": {
@@ -115,7 +132,7 @@
            "sub" : " glass city shibuya"
          },
 
-        "access": "東急東横線・田園都市線・地下鉄銀座線・地下鉄半蔵門線・副都心線・JR渋谷駅より徒歩10分"
+        "access": "Approx 10 min walk from Shibuya Station (JY20/JA10/JS19/DT01/Z01/TY01/F16/G01/IN01)."
       }
     },
     "news": {
@@ -127,7 +144,7 @@
       "sponsor": {
         "head": "Sponsor",
         "subcaption": " ",
-        "coming-soon": "coming soon later ..."
+        "coming-soon": "coming soon"
     }
   },
   "footer": {
@@ -135,7 +152,7 @@
         "creativeCommons":{
           "text":"This web site is licensed under a",
           "license":"Creative Commons Attribution 4.0 International License",
-          "text-end":""
+          "text-end":"."
         }
   },
   "code_of_conduct": {
@@ -150,5 +167,75 @@
       "Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.",
       "We expect participants to follow these rules at conference and workshop venues and conference-related social events."
     ]
+  },
+  "sponsor": {
+    "title": "Sponsor",
+    "recruitTitle": "Recruitment",
+    "companyInfoTitle": "Company"
+  },
+  "event": {
+    "title": "event",
+    "warnning": "Please always check the latest information, because event information may be updated untile the conference day.",
+    "conference": {
+      "title": "Schedule",
+      "language": {
+        "japanese": "Japanese",
+        "english": "English",
+        "multi": "Japanese/English"
+      },
+      "tab": {
+        "day1": "Sep. 17th",
+        "day2": "Sep. 18th"
+      },
+      "rooms": {
+        "roomA": "Conference Rooms A+B",
+        "roomB": "Small Exhibition Hall",
+        "roomC": "Special Conference Room",
+        "roomD": "Convention Hall",
+        "roomD2": "Convention  Hall \"UME\" ",
+        "roomD3": "Convention Hall \"UGUISU\"",
+        "roomE": "Conference Room C",
+        "roomF": "Conference Room D"
+      },
+      "timeEvent": {
+        "regist": "Conference Registration",
+        "opening": "Opening",
+        "keynote": "Keynote",
+        "invitedLecture": "Invited Lecture",
+        "break": "Break",
+        "lunch": "Lunch",
+        "sponsorEvent": "Job Fair",
+        "snack": "Snack",
+        "closing": "Closing",
+        "lightningTalk": "Lightning Talks",
+        "party": "Party"
+      },
+      "sessionDetail": {
+        "talkLanguage": "talk-language",
+        "slideLanguage": "slide-language",
+        "audience": "Level",
+        "speaker": "Speaker",
+        "description": "Session Description"
+      },
+      "sessionSummary": {
+        "detail": "more"
+      },
+      "sessionCategory": {
+        "talk": "Talk",
+        "poster": "Poster Session",
+        "lt": "Lightning Talk"
+      },
+      "posterSummary": {
+          "coretime": "2018-09-18 15:15 - 15:40",
+          "room": "Big Exhibition Hall"
+      },
+      "ltSummary": {
+          "talkTime": "5min",
+          "room": "Big Exhibition Hall"
+      }
+    },
+    "sessions": {
+      "title": "Sessions"
+    }
   }
 }

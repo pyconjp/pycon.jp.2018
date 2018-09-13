@@ -1,7 +1,3 @@
-$breakpoint-xsmall-max: 639px
-$breakpoint-large: 1300px
-$global-link-hover-color: #00dfd8
-
 header#global-header
     background-color: #ffffff
     div#pc-nav
@@ -12,14 +8,37 @@ header#global-header
         nav
             ul
                 li
-                    font-size: 16px
                     color: #9b9b9b
                     a
-
+                      font-size: 16px
                       &:hover
                           color: $global-link-hover-color
-
-
+            div.nav-dropdown
+              @include event-box
+              min-height: 3rem
+              z-index: 20
+              &:before,
+              &:after
+                  content: ""
+                  position: absolute
+                  right: 0
+                  left: -100px
+                  width: 0
+                  height: 0
+                  margin: auto
+              &:before
+                top: -12px
+                border-style: solid
+                border-color: transparent transparent #d0d0d0 transparent
+                border-width: 0 10px 12px 10px
+              &:after
+                top: -10px
+                border-style: solid
+                border-color: transparent transparent #FFF transparent
+                border-width: 0 10px 12px 10px
+              a
+                margin-left: .4rem
+                font-size: 15px
 
     div#mobile-nav
         padding-top: 1.8rem
@@ -58,5 +77,11 @@ nav#global-nav-sp
     li
       margin-bottom: .5rem
       a
+        position: static
         font-size: 16px
         font-weight: 300
+        padding: 0
+    li.nest-title
+      color: #979797
+      li
+        margin-left: 1rem

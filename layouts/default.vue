@@ -1,6 +1,7 @@
 <template lang="pug">
     div.outer-container
-        global-header
+        no-ssr
+          global-header
         nuxt
         div#global-footer-wrapper.uk-container-expand
           global-footer

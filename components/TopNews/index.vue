@@ -5,12 +5,7 @@
 
   export default {
     name: 'top-news',
-    props: {
-      blog_data: {
-        type: Object,
-        default: {}
-      }
-    },
+    props: ['blog_data'],
     methods: {
       getDate(pubDate){
         return moment(pubDate, "dddd, DD MMM YYYY").format("YYYY/MM/DD(ddd)")

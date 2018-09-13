@@ -12,13 +12,21 @@
           return this.$nuxt.$route.name === _route_name
         })()
       },
-      getLangPath () {
-        return (this.$i18n.locale === 'en')?　this.$route.fullPath.replace(/^\/[^\/]+/, '') : `/en` + this.$route.fullPath;
+      getLangPath (path="") {
+        // const _path = (this.$i18n.locale === 'en')? this.$route.fullPath.replace(/^\/[^\/]+/, '') : `/en` + this.$route.fullPath;
+        // return process.env.baseUrl + _path;
+        //const _path =  '/' + path
+        //const __path = (this.$i18n.locale === 'ja')? "/en" + _path: _path
+        //return process.env.baseUrl + __path;
+        return (this.$i18n.locale === 'en') ? process.env.baseUrl + this.$route.fullPath.replace(/^\/[^\/]+/, '') : process.env.baseUrl + `/en` + this.$route.fullPath
       },
       getPath(path=""){
+        // console.log(process.env.baseUrl);
         // Todo::Topへのリンクが重いための暫定処理
-        const _path = '/' + path
-        return (this.$i18n.locale === 'en')? "/" + this.$i18n.locale + _path: _path
+        const _path =  '/' + path
+        const __path = (this.$i18n.locale === 'en')? "/" + this.$i18n.locale + _path: _path
+        //return process.env.baseUrl + __path;
+        return this.$route.path + path
       }
     }
   }

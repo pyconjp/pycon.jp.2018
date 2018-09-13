@@ -1,59 +1,44 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css)
+//@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css)
 
-/**
- * uikit-theme variables
- **/
-// font-family
-$global-font-family: "Noto Sans CJK JP", sans-serif
+@font-face
+  font-family: 'Noto Sans CJK JP'
+  font-style: normal
+  font-weight: 400
+  src: url('~/assets/fonts/NotoSansCJKjp-Regular.woff') format('woff')
 
-//breakpoints
-$breakpoint-small: 640px !default
-$breakpoint-medium: 960px !default
-$breakpoint-large: 1300px !default
-$breakpoint-xlarge: 1600px !default
+@font-face
+  font-family: 'Noto Sans CJK JP'
+  font-style: normal
+  font-weight: 300
+  src: url('~/assets/fonts/NotoSansCJKjp-Light.woff') format('woff')
 
-// uk-container's width
-$container-max-width: 1300px !default
+@font-face
+  font-family: 'Noto Sans CJK JP'
+  font-style: bold
+  font-weight: 500
+  src: url('~/assets/fonts/NotoSansCJKjp-Medium.woff') format('woff')
 
-// uk-container padding (pc)
-$global-medium-gutter: 20px
-
-// uk-container padding (sp)
-$container-padding-horizontal: 0 !default
-
-// body
-$global-color: #666 !default
-$global-inverse-color: #fff !default
-$base-body-color: $global-color !default
-
-// link-setting
-$global-link-color: #29abe2 !default
-$global-link-color: #29abe2 !default
-$base-link-color: $global-link-color !default
-$base-link-text-decoration: none !default
-$global-link-hover-color: #00dfd8 !default
-$base-link-hover-color: $global-link-hover-color !default
-$base-link-hover-text-decoration: none !default
-
-// h2
-$base-h2-font-size: 50px !default
-$base-h2-line-height: 1.3 !default
-
-// sp nav theme
-$offcanvas-bar-background: #333 !default
-$offcanvas-bar-color-mode: light !default
 
 /**
  * common elements setting
  **/
 .outer-container
-    // h2 title
+    *
+      box-sizing: border-box
+
     h2
       color: #4a4a4a
       font-weight: 300
+      margin-bottom: 4.2rem
+      font-size: 50px
 
-$pycon-global-footer-bg-color: #f6f6f6
+    p
+      font-weight: 300
 
 @import "uikit/src/scss/variables-theme.scss"
 @import "uikit/src/scss/mixins-theme.scss"
 @import "uikit/src/scss/uikit-theme.scss"
+
+// Adding by ikeda
+.uk-flex-space-between
+  justify-content: space-between

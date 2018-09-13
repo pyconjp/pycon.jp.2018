@@ -10,6 +10,13 @@
         "sponsor":"スポンサー",
         "staff":"スタッフ"
       },
+      "event":"イベント",
+      "conference":"カンファレンス",
+      "sessions":"セッション一覧",
+      "sprint": "スプリント",
+      "tutorial": "チュートリアル",
+      "youth_coder_workshop": "Youth Coder Workshop",
+      "community_booth": "コミュニティブース",
       "sponsor":"スポンサー",
       "code_of_conduct":"行動規範",
       "lang": "ENGLISH"
@@ -70,23 +77,33 @@
     },
     "keynote": {
         "text": {
-          "head": "キーノート"
+          "head": "Keynote",
+          "subcaption": "基調講演"
       },
       "japanese": {
-        "text": {
-          "head": "国内のキーノート"
-        },
-        "name": "発表者の方の名前",
-        "about": "発表者の方の概要---- ",
-        "title":"発表タイトル"
+        "date": "9月18日",
+        "name": "磯 蘭水",
+        "theme": "「Pythonでやってみた」：広がるプログラミングの愉しみ",
+        "about": "Pythonは1998年より使い始め、今年で20年になります。\nこれまで分散AIの研究、E-Commerceプラットフォーム、サーチエンジン、メディアサーバとメタデータ管理システム、ネット広告配信システム等、数多くのシステムをPythonを用いて開発してきました。\nまた、趣味の分野においてもPythonは第一のプログラミング言語として活用しています。\nPyCon JPにおいては、これまで2011から2016まで6回登壇し「明日の仕事に役立たない」を標榜しつつ、Pythonの様々な側面を紹介してきました。\n現在はAmazon Web Servicesのエンタープライズサポートのエンジニアとしてお客様の技術的な課題解決のお手伝いをしており、ここでもPythonが活躍しています。"
       },
-      "english": {
-        "text": {
-          "head": "国外のキーノート"
-        },
-        "name": "発表者の方の名前-en",
-        "about": "発表者の方の概要----en ",
-        "title":"発表タイトル-en"
+      "foreigner": {
+        "date": "9月17日",
+        "name": "Kaufmann Manuel",
+        "theme": "Argentina in Python: community, dreams, travels and learning",
+        "about": "Manuel Kaufmannは、大学に在学中の2006年に開催されたPyDay Santa FeでPythonに出会った。\nそれによって彼の人生が大きく変わった。\n彼は、Pythonの文法が好きになり、C言語のポインターや双方向リストを数日で忘れるほどだった。\nその時から、Python Argentina（車で南米を旅行しPythonを広げる）のアクティブメンバーになった。\nしばらくして、Djangoの公式ドキュメントやDjango Girlsチュートリアルの翻訳に参加することになった。\n他にも、One Laptop Per Childのようなプロジェクトにも参加するようになった。\n彼のArgentina in Pythonの活動が、2016年2月にPSF Python Ambassadorとして表彰された。\n現在、Read the Docsでソフトウエアエンジニアとして働いている。"
+      }
+    },
+    "invited-lecture": {
+      "text": {
+          "head": "Invited Lecture",
+          "subcaption": "招待講演",
+          "coution": "講演を予定しておりました松尾 豊氏に関しましては都合により出演中止となりましたのでご了承ください。"
+      },
+      "second": {
+        "date": "9月17日",
+        "name": "中山 浩太郎",
+        "theme": "東大松尾研流 実践的AI人材育成法",
+        "about": "東京大学工学系研究科技術経営戦略学専攻 松尾研究室 リサーチディレクター。\n2007年に大阪大学大学院情報科学研究科博士号取得後、大阪大学情報科学研究科特任研究員、東京大学知の構造化センター助教、講師を経て、現在に至る。\n専門分野はAI、Web、大規模データ解析。"
       }
     },
     "map": {
@@ -120,7 +137,7 @@
       "head": "News",
       "subcaption": "お知らせ",
       "more": "もっと読む",
-      "detail": "詳細を表示"
+      "detail": "詳細"
     },
       "sponsor": {
         "head": "Sponsor",
@@ -148,5 +165,75 @@
       "会議スタッフは、ハラスメントを経験した人が、会議期間中安全かつ安心と感じられるように、参加者がホテル/会場の警備や近隣の警察に連絡すること、付き添い者の提供、およびその他の支援を行います。私達にとってあなたが参加しているのは大事なことなのです。",
       "私達は参加者が会議場とワークショップ会場、また会議に関連したソーシャルイベントにて、このルールに従うことを望みます。"
     ]
+  },
+  "sponsor": {
+    "title": "スポンサー",
+    "recruitTitle": "採用について",
+    "companyInfoTitle": "企業概要"
+  },
+  "event": {
+    "title": "イベント",
+    "warnning": "イベントについては開催当日まで内容が変更される可能性があります。都度最新の情報をご確認ください。",
+    "conference": {
+      "title": "カンファレンス",
+      "language": {
+        "japanese": "日本語",
+        "english": "英語",
+        "multi": "日本語/英語"
+      },
+      "tab": {
+        "day1": "9月17日",
+        "day2": "9月18日"
+      },
+      "rooms": {
+        "roomA": "A+B会議室",
+        "roomB": "小展示",
+        "roomC": "特別会議室",
+        "roomD": "コンベンションホール",
+        "roomD2": "コンベンションホール 梅",
+        "roomD3": "コンベンションホール 鶯",
+        "roomE": "C会議室",
+        "roomF": "D会議室"
+      },
+      "timeEvent": {
+        "regist": "開場",
+        "opening": "オープニング",
+        "keynote": "基調講演",
+        "invitedLecture": "招待講演",
+        "break": "休憩",
+        "lunch": "ランチタイム",
+        "sponsorEvent": "ジョブフェア",
+        "snack": "おやつタイム",
+        "closing": "クロージング",
+        "lightningTalk": "Lightning Talks",
+        "party": "パーティ"
+      },
+      "sessionDetail": {
+        "talkLanguage": "発表言語",
+        "slideLanguage": "資料言語",
+        "audience": "Level",
+        "speaker": "発表者",
+        "description": "発表詳細"
+      },
+      "sessionSummary": {
+        "detail": "詳細"
+      },
+      "sessionCategory": {
+        "talk": "Talk",
+        "poster": "Poster Session",
+        "lt": "Lightning Talk"
+      },
+      "posterSummary": {
+          "coretime": "2018-09-18 15:15 - 15:45",
+          "room": "大展示ホール"
+      },
+      "ltSummary": {
+          "talkTime": "5min",
+          "room": "大展示ホール"
+      }
+    },
+    "sessions": {
+      "title": "セッション一覧"
+    }
   }
 }

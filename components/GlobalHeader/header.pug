@@ -1,19 +1,32 @@
 header#global-header(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar" uk-navbar)
     div#pc-nav.uk-container.uk-flex.uk-flex-middle(class="uk-visible@s")
-      h1
-        a(:href="getPath()")
-            img(src='~/static/common/global-header-logo.png', alt='PyConJP 2018' width='188' height='26')
+      nuxt-link(:to="$i18n.path('')" exact tag="h1")
+        a
+          img(src='~/static/common/global-header-logo.png', alt='PyConJP 2018' width='188' height='26')
       nav#global_nav.uk-navbar-right
           ul.uk-navbar-nav
-              //li(v-bind:class="{'uk-active':isActive('sponsor')}")
-                  nuxt-link(:to="$i18n.path('sponsor')" exact)
-                      | {{ $t('header.navi.sponsor') }}
-              li(v-bind:class="{'uk-active':isActive('code-of-conduct')}")
-                  nuxt-link(:to="$i18n.path('code-of-conduct')" exact)
-                      | {{ $t('header.navi.code_of_conduct') }}
-              li
-                  a(v-if="isActive('index')" :href="getLangPath()") {{ $t('header.navi.lang') }}
-                  nuxt-link(v-else :to="getLangPath()" exact) {{ $t('header.navi.lang') }}
+            li(v-bind:class="{'uk-active':isActive('conference')}")
+              a {{ $t('header.navi.event') }}
+            div.nav-dropdown(uk-dropdown="offset: -10;delay-hide: 200")
+              ul.uk-nav.uk-dropdown-nav
+                li
+                  nuxt-link(:to="$i18n.path('event/conference')" exact) {{ $t('header.navi.conference') }}
+                li
+                  nuxt-link(:to="$i18n.path('event/sessions')" exact) {{ $t('header.navi.sessions') }}
+                li
+                  a(href='https://pyconjp.connpass.com/event/97868/' target='_blank')  {{ $t('header.navi.sprint') }}
+                li
+                  a(href='https://pyconjp.connpass.com/event/94980/' target='_blank') {{ $t('header.navi.tutorial') }}
+                li
+                  a(href='https://pyconjp.connpass.com/event/94979/' target='_blank')  {{ $t('header.navi.youth_coder_workshop') }}
+                li
+                  a(href='https://pyconjp.blogspot.com/2018/08/community-booth.html' target='_blank') {{ $t('header.navi.community_booth') }}
+            li(v-bind:class="{'uk-active':isActive('sponsor')}")
+                nuxt-link(:to="$i18n.path('sponsor')" exact) {{ $t('header.navi.sponsor') }}
+            li(v-bind:class="{'uk-active':isActive('code-of-conduct')}")
+                nuxt-link(:to="$i18n.path('code-of-conduct')" exact) {{ $t('header.navi.code_of_conduct') }}
+            li
+                a(:href="getLangPath()") {{ $t('header.navi.lang') }}
 
     div#mobile-nav.uk-container(class="uk-hidden@s").uk-flex
         .uk-offcanvas-content
@@ -26,17 +39,26 @@ header#global-header(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk
               button.uk-offcanvas-close(tyle="button" uk-close)
               nav#global-nav-sp
                   ul
-                    li(v-bind:class="{'uk-active':isActive('sponsor')}")
-                        a(:href="getPath()")  {{ $t('header.navi.top.top') }}
-                    //li(v-bind:class="{'uk-active':isActive('sponsor')}")
-                        nuxt-link(:to="$i18n.path('sponsor')" exact)
-                            | {{ $t('header.navi.sponsor') }}
-                    li(v-bind:class="{'uk-active':isActive('code-of-conduct')}")
-                        nuxt-link(:to="$i18n.path('code-of-conduct')" exact)
-                            | {{ $t('header.navi.code_of_conduct') }}
+                    nuxt-link(:to="$i18n.path('')" exact tag="li")
+                        a.uk-offcanvas-close {{ $t('header.navi.top.top') }}
+                    nuxt-link(:to="$i18n.path('event/conference')" exact tag="li")
+                        a.uk-offcanvas-close {{ $t('header.navi.conference') }}
+                    nuxt-link(:to="$i18n.path('event/sessions')" exact tag="li")
+                        a.uk-offcanvas-close {{ $t('header.navi.sessions') }}
                     li
-                        a(v-if="isActive('index')" :href="getLangPath()") {{ $t('header.navi.lang') }}
-                        nuxt-link(v-else :to="getLangPath()" exact) {{ $t('header.navi.lang') }}
+                        a(href='https://pyconjp.connpass.com/event/97868/' target='_blank')  {{ $t('header.navi.sprint') }}
+                    li
+                        a(href='https://pyconjp.connpass.com/event/94980/' target='_blank') {{ $t('header.navi.tutorial') }}
+                    li
+                        a(href='https://pyconjp.connpass.com/event/94979/' target='_blank')  {{ $t('header.navi.youth_coder_workshop') }}
+                    li
+                        a(href='https://pyconjp.blogspot.com/2018/08/community-booth.html' target='_blank') {{ $t('header.navi.community_booth') }}
+                    nuxt-link(:to="$i18n.path('sponsor')" exact tag="li")
+                        a.uk-offcanvas-close {{ $t('header.navi.sponsor') }}
+                    nuxt-link(:to="$i18n.path('code-of-conduct')" exact tag="li")
+                        a.uk-offcanvas-close  {{ $t('header.navi.code_of_conduct') }}
+                    li
+                      a(:href="getLangPath()") {{ $t('header.navi.lang') }}
 
-        a(:href="getPath()")
+        nuxt-link(:to="$i18n.path('')" exact)
             img(src='~/static/top/firstview-logo.png', alt='PyConJP 2018')
