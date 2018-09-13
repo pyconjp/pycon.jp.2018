@@ -68,7 +68,7 @@ export default {
     waterSponsors() { return this.sponsors.filter(s => s.package == "Water") },
     lanyardSponsors() { return this.sponsors.filter(s => s.package == "Lanyard") },
     patron() { return this.sponsors.filter(s => s.package == "Patron") },
-    mediaSponsors() { return this.sponsors.filter(s => s.package == "Media") }
+    mediaSponsors() { return this.sponsors.filter(s => s.package == "Media") },
     networkSponsors() { return this.sponsors.filter(s => s.package == "Network") }
   },
   methods: {
