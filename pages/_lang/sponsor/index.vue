@@ -13,6 +13,7 @@
     lanyard(:sponsors="lanyardSponsors")
     patron(:sponsors="patron")
     media(:sponsors="mediaSponsors")
+    network(:sponsors="networkSponsors")
 </template>
 
 
@@ -30,6 +31,7 @@ import Water from '~/components/Sponsor/Water';
 import Lanyard from '~/components/Sponsor/Lanyard';
 import Patron from '~/components/Sponsor/Patron';
 import Media from '~/components/Sponsor/Media';
+import Network from '~/components/Sponsor/Network';
 
 export default {
   name: 'sponsor',
@@ -45,7 +47,8 @@ export default {
     Water,
     Lanyard,
     Patron,
-    Media
+    Media,
+    Network
   },
   mounted() {
     this.FETCH_SPONSOR()
@@ -65,7 +68,8 @@ export default {
     waterSponsors() { return this.sponsors.filter(s => s.package == "Water") },
     lanyardSponsors() { return this.sponsors.filter(s => s.package == "Lanyard") },
     patron() { return this.sponsors.filter(s => s.package == "Patron") },
-    mediaSponsors() { return this.sponsors.filter(s => s.package == "Media") }
+    mediaSponsors() { return this.sponsors.filter(s => s.package == "Media") },
+    networkSponsors() { return this.sponsors.filter(s => s.package == "Network") }
   },
   methods: {
     ...mapActions({
