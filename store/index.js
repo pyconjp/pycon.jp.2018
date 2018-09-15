@@ -32,7 +32,7 @@ let getSessinsAPIUri = (category) => {
   const noCache = false
 
   if(category === 'talk'){
-    sheetName = 'prod_20180907'
+    sheetName = 'prod_20180915'
     apiUri = process.env.talkApiEndpoint + `?stage=${sheetName}&noCache=${noCache}`
   }else if( category === 'poster'){
     sheetName = 'prod'
