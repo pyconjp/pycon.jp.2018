@@ -67,9 +67,8 @@
           }
           return _day + " " + _time
         } else if( this.category === 'lt'){
-          _day = this.session.day === 1 ? "2018-9-17":"2018-9-18"
+          _day = this.session.day === 1 ? "2018-9-17 (17:30~) " : "2018-9-18 (17:15~) "
           _time = this.session.no ? "no." + this.session.no : ""
-
           return _day + " " + _time
         } else if( this.category === 'poster'){
           _day =  "2018-9-18"

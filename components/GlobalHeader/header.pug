@@ -13,6 +13,14 @@ header#global-header(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk
                   nuxt-link(:to="$i18n.path('event/conference')" exact) {{ $t('header.navi.conference') }}
                 li
                   nuxt-link(:to="$i18n.path('event/sessions')" exact) {{ $t('header.navi.sessions') }}
+                li
+                  a(href='https://pyconjp.connpass.com/event/97868/' target='_blank')  {{ $t('header.navi.sprint') }}
+                li
+                  a(href='https://pyconjp.connpass.com/event/94980/' target='_blank') {{ $t('header.navi.tutorial') }}
+                li
+                  a(href='https://pyconjp.connpass.com/event/94979/' target='_blank')  {{ $t('header.navi.youth_coder_workshop') }}
+                li
+                  a(href='https://pyconjp.blogspot.com/2018/08/community-booth.html' target='_blank') {{ $t('header.navi.community_booth') }}
             li(v-bind:class="{'uk-active':isActive('sponsor')}")
                 nuxt-link(:to="$i18n.path('sponsor')" exact) {{ $t('header.navi.sponsor') }}
             li(v-bind:class="{'uk-active':isActive('code-of-conduct')}")
@@ -37,6 +45,14 @@ header#global-header(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk
                         a.uk-offcanvas-close {{ $t('header.navi.conference') }}
                     nuxt-link(:to="$i18n.path('event/sessions')" exact tag="li")
                         a.uk-offcanvas-close {{ $t('header.navi.sessions') }}
+                    li
+                        a(href='https://pyconjp.connpass.com/event/97868/' target='_blank')  {{ $t('header.navi.sprint') }}
+                    li
+                        a(href='https://pyconjp.connpass.com/event/94980/' target='_blank') {{ $t('header.navi.tutorial') }}
+                    li
+                        a(href='https://pyconjp.connpass.com/event/94979/' target='_blank')  {{ $t('header.navi.youth_coder_workshop') }}
+                    li
+                        a(href='https://pyconjp.blogspot.com/2018/08/community-booth.html' target='_blank') {{ $t('header.navi.community_booth') }}
                     nuxt-link(:to="$i18n.path('sponsor')" exact tag="li")
                         a.uk-offcanvas-close {{ $t('header.navi.sponsor') }}
                     nuxt-link(:to="$i18n.path('code-of-conduct')" exact tag="li")

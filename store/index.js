@@ -17,7 +17,7 @@ export const getters = {
   top_sponsor_loading (state) { return state.top_sponsor_loading},
   talk_array (state) { return state.talk_array},
   poster_array (state) { return state.poster_array},
-  lt_array (state) {return state.lit_array},
+  lt_array (state) {return state.lt_array},
   news_list (state) { return state.news_list }
 }
 
@@ -32,13 +32,13 @@ let getSessinsAPIUri = (category) => {
   const noCache = false
 
   if(category === 'talk'){
-    sheetName = 'prod_20180831'
+    sheetName = 'prod_20180915'
     apiUri = process.env.talkApiEndpoint + `?stage=${sheetName}&noCache=${noCache}`
   }else if( category === 'poster'){
     sheetName = 'prod'
     apiUri = process.env.posterApiEndpoint + `?stage=${sheetName}&noCache=${noCache}`
   }else if( category === 'lt'){
-    sheetName = 'dev'
+    sheetName = 'prod_20180911'
     apiUri = process.env.ltApiEndpoint + `?stage=${sheetName}&noCache=${noCache}`
   }
 
@@ -92,6 +92,13 @@ export const actions = {
     const response = await fetch(uri)
     const json = await response.json()
     const data = json.data
+    data.sort((a, b) => {
+        if (a.day < b.day) return -1
+        if (a.day > b.day) return 1
+        if (a.no < b.no) return -1
+        if (a.no > b.no) return 1
+        return 0
+    })
     commit('FETCH_LT', data)
   },
   async FETCH_NEWS ({ commit }) {

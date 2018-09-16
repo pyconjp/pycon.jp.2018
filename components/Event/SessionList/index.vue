@@ -37,7 +37,7 @@
       ...mapGetters({
         "talks": "talk_array",
         "posters": "poster_array",
-        "lts": "lt_array",
+        "lts": "lt_array"
       })
     },
     methods:{
@@ -55,7 +55,7 @@
         // show UIkit modal
         const uikit = require('uikit')
         uikit.modal('#modal-session').show()
-      },
+      }
     }
   }
 </script>
