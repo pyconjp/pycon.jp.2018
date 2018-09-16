@@ -1,10 +1,11 @@
 <template lang="pug">
 .card.uk-flex.uk-flex-row
-  //- a.img-link(:href="this.siteUrl" target="_blank")
-    //- .img-block
-    //-   img.img(:src="this.imgSrc")
-  a.text-block(:href="this.siteUrl" target="_blank")
-    a.name(:href="this.siteUrl" target="_blank") {{this.name}}
+  a.img-link(:href="this.siteUrl" target="_blank")
+    .img-block
+      img.img(:src="this.imgSrc")
+  .text-block
+    .name {{this.name}}
+  //- a.text-block(:href="this.siteUrl" target="_blank")
 </template>
 
 <script>

@@ -21,7 +21,7 @@ export const getters = {
   news_list (state) { return state.news_list }
 }
 
-const sponsorSheetName = 'prod_20180913'// Please change to "prod" if deploying production
+const sponsorSheetName = 'prod_20180916'// Please change to "prod" if deploying production
 const sponsorNoCache = false  // Please change to "false" if deploying production
 const sponsorApiUri = process.env.sponsorApiEndpoint + `?stage=${sponsorSheetName}&noCache=${sponsorNoCache}`
 
