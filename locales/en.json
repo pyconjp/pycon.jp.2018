@@ -205,6 +205,7 @@
         "break": "Break",
         "lunch": "Lunch",
         "sponsorEvent": "Job Fair",
+        "sponsorEventDesc": "テックビューロ株式会社、株式会社メルカリ、GROOVE X株式会社、株式会社アイリッジの4社をお招きし、WEB・ロボット・機械学習・FinTech等の各分野でのPython・技術活用について、パネルディスカッションを行います。",
         "snack": "Snack",
         "closing": "Closing",
         "lightningTalk": "Lightning Talks",
