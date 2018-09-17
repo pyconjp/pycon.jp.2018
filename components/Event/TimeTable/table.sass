@@ -238,7 +238,7 @@
           height: 80px
           @media (max-width: $breakpoint-xsmall-max)
             border: none
-            height: 120px
+            height: 170px
             &:not(.event)
               height: 0
           &:not(.event)
@@ -248,14 +248,17 @@
                 content: ""
                 display: block
                 width: 100%
-                height: 120px
+                height: 170px
                 margin: 0
                 background-color: rgba(255,255,255,0.7)
           div.session-summary
-            min-height: 100px
-            height: 100px
             p
-              margin: 2.4rem 0 .2rem
+              margin: 3px 0
+            p.desc
+              font-size: 10px
+              @media (max-width: $breakpoint-xsmall-max)
+                font-size: 12px
+
     table#day-1
       td
         width: calc((1296px - 4rem) / 6)
