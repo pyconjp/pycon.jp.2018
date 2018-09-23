@@ -32,6 +32,7 @@ import Lanyard from '~/components/Sponsor/Lanyard';
 import Patron from '~/components/Sponsor/Patron';
 import Media from '~/components/Sponsor/Media';
 import Network from '~/components/Sponsor/Network';
+import sponsors from '~/static/sponsor/data.json'
 
 export default {
   name: 'sponsor',
@@ -50,13 +51,10 @@ export default {
     Media,
     Network
   },
-  mounted() {
-    this.FETCH_SPONSOR()
+  data () {
+    return { sponsors: sponsors.data }
   },
   computed: {
-    ...mapGetters({
-      "sponsors": "sponsor_array"
-    }),
     diamondSponsor() { return this.sponsors.filter(s => s.package == "Diamond")[0] || {} },
     platinumSponsors() { return this.sponsors.filter(s => s.package == "Platinum") },
     goldSponsors() { return this.sponsors.filter(s => s.package == "Gold") },

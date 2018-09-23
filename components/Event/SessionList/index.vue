@@ -1,10 +1,11 @@
 <template src="./list.pug" lang="pug"/>
-<style src="./list.sass" lang="sass" />
 
 <script>
-  import { mapGetters, mapActions } from 'vuex'
   import SessionSummary from '~/components/Event/SessionSummary'
   import SessionDetail from '~/components/Event/SessionDetail'
+  import talks from '~/static/contents/talks.json'
+  import posters from '~/static/contents/posters.json'
+  import lts from '~/static/contents/lightningtalks.json'
 
   export default {
     name: 'session-list',
@@ -12,21 +13,18 @@
       SessionSummary,
       SessionDetail
     },
-    data: () => {
-      return{
+    data() {
+      return {
         isFixed: false,
         currentSessionDetail: {
             category: "",
             session: "",
             date: "",
             no: ""
-        }
+        },
+        talks: talks.data, 
+        posters: posters.data
       }
-    },
-    mounted(){
-      this.FETCH_TALK()
-      this.FETCH_POSTER()
-      this.FETCH_LT()
     },
     destroyed(){
       // !uikitのmodalを利用すると閉じたあとnodeの位置が変ってしまい、ページ遷移の度に元の位置にあった分のコンポーネントがロードされてしまうのでdestroyedの度に場外（になってるはず）のmodalを殺しておく。
@@ -34,18 +32,17 @@
       if(_modal != undefined) _modal.remove()
     },
     computed: {
-      ...mapGetters({
-        "talks": "talk_array",
-        "posters": "poster_array",
-        "lts": "lt_array"
-      })
+      lts() {
+        return lts.data.sort((a, b) => {
+          if (a.day < b.day) return -1
+          if (a.day > b.day) return 1
+          if (a.no < b.no) return -1
+          if (a.no > b.no) return 1
+          return 0
+        })
+      }
     },
     methods:{
-      ...mapActions({
-        FETCH_TALK: "FETCH_TALK",
-        FETCH_POSTER: "FETCH_POSTER",
-        FETCH_LT: "FETCH_LT"
-      }),
       showDetail (category,session) {
         this.$data.currentSessionDetail.category = category
         this.$data.currentSessionDetail.session = session
@@ -59,3 +56,5 @@
     }
   }
 </script>
+
+import sponsors from '~/static/sponsor/data.json'
