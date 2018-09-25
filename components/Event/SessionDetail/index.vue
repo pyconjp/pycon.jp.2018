@@ -1,5 +1,4 @@
 <template src="./detail.pug" lang="pug"/>
-<style src="./detail.sass" lang="sass" />
 
 <script>
   import sessionsMixin from '~/components/Event/mixins/sessionsMixin'
@@ -103,3 +102,5 @@
     }
   }
 </script>
+
+<style src="./detail.sass" lang="sass" />
