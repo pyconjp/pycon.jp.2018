@@ -2,21 +2,24 @@
 
 <script>
   import { mapGetters, mapActions } from 'vuex'
+  import sponsors from '~/static/sponsor/data.json'
   export default {
     name: 'top-sponsor',
-    mounted(){
-      this.FETCH_TOP_SPONSOR()
-    },
     computed: {
-      ...mapGetters([
-        "top_sponsor_array",
-        "top_sponsor_loading"
-      ])
+      top_sponsor_array(){
+        // 重複の削除
+        const data = sponsors.data
+        let _data = [], names = []
+        data.forEach( function ( item ) {
+          if ( names.indexOf( item.distinctName ) === -1 && item.package) {
+            _data.push(item)
+          }
+          names.push( item.distinctName )
+        })
+      return _data
+      }
     },
     methods: {
-      ...mapActions({
-        FETCH_TOP_SPONSOR: "FETCH_TOP_SPONSOR"
-      }),
       getImagePath(path){
         let _path
           if( path != undefined && path != "" ){
@@ -33,9 +36,6 @@
           }
         return _show
       }
-    },
-    data(){
-      return {}
     }
   }
 </script>

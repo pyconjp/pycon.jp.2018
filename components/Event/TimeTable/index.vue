@@ -1,14 +1,14 @@
 <template src="./table.pug" lang="pug"/>
-<style src="./table.sass" lang="sass" />
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import SessionSummary from '~/components/Event/SessionSummary'
 import SessionDetail from '~/components/Event/SessionDetail'
+import talks from '~/static/contents/talks.json'
 
 export default {
   name: 'time-table',
-  data: () => {
+  data(){
     return{
       isFixed: false,
       currentTab: "day-1",
@@ -21,29 +21,19 @@ export default {
           talk: "",
           date: "",
           no: ""
-      }
+      },
+      talks: talks.data
     }
   },
   components: {
     SessionSummary,
     SessionDetail
   },
-  mounted(){
-    this.FETCH_TALK()
-  },
   destroyed() {
     let _modal = document.getElementById("modal-session")
     if(_modal != undefined) _modal.remove()
   },
-  computed: {
-    ...mapGetters({
-      "talks": "talk_array",
-    })
-  },
   methods:{
-    ...mapActions({
-      FETCH_TALK: "FETCH_TALK"
-    }),
     showDetail (day,no,room) {
       const talk = this.getTalk(day,no,room)
       this.$data.currentTalkDetail.talk = talk
@@ -96,3 +86,5 @@ export default {
   }
 }
 </script>
+
+<style src="./table.sass" lang="sass"/>
